@@ -1,0 +1,11 @@
+{
+    "banner" :".orangehrm-login-branding > img",
+    "logo": ".orangehrm-login-logo > img",
+    "iconos" : ".orangehrm-login-footer-sm",
+    "loginText" : ".oxd-text--h5",
+    "userText" : ":nth-child(2) > .oxd-input-group > .oxd-input-group__label-wrapper > .oxd-label",
+    "passText" : ":nth-child(3) > .oxd-input-group > .oxd-input-group__label-wrapper > .oxd-label",
+    "iconoUser" : ":nth-child(2) > .oxd-input-group > .oxd-input-group__label-wrapper > .oxd-icon",
+    "iconoPass" : ":nth-child(3) > .oxd-input-group > .oxd-input-group__label-wrapper > .oxd-icon",
+    "btnLogin" : ".oxd-button"
+}
