@@ -4,7 +4,7 @@
   "description": "Qa",
   "main": "index.js",
   "scripts": {
-    "test_chrome": "cypress run --spec cypress/e2e/test_divisas.cy.js --browser chrome",
+    "test_chrome": "cypress run --spec cypress/e2e/Testing_Bonpland_idea5/home.cy.js --browser chrome", 
     "test_edge": "cypress run --spec cypress/e2e/test_divisas.cy.js --browser edge",
     "cypress_open":"cypress open"
    
