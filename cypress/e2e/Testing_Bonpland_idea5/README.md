@@ -1,14 +1,9 @@
 
- <h1 align="Left">Bonpland Idea 5</h1>
+ <h2 align="Left">Bonpland Idea 5</h2>
 
  <br />
 
- 
-<h1 align="left"><em>📋 Indice </em></h1>
-
-
-
-<h1 align="left">✒️ Descripcion del Test</h1>
+<h3 align="left">✒️ Descripcion del Test</h3>
 
 
 
