@@ -8,22 +8,22 @@
 <br />
 
 
-<h1 align="left"><em> Indice </em></h1>
+<h1 align="left"><em>📋 Indice </em></h1>
 
-* [Proyecto de IdForIdeas](https://drive.google.com/file/d/1X7tHO7CpUHDNBqgOVyzlZqUOdyPzViTh/view)
+📌 [Proyecto de IdForIdeas](https://drive.google.com/file/d/1X7tHO7CpUHDNBqgOVyzlZqUOdyPzViTh/view)
 <br /> 
 
-* [Plan de Pruebas ](#Introduccion)
+📌 [Plan de Pruebas ](#Introduccion)
 <br />
 
-* [Automation en Cypress](./cypress/e2e/Testing_Bonpland_idea5/)
+📌 [Automation en Cypress](./cypress/e2e/Testing_Bonpland_idea5/)
 <br />
 
-* [Datos de la Prueba](#datos)
+📌 [Datos de la Prueba](#datos)
 <br />
 <br />
 
-<h1 align="left">Descripcion del Proyecto</h1>
+<h1 align="left">✒️ Descripcion del Proyecto</h1>
 <h3 align="left">Bonpland es una app que permite a los usuarios buscar inmuebles para alquilar, comprar o vender </h3>
 
 
