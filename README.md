@@ -16,7 +16,7 @@
 📌 [Plan de Pruebas ](#Introduccion)
 <br />
 
-📌 [Automation en Cypress](./cypress/e2e/Testing_Bonpland_idea5/)
+📌 [Automation en Cypress](./mochawesome-report/mochawesome.html)
 <br />
 
 📌 [Datos de la Prueba](#datos)
