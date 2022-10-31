@@ -10,4 +10,12 @@ describe('Testing en Filtro De Busqueda', () => {
 
     })
 
+    it('Filtro segun (Ciudad, Ambiente, Baños, Habitaciones, mts2)', () => {
+        
+    });
+
+    it('Button con filtro Desplegable', () => {
+        
+    });
+
 })
