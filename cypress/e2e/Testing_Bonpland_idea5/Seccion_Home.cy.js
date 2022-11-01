@@ -5,6 +5,13 @@ describe('Testing del 1er Sprint Idea 5 - Bonpland', () => {
 
       })
 
+    it('Pruebas de Api', () => { // Se probaran status y Enpoints
+                    // Prueba elementos Endpoints de Usuario en la tabla "Nombre de Usuario","Passwrord para Usuario","Nombre","Apellido","Apellido","Email","Ciudad","Pais","Telefono"//
+                    // Prueba elementos Endpoint en Inmuebles en la tabla "Id para inmuebles","Id para Img","Precio","Direccion","Ciudad","Pais","Tamñano Inmueble","Ambientes","Estado (REservado/Alquilado/Vendido),"Codigo de Zona","Fecha Publicacion","Tipo de Inmueble" 
+                    // Pruebas de Status
+        
+    });  
+
     it('Check de todos los elementos diseñados en seccion Home', ()=>{ //Checkeamos todos lo elementos del dom existentes segun diseño UI
                     // Prueba de todos los elementos del Dom
 
