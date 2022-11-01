@@ -8,7 +8,7 @@
     "test_edge": "cypress run --spec cypress/e2e/test_divisas.cy.js --browser edge",
     "cypress_open": "cypress open",
     "test_mocha": "cypress run reporter mochawesome --spec cypress/e2e/Testing_Bonpland_idea5/Seccion_Home.cy.js",
-    "test_mocha_filtro": "cypress run reporter mochawesome --spec cypress/e2e/Testing_Bonpland_idea5/Filtro_Busqueda.cy.js" 
+    "test_bonpland_home": "cypress run reporter mochawesome --spec cypress/e2e/Testing_Bonpland_idea5/Home.cy.js" 
   },
   "author": "Bonpland",
   "license": "ISC",
