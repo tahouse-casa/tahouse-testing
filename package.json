@@ -6,9 +6,10 @@
   "scripts": {
     "test_chrome": "cypress run --spec cypress/e2e/Testing_Bonpland_idea5/Seccion_Home.cy.js --browser chrome",
     "test_edge": "cypress run --spec cypress/e2e/test_divisas.cy.js --browser edge",
+    "test_chrome_headless": "cypress run --spec cypress/e2e/Testing_Bonpland_idea5/Home.cy.js --browser chrome",
     "cypress_open": "cypress open",
     "test_mocha": "cypress run reporter mochawesome --spec cypress/e2e/Testing_Bonpland_idea5/Seccion_Home.cy.js",
-    "test_bonpland_home": "cypress run reporter mochawesome --spec cypress/e2e/Testing_Bonpland_idea5/Home.cy.js" 
+    "test_bonpland_home": "cypress run reporter mochawesome --spec cypress/e2e/Testing_Bonpland_idea5/Home.cy.js"
   },
   "author": "Bonpland",
   "license": "ISC",
@@ -16,7 +17,9 @@
     "cypress": "^10.10.0"
   },
   "devDependencies": {
-    "mochawesome": "^7.1.3"
+    "cypress-mochawesome-reporter": "^3.2.3",
+    "cypress-multi-reporters": "^1.6.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }
-

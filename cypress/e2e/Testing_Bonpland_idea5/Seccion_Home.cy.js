@@ -52,7 +52,7 @@ describe('Testing del 1er Sprint Idea 5 - Bonpland', () => {
     })
 
     it('Footer Mostrando Datos de la Inmobiliaria', ()=>{ // Mostrar footer en forma de acordeon con sus 4 menuces, logo y posicion de elementos en el Dom segun diseño UI
-      
+
                     // Prueba de Img logo ubicada segun diseño UI
                     // Prueba de contenido en sus 4 opciones "Sobre Nosotros","Nuestra Trayectoria","Paises","Categorias"
                     // Prueba de menuces de tipo acordeon y su depliegue
@@ -79,7 +79,45 @@ describe('Testing del 1er Sprint Idea 5 - Bonpland', () => {
                     // Filtramos por Mts2 Min/Max y validando que se sean 
     });
 
-    
-  
+     
 })
-  
+
+describe('Testing Exploratorio seccion Home', () => {
+    
+  beforeEach(() => {
+      
+  });
+
+  it('CP en Api', () => {
+      
+  });
+
+  it('CP en Login', () => { // Pruebas de login Positivo y Negativo
+      
+  });
+
+  it('CP en Formulario de Registro', () => { // Se realizaran distintas pruebas en todos los campos de datos del Formulario (Casos de pruebas Positivos y Negativos)
+      
+  });
+
+  it('CP en Formulario de Busqueda', () => { // Se realziaran pruebas de filtrado en los campos de Busqueda
+      
+  });
+
+  it('CP comprobando todos los elementos del Dom', () => {
+      
+  });
+
+  it('CP comprobando Textos Descriptivos', () => {
+      
+  });
+
+  it('CP en Menu Navbar', () => {
+      
+  });
+
+  it('CP en Footer', () => {
+      
+  });
+
+});
