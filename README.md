@@ -13,10 +13,10 @@
 📌 [Proyecto de IdForIdeas](https://drive.google.com/file/d/1X7tHO7CpUHDNBqgOVyzlZqUOdyPzViTh/view)
 <br /> 
 
-📌 [Plan de Pruebas ](#Introduccion)
+📌 [Plan de Pruebas ](./docs/Plan%20de%20Pruebas%20Bonpland%20-%20Idea%205%20(1).pdf)
 <br />
 
-📌 [Automation en Cypress](./cypress/e2e/Testing_Bonpland_idea5/)
+📌 [Automation en Cypress](https://maxibarbo.github.io/Testing_Bonpland/)
 <br />
 
 📌 [Datos de la Prueba](#datos)

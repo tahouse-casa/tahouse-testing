@@ -2,15 +2,9 @@ describe('Testing del 1er Sprint Idea 5 - Bonpland', () => {
 
     beforeEach(() => {
 
-      })
+    })
 
-    it('Check de todos los elementos diseñados en seccion Home', ()=>{ //Checkeamos todos lo elementos del dom existentes segun diseño UI
-
-                    // Prueba de todos los elementos del Dom
-
-    })  
-
-    it('Pruebas de Api', () => { // Se probaran status y Endpoints
+    it('A_001 - Pruebas de Api', () => { // Se probaran status y Endpoints
 
                     // Prueba elementos Endpoints de Usuario en la tabla "Nombre de Usuario","Passwrord para Usuario","Nombre","Apellido","Apellido","Email","Ciudad","Pais","Telefono"//
                     // Prueba elementos Endpoint en Inmuebles en la tabla "Id para inmuebles","Id para Img","Precio","Direccion","Ciudad","Pais","Tamñano Inmueble","Ambientes","Estado (REservado/Alquilado/Vendido),"Codigo de Zona","Fecha Publicacion","Tipo de Inmueble" 
@@ -18,12 +12,12 @@ describe('Testing del 1er Sprint Idea 5 - Bonpland', () => {
 
     });   
 
-    it('Filtro en Banner', ()=>{ // Mostrar inmuebles segun ciudad filtrada
+    it('H_001 - Filtro en Banner', ()=>{ // Mostrar inmuebles segun ciudad filtrada
 
  
     })
 
-    it('Menu Navbar', ()=>{ // Mostrar logo, texto descriptivo, input ubicacion, secciones de la web
+    it('H_002 - Menu Navbar', ()=>{ // Mostrar logo, texto descriptivo, input ubicacion, secciones de la web
 
                     // Prueba de Img logo segun diseño UI
                     // Prueba icono menu Nav
@@ -34,7 +28,7 @@ describe('Testing del 1er Sprint Idea 5 - Bonpland', () => {
 
     })
 
-    it('Inmuebles Destacados', ()=>{ // los inmuebles se muestren de mayor a menor segun su solicitud en destacados
+    it('H_003 - Inmuebles Destacados', ()=>{ // los inmuebles se muestren de mayor a menor segun su solicitud en destacados
 
                     // Ubicacion 
                     // Prueba texto descriptivo
@@ -43,23 +37,29 @@ describe('Testing del 1er Sprint Idea 5 - Bonpland', () => {
                     // El carrousel debe contener los 5 mejores inmuebles de mayor a menor
     })
     
-    it('Seccion Propiedades', ()=>{ // Mostrar un listado de inmuebles en promocion
+    it('H_004 - Seccion Propiedades', ()=>{ // Mostrar un listado de inmuebles en promocion
 
                     //Prueba imagen de fondo segun diseño UI
                     //Mostrar Texto indicando lo precios y descuentos de Bopland
                     //Button llamado "Ver Propiedades" redirecciona a la pagina "Listado de Inmuebles"
 
     })
-
-    it('Footer Mostrando Datos de la Inmobiliaria', ()=>{ // Mostrar footer en forma de acordeon con sus 4 menuces, logo y posicion de elementos en el Dom segun diseño UI
+    
+    it('H_005 - Footer Informativo', ()=>{ // Mostrar footer en forma de acordeon con sus 4 menuces, logo y posicion de elementos en el Dom segun diseño UI
 
                     // Prueba de Img logo ubicada segun diseño UI
                     // Prueba de contenido en sus 4 opciones "Sobre Nosotros","Nuestra Trayectoria","Paises","Categorias"
                     // Prueba de menuces de tipo acordeon y su depliegue
 
     })
+
+    it('H_006 - Check de todos los elementos diseñados en seccion Home', ()=>{ //Checkeamos todos lo elementos del dom existentes segun diseño UI
+
+      // Prueba de todos los elementos del Dom
+
+    })  
  
-    it('Seccion Guia en el Home', () => { //Mostrar una Guia al usuario para alquilar y/o comprar inmuebles
+    it('H_007 - Seccion Guia en el Home', () => { //Mostrar una Guia al usuario para alquilar y/o comprar inmuebles
 
                     // Prueba de Imagen y Texto correspondiente segun diseño UI
                     // Prueba de Button "Guia para Alquilar y Guia para Vender"
