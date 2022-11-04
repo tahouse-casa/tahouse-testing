@@ -1,5 +1,5 @@
 
- <h1 align="center">Bonpland Idea 5</h1>
+ <h1 align="center"><em>Bonpland Idea 5</em></h1>
 
  <br />
 
@@ -8,7 +8,7 @@
 <br />
 
 
-<h1 align="left"><em>📋 Indice </em></h1>
+<h2 align="left"><em>📋 Indice </em></h2>
 
 📌 [Proyecto de IdForIdeas](https://drive.google.com/file/d/1X7tHO7CpUHDNBqgOVyzlZqUOdyPzViTh/view)
 <br /> 
@@ -23,7 +23,7 @@
 <br />
 
 
-<h1 align="left">✒️ Descripcion del Proyecto</h1>
+<h2 align="left"><em>✒️ Descripcion del Proyecto</em></h2>
 <h3 align="left">Bonpland es una app que permite a los usuarios buscar inmuebles para alquilar, comprar o vender </h3>
 
 
