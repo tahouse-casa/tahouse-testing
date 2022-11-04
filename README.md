@@ -21,7 +21,7 @@
 
 📌 [Datos de la Prueba](#datos)
 <br />
-<br />
+
 
 <h1 align="left">✒️ Descripcion del Proyecto</h1>
 <h3 align="left">Bonpland es una app que permite a los usuarios buscar inmuebles para alquilar, comprar o vender </h3>
