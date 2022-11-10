@@ -4,18 +4,23 @@
   "description": "Qa",
   "main": "index.js",
   "scripts": {
+    "test_all": "cypress run reporter mochawesome",
     "test_chrome": "cypress run --spec cypress/e2e/Testing_Bonpland_idea5/Seccion_Home.cy.js --browser chrome",
     "test_edge": "cypress run --spec cypress/e2e/test_divisas.cy.js --browser edge",
     "test_chrome_headless": "cypress run --spec cypress/e2e/Testing_Bonpland_idea5/Home.cy.js --browser chrome",
     "cypress_open": "cypress open",
     "test_mocha": "cypress run reporter mochawesome --spec cypress/e2e/Testing_Bonpland_idea5/Seccion_Home.cy.js",
     "test_bonpland_home": "cypress run reporter mochawesome --spec cypress/e2e/Testing_Bonpland_idea5/Home.cy.js",
-    "cy:run:chrome":"cypress run -b chrome"
+    "cy:run:chrome": "cypress run -b chrome",
+    "merge-report":"mochawesome-merge  cypress/mochawesome-report/*.json> cypress/mochawesome-report/report.json",
+    "html_generate": ""
   },
   "author": "Bonpland",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^10.10.0"
+    "cypress": "^10.10.0",
+    "mocha": "^10.1.0",
+    "mochawesome-merge": "^4.2.1"
   },
   "devDependencies": {
     "cypress-mochawesome-reporter": "^3.2.3",
