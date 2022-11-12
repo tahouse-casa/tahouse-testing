@@ -19,7 +19,11 @@
 📌 [Automation en Cypress](https://maxibarbo.github.io/Testing_Bonpland/)
 <br />
 
-📌 [Datos de la Prueba](#datos)
+ <h2 align="left"><em>📋 Datos CP </em></h2>
+ 
+  - <h3>Sprint N°1 ⚙️
+   - Casos de Pruebas Ejecutados
+   - Detalle Casos de Pruebas Ejecutados
 <br />
 
 
