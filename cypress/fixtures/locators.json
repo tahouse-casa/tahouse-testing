@@ -1,0 +1,19 @@
+{
+    "mts2":":nth-child(1) > .sc-bjfHbI > .eTKTDl > :nth-child(1) > .sc-bBABsx",
+    "tamaño":":nth-child(1) > .sc-bjfHbI > .eTKTDl > :nth-child(2) > .sc-bBABsx",
+    "ambientes":":nth-child(1) > .sc-bjfHbI > .eTKTDl > :nth-child(3) > .sc-bBABsx",
+    "dormitorios":":nth-child(1) > .sc-bjfHbI > .eTKTDl > :nth-child(4) > .sc-bBABsx",
+    "baños":":nth-child(1) > .sc-bjfHbI > .eTKTDl > :nth-child(5) > .sc-bBABsx",
+    "pais":":nth-child(1) > .sc-bjfHbI > :nth-child(2) > .sc-fLcnxK",
+    "direccion":":nth-child(1) > .sc-bjfHbI > :nth-child(2) > .sc-dmctIk",
+    "fecha":":nth-child(1) > .sc-bjfHbI > .sc-idXgbr > .sc-kgTSHT > .sc-fLcnxK",
+    "precio":":nth-child(1) > .sc-bjfHbI > .sc-idXgbr > .sc-kgTSHT > .sc-dmctIk",
+    "button":":nth-child(1) > .sc-bjfHbI > .sc-idXgbr > .sc-dIfARi",
+    "imagen":":nth-child(1) > a > .sc-fEXmlR",
+    "footerItemHome1":".sc-dPWrhe",
+    "footerItemHome2":":nth-child(2) > .sc-AHaJN",
+    "footerItemHome3":":nth-child(3) > .sc-AHaJN",
+    "footerItemHome4":":nth-child(4) > .sc-AHaJN",
+    "footerItemHome5":":nth-child(5) > .sc-AHaJN",
+    "textFooterNosotros":".sc-hTBuwn"
+}
