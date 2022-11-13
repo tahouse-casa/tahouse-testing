@@ -2,7 +2,7 @@ import Home from '../../pages/home'
 
 const home = new Home
 
-describe('Testing 1er Sprint Idea 5 - Bonpland', () => {
+describe('Testing 1er Sprint | Idea 5 - Bonpland', () => {
 
     beforeEach(() => {
       cy.visit('http://localhost:3000/')
