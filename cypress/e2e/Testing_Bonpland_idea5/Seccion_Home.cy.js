@@ -34,7 +34,7 @@ describe('Testing 1er Sprint | Idea 5 - Bonpland', () => {
     
     })
 
-    it.only('H_002 - Titulo Inmuebles Destacados | Orden', () => {
+    it('H_002 - Titulo Inmuebles Destacados | Contenido', () => {
         // Prueba de texto descriptivo en titulo del card container 
       // Se Espera: que el titulo sea "Inmuebles Destacados"
       home.checkTitulo1('Inmuebles Destacados')
