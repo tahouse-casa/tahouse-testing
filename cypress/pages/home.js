@@ -153,6 +153,19 @@ class Home {
         })
     }
 
+    checkTitulo1(text){
+        cy.contains('Inmuebles destacados').then((e)=>{ 
+            let estado = e.text()
+            if(estado == text){
+              cy.log('El Titulo Contiene Inmuebles Destacados')
+              cy.get('.sc-ckEbSK > .sc-gGvHcT').should('have.text',`${estado}`)// Probamos que el titulo no es correcto
+            }else{
+              cy.log('El titulo contiene "Inmuebles destacados"')
+              cy.get('.sc-ckEbSK > .sc-gGvHcT').should('have.text','Inmueble Destacado')// Probamos que el titulo es correcto
+            }
+          })
+    }
+
     bucle(num){
         for (let i = 0; i < num ; i++) {
             cy.log("N° "+ i)

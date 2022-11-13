@@ -34,18 +34,11 @@ describe('Testing 1er Sprint | Idea 5 - Bonpland', () => {
     
     })
 
-    it('H_002 - Titulo Inmuebles Destacados | Orden', () => {
+    it.only('H_002 - Titulo Inmuebles Destacados | Orden', () => {
         // Prueba de texto descriptivo en titulo del card container 
-      cy.contains('Inmuebles destacados').then((e)=>{ // Se Espera: que el titulo sea "Inmuebles Destacados"
-        let estado = e.text()
-        if(estado == 'Inmuebles Destacados'){
-          cy.log('El Titulo Contiene Inmuebles Destacados')
-          cy.get('.sc-ckEbSK > .sc-gGvHcT').should('have.text',`${estado}`)// Probamos que el titulo no es correcto
-        }else{
-          cy.log('El titulo contiene "Inmuebles destacados"')
-          cy.get('.sc-ckEbSK > .sc-gGvHcT').should('have.text','Inmueble Destacado')// Probamos que el titulo es correcto
-        }
-      })
+      // Se Espera: que el titulo sea "Inmuebles Destacados"
+      home.checkTitulo1('Inmuebles Destacados')
+
     });
 
     it('H_003 - Inmuebles Destacados | Elementos', ()=>{ // Se Probaran los textos y elementos dentro de las Card 
