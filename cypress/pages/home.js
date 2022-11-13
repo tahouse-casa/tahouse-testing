@@ -49,12 +49,22 @@ class Home {
         cy.document().should('have.property','charset').and('eq','UTF-8')
     }
 
-    bucle(num){
-        for (let i = 0; i < num ; i++) {
-            cy.log("N° "+ i)
-             
-       }  
+    checkDataCardBtn(text){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.button).each(($el)=>{
+              cy.get(locator.button).should(text)
+            })
+        }) 
     }
+    
+    checkDataCardImg(text){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.imagen).each(($el)=>{
+              cy.get(locator.imagen).should(text)
+            })  
+        }) 
+    }
+
     checkDataCardPais(prop){
         cy.fixture('locators').then((locator)=>{
             cy.get(locator.pais).each(($el)=>{
@@ -65,13 +75,11 @@ class Home {
             })
         })
     }
+
     checkDataCardDir(prop){
         cy.fixture('locators').then((locator)=>{
-            cy.get(locator.direccion).each(($el)=>{
-                let data = $el.text()
-                if(data){
+            cy.get(locator.direccion).each(($el)=>{  
                     cy.get(locator.direccion).should(prop)
-                }
             })
         })
     }
@@ -117,8 +125,39 @@ class Home {
                   }
             })
         }) 
+        
+    }
+
+    checkTitulosGuia(text){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.titulosGuiaCompra).each(($el)=>{
+              cy.get(locator.titulosGuiaCompra).should(text)
+            })  
+        }) 
     }
     
+    checkTextSub(text){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.textGuiaCompra).each(($el)=>{
+              cy.get(locator.textGuiaCompra).should(text)
+            })  
+        }) 
+    }
 
+    chechitems2(text){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.img2).should(text)
+            cy.get(locator.logo).should(text)
+            cy.get(locator.textlogo).should(text)
+            cy.get(locator.btnProp).should(text)
+        })
+    }
+
+    bucle(num){
+        for (let i = 0; i < num ; i++) {
+            cy.log("N° "+ i)
+             
+       }  
+    }
 }
 export default Home

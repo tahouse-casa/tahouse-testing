@@ -2,7 +2,7 @@ import Home from '../../pages/home'
 
 const home = new Home
 
-describe('Testing del 1er Sprint Idea 5 - Bonpland', () => {
+describe('Testing 1er Sprint Idea 5 - Bonpland', () => {
 
     beforeEach(() => {
       cy.visit('http://localhost:3000/')
@@ -10,112 +10,91 @@ describe('Testing del 1er Sprint Idea 5 - Bonpland', () => {
     })
 
     it('Web HTML Propiedades', () => { // Validamos las propiedades del HTML
-
       cy.request('http://localhost:3000/')
         .should((response)=>{
-          expect(response.status).to.eq(200) // Validamos el estado de la conexion 
-          expect(response).to.have.property('headers') // Validamos respuesta del Header
-          expect(response.headers).to.have.property('content-type') // Validamos content-type
+          expect(response.status).to.eq(200) // Se Espera: que el estado de la conexion sea 200
+          expect(response).to.have.property('headers') // Se Espera: que exista el header 
+          expect(response.headers).to.have.property('content-type') // Se Espera: que exista el content-type 
           
         })
-
-      // Validoms tipo de documento web
-      home.checkProperty('Bonplad','http://localhost:3000/')  // validamos el titulo pag y propiedades url ( direccion url,charset )
+      // Validacion web y prop HTML
+      home.checkProperty('Bonpland','http://localhost:3000/')  // Se Espera: que el titulo de la pag sea Bonpland, url, charset sean correctos
                                                               
     });
 
     it('A_001 - Pruebas de Api', () => { // Se probaran status y Endpoints
-
-      home.bucle(9)
       // Prueba elementos Endpoints de Usuario en la tabla "Nombre de Usuario","Passwrord para Usuario","Nombre","Apellido","Apellido","Email","Ciudad","Pais","Telefono"//
       // Prueba elementos Endpoint en Inmuebles en la tabla "Id para inmuebles","Id para Img","Precio","Direccion","Ciudad","Pais","Tamñano Inmueble","Ambientes","Estado (REservado/Alquilado/Vendido),"Codigo de Zona","Fecha Publicacion","Tipo de Inmueble" 
       // Pruebas GET y POST
-
+      home.bucle(3)
     });   
 
     it('H_001 - Filtro de Busqueda en Banner', ()=>{ // Mostrar inmuebles segun Pais filtrado
-
-      home.search('mexico') // Prueba de Busquda en input "search" 
-
+      home.search('mexico') // Se espera: que el filtro busque por pais ingresado en "Search"
     
     })
 
-    it('H_002 - Menu Navbar', ()=>{ // Mostrar logo, texto descriptivo, input ubicacion, secciones de la web
-
-      // Prueba de Img logo segun diseño UI
-      // Prueba icono menu Nav
-      // Prueba Texto descriptivo "Encuentra el Hogar de tus Sueños"
-      // Prueba de Filtro realizando busqueda
-      // Texto descriptivo "En que ciudad desea Vivir"
-      // Link acceso formulario
-
-    })
-
-    it('H_003 - Titulo Inmuebles Destacados', () => {
-        // Prueba texto descriptivo en titulo contenedor Cards destacadas "Inmuebles Destacados"
-      cy.contains('Inmuebles destacados').then((e)=>{
+    it('H_002 - Titulo Inmuebles Destacados | Orden', () => {
+        // Prueba de texto descriptivo en titulo del card container 
+      cy.contains('Inmuebles destacados').then((e)=>{ // Se Espera: que el titulo sea "Inmuebles Destacados"
         let estado = e.text()
         if(estado == 'Inmuebles Destacados'){
           cy.log('El Titulo Contiene Inmuebles Destacados')
-          cy.get('.sc-ckEbSK > .sc-gGvHcT').should('have.text',`${estado}`)//Probamos que el titulo no es correcto
+          cy.get('.sc-ckEbSK > .sc-gGvHcT').should('have.text',`${estado}`)// Probamos que el titulo no es correcto
         }else{
           cy.log('El titulo contiene "Inmuebles destacados"')
-          cy.get('.sc-ckEbSK > .sc-gGvHcT').should('have.text','Inmueble Destacado')//Probamos que el titulo correcto
+          cy.get('.sc-ckEbSK > .sc-gGvHcT').should('have.text','Inmueble Destacado')// Probamos que el titulo es correcto
         }
       })
     });
 
-    it.only('H_004 - Inmuebles Destacados | Elementos', ()=>{ // Se Probaran los textos y elementos dentro de las Card 
-
-      // Pruebas de elementos indicando los criterios de aceptacion en las Card
-      home.CheckDataCard('m2','amb','dorm','baños')// Check de texto "mt2","ambientes","dormitorios" en las Card  
-      home.CheckDataCard2('usd') // Check de texto "Precio" en la Card
-      home.checkDataCardPais('be.visible') // Check de "Pais" en las Card
-      home.checkDataCardDir('exist')// Prueba de elemento "Direccion" dentro de la card
-      home.checkDataCardFecha('be.visible')
-
-      cy.fixture('locators').then((locator)=>{ 
-        cy.get(locator.button).should('exist') // Prueba de elemento "Button" dentro de la card
-        cy.get(locator.imagen).should('exist') // Prueba de elemento "Imagen" dentro de la card
-      })
+    it('H_003 - Inmuebles Destacados | Elementos', ()=>{ // Se Probaran los textos y elementos dentro de las Card 
       // El carrousel debe contener los 5 mejores inmuebles de mayor a menor 
+      // Pruebas de elementos indicando los criterios de aceptacion en las Card
+      home.CheckDataCard('m2','amb','dorm','baños')// Se Espera: que el elemento "mt2","ambientes","dormitorios" existan 
+      home.CheckDataCard2('usd') // Se Espera: que el elemento "Precio" exista
+      home.checkDataCardPais('be.visible') // Se Espera: que el elemento "Pais" exista
+      home.checkDataCardDir('be.visible')// Se Espera: que el elemento "Direccion" exista
+      home.checkDataCardFecha('be.visible')// Se Espera: que el elemento "Fecha" exista
+      home.checkDataCardImg('be.visible') // Se Espera: que el elemento "Imagen" exista
+      home.checkDataCardBtn('be.visible') // Se Espera: que el elemento "Button" exista
+
     })
     
-    it('H_005 - Seccion Todas las Propiedades', ()=>{ // Mostrar un listado de inmuebles en promocion
+    it('H_004 - Footer Informativo, H_005 Footer Informativo | Titulo Menu', ()=>{ // Mostrar footer en forma de acordeon con sus 4 menuces y logo
+      cy.fixture('locators').then((locator)=>{
+        cy.get(locator.footerItemHomeTit).should('be.visible').and('have.text','Bonplad') // Se Espera: que el titulo/logo exista
 
+      })
+
+      home.checkFooter1('Sobre nosotros')// Se Espera: que el subtitulo "Sobre Nosotros" y el despliegue del texto existan
+      home.checkFooter3('Paises') // Se Espera: que el subtitulo "Paises" y despliegue del texto existan 
+      home.checkFooter4('Categorias') // Se Espera: que el subtitulo "Categorias" y despliegue del texto existan
+      home.checkFooter2('Nuestra Trayectoria') // Se Espera: que el subtitulo "Nuestra Trayecoria" y despliegue del texto existan   
+
+    })
+
+    it('H_006 Seccion Guia en el Home', () => { // Mostrar una Guia al usuario para alquilar y/o comprar inmuebles
+      cy.contains('Guia de compra').click()// Se Espera: un button de nombre "Guia de Compra"
+      home.checkTitulosGuia('exist') // Se Espera: que los elementos titulos y Subtitulos existan en seccion "Guia de Compras"
+      home.checkTextSub('be.visible') // Se Espera: que el texto descriptivo debajo de los Subtitlos exista
+      
+    });
+
+    it('H_007 Seccion Todas las Propiedades | Elementos en Home ', ()=>{ // Mostrar un listado de inmuebles en promocion
+      home.chechitems2('be.visible') // Se Espera: que los elementos "Imagen de fondo","logo","texto descriptivo" y "button" existan
+      
+    })
+
+    it('H_008 Seccion Todas las Propiedades', ()=>{ // Mostrar un listado de inmuebles en promocion
+  
       //Prueba imagen de fondo segun diseño UI
       //Mostrar Titulo de seccion "Todas las Propiedades"
+
       //Mostrar un Filtro de Busqueda en Banner
       //Mostrar elementos de Paginacion
       //Mostrar Footer Informativo de la Inmobiliaria
     })
-    
-    it('H_005 - Footer Informativo', ()=>{ // Mostrar footer en forma de acordeon con sus 4 menuces, logo y posicion de elementos en el Dom segun diseño UI
-
-      cy.fixture('locators').then((locator)=>{
-        cy.get(locator.footerItemHomeTit).should('be.visible').and('have.text','Bonplad') //Prueba de Contenido en el Titulo del Footer
-      })
-
-      home.checkFooter1('Sobre nosotros')// Prueba de Contenido y despliegue "Sobre Nosotros"
-      home.checkFooter3('Paises') // Prueba de Contenido y despliegue de "Paises"
-      home.checkFooter4('Categorias') //Prueba de Contenido y despliegue de "Categorias"
-      home.checkFooter2('Nuestra Trayectoria') // Prueba de Contenido y despliegue "Nuestra Trayectoria"    
-
-    })
-
-    it('H_006 - Check de todos los elementos diseñados en seccion Home', ()=>{ //Checkeamos todos lo elementos del dom existentes segun diseño UI
-
-      // Prueba de todos los elementos del Dom
-    })  
- 
-    it('H_007 - Seccion Guia en el Home', () => { //Mostrar una Guia al usuario para alquilar y/o comprar inmuebles
-
-      // Prueba de Imagen y Texto correspondiente segun diseño UI
-      // Prueba de Button "Guia para Alquilar y Guia para Vender"
-      // Al realizar click se muestra informacion sobre la venta y/o alquiler del Inmueble
-      // Probamos seleccion Alquilar aplicando Filtros, al ecribir una ciudad se agruparan por dicha eleccion 
-      // Probamos seleccion Vender aplicando Filtros
-    });
 
     it('Formulario de Busqueda para Inmuebles', () => { // Mostrar todos los inmuebles que coincidan con el criterio de busqueda realizado por el Usuario
       
@@ -126,9 +105,24 @@ describe('Testing del 1er Sprint Idea 5 - Bonpland', () => {
       // Filtramos por cantidad de Habitaciones y validando que sean numeros enteros
       // Filtramos por cantidad de Baños y validando que sean numeros enteros
       // Filtramos por Mts2 Min/Max y validando que se sean 
+
     });
 
-     
+    it('Check de todos los elementos diseñados en seccion Home', ()=>{ //Checkeamos todos lo elementos del dom existentes segun diseño UI
+      // Prueba de todos los elementos del Dom
+
+    }) 
+    
+    it('Menu Navbar', ()=>{ // Mostrar logo, texto descriptivo, input ubicacion, secciones de la web
+
+      // Prueba de Img logo segun diseño UI
+      // Prueba icono menu Nav
+      // Prueba Texto descriptivo "Encuentra el Hogar de tus Sueños"
+      // Prueba de Filtro realizando busqueda
+      // Texto descriptivo "En que ciudad desea Vivir"
+      // Link acceso formulario
+
+    })
 })
 
 describe('Testing Exploratorio seccion Home', () => {

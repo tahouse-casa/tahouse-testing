@@ -12,7 +12,7 @@
     "fecha":".sc-idXgbr > .sc-kgTSHT > .sc-fLcnxK",
     "precio":".sc-idXgbr > .sc-kgTSHT > .sc-dmctIk",
     "button":":nth-child(1) > .sc-bjfHbI > .sc-idXgbr > .sc-dIfARi",
-    "imagen":":nth-child(1) > a > .sc-fEXmlR",
+    "imagen":"a > .sc-fEXmlR",
     "footerItemHomeTit":".sc-dPWrhe",
     "footerItemHome1":":nth-child(2) > .sc-AHaJN",
     "footerItemHome2":":nth-child(3) > .sc-AHaJN",
@@ -23,5 +23,11 @@
     "textFooter3":":nth-child(4) > .sc-khsqcC > .sc-hTBuwn",
     "textFooter4":":nth-child(5) > .sc-khsqcC > .sc-hTBuwn",
     "textFooter1":":nth-child(2) > .sc-khsqcC > .sc-hTBuwn",
-    "detail1":".sc-bBABsx"
+    "detail1":".sc-bBABsx",
+    "titulosGuiaCompra":".sc-jIRcFI",
+    "textGuiaCompra":".sc-hhOBVt",
+    "img2":".cgVnsX",
+    "logo":".sc-lbVpMG",
+    "textlogo":".sc-lbVpMG",
+    "btnProp":".sc-eJDSGI"
 }
