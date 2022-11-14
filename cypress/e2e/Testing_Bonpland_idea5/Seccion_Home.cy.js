@@ -79,12 +79,12 @@ describe('Testing 1er Sprint | Idea 5 - Bonpland', () => {
       
     })
 
-    it.only('H_008 Seccion Todas las Propiedades | Filter', () => {
+    it('H_008 Seccion Todas las Propiedades | Filter', () => {
       home.checkFilter1('filter') // Se Espera: que exista un filtro de Busqueda en seccion "Todas las Propiedades"
 
     });
 
-    it.only('H_009 Seccion Todas las Propiedades | Paginacion', () => {
+    it('H_009 Seccion Todas las Propiedades | Paginacion', () => {
       home.checkPaginacion1('paginacion') // Se Espera: que exista un button de Busqueda en seccion "Todas las Propiedades"
 
     });
