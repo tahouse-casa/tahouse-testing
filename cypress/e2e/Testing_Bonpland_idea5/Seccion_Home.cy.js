@@ -9,20 +9,23 @@ describe('Testing 1er Sprint | Idea 5 - Bonpland', () => {
 
     })
 
-    it('W_001 - Html Props', () => { // Validamos las propiedades del HTML
+    it('W_001 - Html | XHR request', () => { // Validamos las propiedades del HTML
       cy.request('http://localhost:3000/')
         .should((response)=>{
           expect(response.status).to.eq(200) // Se Espera: que el estado de la conexion sea 200
           expect(response).to.have.property('headers') // Se Espera: que exista el header 
           expect(response.headers).to.have.property('content-type') // Se Espera: que exista el content-type 
+          expect(response).to.have.property('duration')
         })
-                                                        
+
+        home.checkProperty('http://localhost:3000/')  // Se Espera: que la url y charset "UTF-8" sean correctos 
     });
 
-    it('W_002 - Html & Web Props', () => { // Validacion web y prop HTML
-      home.checkProperty('Bonpland','http://localhost:3000/')  // Se Espera: que el titulo de la pag sea Bonpland, url, charset sean correctos
+    it('W_002 - Html | Titulo', () => { // Validacion web y prop HTML
+      home.checkProperty('Bonpland')  // Se Espera: que el titulo de la pag sea Bonpland
 
     });
+
 
     it('A_001 - Pruebas de Api', () => { // Se probaran status y Endpoints
       // Prueba elementos Endpoints de Usuario en la tabla "Nombre de Usuario","Passwrord para Usuario","Nombre","Apellido","Apellido","Email","Ciudad","Pais","Telefono"//
@@ -32,7 +35,7 @@ describe('Testing 1er Sprint | Idea 5 - Bonpland', () => {
     });   
 
     it('H_001 - Filtro de Busqueda en Banner', ()=>{ // Mostrar inmuebles segun Pais filtrado
-      home.search('mexico') // Se espera: que el filtro busque por pais ingresado en "Search"
+      home.search('uruguay') // Se espera: que el filtro busque por pais ingresado en "Search"
     
     })
 
@@ -63,10 +66,10 @@ describe('Testing 1er Sprint | Idea 5 - Bonpland', () => {
 
       })
 
-      home.checkFooter1('Sobre nosotros')// Se Espera: que el subtitulo "Sobre Nosotros" y el despliegue del texto existan
-      home.checkFooter3('Paises') // Se Espera: que el subtitulo "Paises" y despliegue del texto existan 
-      home.checkFooter4('Categorias') // Se Espera: que el subtitulo "Categorias" y despliegue del texto existan
-      home.checkFooter2('Nuestra Trayectoria') // Se Espera: que el subtitulo "Nuestra Trayecoria" y despliegue del texto existan   
+      home.checkFooter1('Sobre nosotros',"be.visible")// Se Espera: que el subtitulo "Sobre Nosotros" y el despliegue del texto existan
+      home.checkFooter3('Paises','be.visible') // Se Espera: que el subtitulo "Paises" y despliegue del texto existan 
+      home.checkFooter4('Categorias','be.visible') // Se Espera: que el subtitulo "Categorias" y despliegue del texto existan
+      home.checkFooter2('Nuestra Trayectoria','be.visible') // Se Espera: que el subtitulo "Nuestra Trayecoria" y despliegue del texto existan   
 
     })
 

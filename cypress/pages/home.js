@@ -1,37 +1,37 @@
 
 class Home {
 
-    checkFooter1(text){
+    checkFooter1(text,text2){
         cy.fixture('locators').then((locator)=>{
-            cy.get(locator.footerItemHome1).should('be.visible').and('have.text',text).then(()=>{
+            cy.get(locator.footerItemHome1).should(text2).and('have.text',text).then(()=>{
                 cy.get(locator.footerItemHome1).click()
-                cy.get(locator.textFooter1).should('be.visible')
+                cy.get(locator.textFooter1).should(text2)
                 
             })
         })
     }
-    checkFooter2(text){
+    checkFooter2(text,text2){
         cy.fixture('locators').then((locator)=>{
-            cy.get(locator.footerItemHome2).should('be.visible').and('have.text',text).then(()=>{
+            cy.get(locator.footerItemHome2).should(text2).and('have.text',text).then(()=>{
                 cy.get(locator.footerItemHome2).click()
-                cy.get(locator.textFooter2).should('be.visible')
+                cy.get(locator.textFooter2).should(text2)
             })
         })
     }
-    checkFooter3(text){
+    checkFooter3(text,text2){
         cy.fixture('locators').then((locator)=>{
-            cy.get(locator.footerItemHome3).should('be.visible').and('have.text',text).then(()=>{
+            cy.get(locator.footerItemHome3).should(text2).and('have.text',text).then(()=>{
                 cy.get(locator.footerItemHome3).click()
-                cy.get(locator.textFooter3).should('be.visible')
+                cy.get(locator.textFooter3).should(text2)
             })
         })
     }
 
-    checkFooter4(text){
+    checkFooter4(text,text2){
         cy.fixture('locators').then((locator)=>{
-            cy.get(locator.footerItemHome4).should('be.visible').and('have.text',text).then(()=>{
+            cy.get(locator.footerItemHome4).should(text2).and('have.text',text).then(()=>{
                 cy.get(locator.footerItemHome4).click()
-                cy.get(locator.textFooter4).should('be.visible')
+                cy.get(locator.textFooter4).should(text2)
             })
         })
     }
@@ -43,10 +43,13 @@ class Home {
         })
     }
 
-    checkProperty(text,url){
-        cy.title().should('eq',text)
+    checkProperty(url){
         cy.url().should('eq',url)
         cy.document().should('have.property','charset').and('eq','UTF-8')
+    }
+
+    chechProperty2(text){
+        cy.title().should('eq',text)
     }
 
     checkDataCardBtn(text){
@@ -180,7 +183,7 @@ class Home {
     checkFilter1(text){
         cy.fixture('locators').then((locator)=>{
             cy.get(locator.btnProp).click()
-            cy.log('El filtro de Busqueda debe ir arriba del Titulo')
+            cy.log('El filtro de Busqueda debe ir arriba del Titulo y abajo del menu de Navegacion')
             cy.get(locator.titulo2).should('contain',text)
         })
     }
@@ -188,7 +191,7 @@ class Home {
     checkPaginacion1(text){
         cy.fixture('locators').then((locator)=>{
             cy.get(locator.btnProp).click()
-            cy.log('El Button de Paginacion debe ir arriba del Titulo')
+            cy.log('El Button de Paginacion debe ir abajo de las Card y Arriba del Menu Acordeon')
             cy.get(locator.titulo2).should('contain',text)
         })
     }
