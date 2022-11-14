@@ -13,7 +13,7 @@
 📌 [Proyecto de IdForIdeas](https://drive.google.com/file/d/1X7tHO7CpUHDNBqgOVyzlZqUOdyPzViTh/view)
 <br /> 
 
-📌 [Plan de Pruebas ](./Testing_Bonpland/docs/Plan%20de%20Pruebas%20Bonpland%20-%20Idea%205.pdf)
+📌 [Plan de Pruebas ](https://docs.google.com/document/d/1dUFPsR8bqabMhBHuJoDZJEjY0QTFLXMIijpkcEeTWhU/edit)
 <br />
 
 📌 [Pruebas en Cypress](https://maxibarbo.github.io/Testing_Bonpland/)
@@ -23,7 +23,7 @@
  
   - <h3><em>Sprint N°1 </em>⚙️</h3>
    - [Casos de Pruebas Ejecutados](https://docs.google.com/document/d/1Xx8sjieOoW9J3KxGvVvh4f9f_67qTRfVkMO4sOdOIc0/edit)
-   - [Detalle Casos de Pruebas Ejecutados]()
+   - [Detalle Casos de Pruebas Ejecutados](https://docs.google.com/spreadsheets/d/1AFWnSNzIHXbe13HhTuA2pnjD-wAlpQRj3usGxob2w0g/edit#gid=0)
 <br />
 
 
