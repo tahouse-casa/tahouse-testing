@@ -29,8 +29,8 @@
 <br />
 <br />
 
-<h1 align="left"><em>✒️ Descripcion del Proyecto</em></h1>
-<h3 align="left">Bonpland es una app que permite a los usuarios buscar inmuebles para alquilar, comprar o vender </h3>
+<h2 align="left"><em>✒️ Descripcion del Proyecto</em></h2>
+<h4 align="left">Bonpland es una app que permite a los usuarios buscar inmuebles para alquilar, comprar o vender </h4>
 
 
 
