@@ -23,9 +23,9 @@
 
 - ## <em>Sprint N°1 </em>⚙️
 
-   - [Reporte de Casos de Pruebas Ejecutados - <img  src="https://cdn-icons-png.flaticon.com/512/300/300221.png" style="height:10px; width: 10px;"> Docs](https://docs.google.com/document/d/1Xx8sjieOoW9J3KxGvVvh4f9f_67qTRfVkMO4sOdOIc0/edit)
+   - [Resumen de Casos de Pruebas Ejecutados - <img  src="https://cdn-icons-png.flaticon.com/512/300/300221.png" style="height:10px; width: 10px;"> Docs](https://docs.google.com/document/d/1Xx8sjieOoW9J3KxGvVvh4f9f_67qTRfVkMO4sOdOIc0/edit)
    - [Detalle Casos de Pruebas Ejecutados - <img  src="https://cdn-icons-png.flaticon.com/512/300/300221.png" style="height:10px; width: 10px;"> sheet](https://docs.google.com/spreadsheets/d/1AFWnSNzIHXbe13HhTuA2pnjD-wAlpQRj3usGxob2w0g/edit#gid=0)
-   - [Casos de Prueba Automation - <img  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fres.cloudinary.com%2Fpracticaldev%2Fimage%2Ffetch%2Fs--e86iTjK3--%2Fc_imagga_scale%2Cf_auto%2Cfl_progressive%2Ch_500%2Cq_auto%2Cw_1000%2Fhttps%3A%2F%2Fres.cloudinary.com%2Fpracticaldev%2Fimage%2Ffetch%2Fs--iIo0OPoC--%2Fc_imagga_scale%252Cf_auto%252Cfl_progressive%252Ch_420%252Cq_auto%252Cw_1000%2Fhttps%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fo6x03ekm3ijiopc2r62p.png&f=1&nofb=1&ipt=5184aab21840df5646c342e7162ddbe444b0098ecd65bf49ab7766d9e8edeac7&ipo=images" style="height:12px; width: 30px;"> Mochawesome ](https://maxibarbo.github.io/Testing_Bonpland/)
+   - [Detalle Casos de Pruebas Ejecutados en Automation - <img  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fres.cloudinary.com%2Fpracticaldev%2Fimage%2Ffetch%2Fs--e86iTjK3--%2Fc_imagga_scale%2Cf_auto%2Cfl_progressive%2Ch_500%2Cq_auto%2Cw_1000%2Fhttps%3A%2F%2Fres.cloudinary.com%2Fpracticaldev%2Fimage%2Ffetch%2Fs--iIo0OPoC--%2Fc_imagga_scale%252Cf_auto%252Cfl_progressive%252Ch_420%252Cq_auto%252Cw_1000%2Fhttps%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fo6x03ekm3ijiopc2r62p.png&f=1&nofb=1&ipt=5184aab21840df5646c342e7162ddbe444b0098ecd65bf49ab7766d9e8edeac7&ipo=images" style="height:12px; width: 30px;"> Mochawesome ](https://maxibarbo.github.io/Testing_Bonpland/)
 <br />
 <br />
 
