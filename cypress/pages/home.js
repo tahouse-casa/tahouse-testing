@@ -193,6 +193,19 @@ class Home {
         })
     }
 
+    checkCardsLimit(num){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.btnProp).click()
+            cy.get(locator.allimgCards1).should('have.length',num)
+        })
+    }
+
+    checkCardsLimit2(num){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.imagen).should('have.length',num)
+        })
+    }
+
     bucle(num){
         for (let i = 0; i < num ; i++) {
             cy.log("N° "+ i)

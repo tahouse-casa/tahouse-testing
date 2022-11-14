@@ -9,17 +9,19 @@ describe('Testing 1er Sprint | Idea 5 - Bonpland', () => {
 
     })
 
-    it('Web HTML Propiedades', () => { // Validamos las propiedades del HTML
+    it('W_001 - Html Props', () => { // Validamos las propiedades del HTML
       cy.request('http://localhost:3000/')
         .should((response)=>{
           expect(response.status).to.eq(200) // Se Espera: que el estado de la conexion sea 200
           expect(response).to.have.property('headers') // Se Espera: que exista el header 
           expect(response.headers).to.have.property('content-type') // Se Espera: que exista el content-type 
-          
         })
-      // Validacion web y prop HTML
+                                                        
+    });
+
+    it('W_002 - Html & Web Props', () => { // Validacion web y prop HTML
       home.checkProperty('Bonpland','http://localhost:3000/')  // Se Espera: que el titulo de la pag sea Bonpland, url, charset sean correctos
-                                                              
+
     });
 
     it('A_001 - Pruebas de Api', () => { // Se probaran status y Endpoints
@@ -51,6 +53,7 @@ describe('Testing 1er Sprint | Idea 5 - Bonpland', () => {
       home.checkDataCardFecha('be.visible')// Se Espera: que el elemento "Fecha" exista
       home.checkDataCardImg('be.visible') // Se Espera: que el elemento "Imagen" exista
       home.checkDataCardBtn('be.visible') // Se Espera: que el elemento "Button" exista
+      home.checkCardsLimit2(5) // Se Espera: que la cantidad de Cards a mostrar sean 5
 
     })
     
@@ -89,10 +92,13 @@ describe('Testing 1er Sprint | Idea 5 - Bonpland', () => {
 
     });
 
-    it('H_010 Seccion Todas las Propiedades | Contenido', ()=>{ // Mostrar un listado de inmuebles en promocion
+    it('H_010 Seccion Todas las Propiedades | Contenido', () => {
+      home.checkCardsLimit(4) // Se Espera: que el limite de Cards visibles sean 4
+    });
+
+    it('H_011 Seccion Todas las Propiedades | Contenido', ()=>{ // Mostrar un listado de inmuebles en promocion
       home.checkCards1('be.visible') // Se Espera: el elemento "Imagen" exista en las Card
       
-
       //Prueba imagen de fondo segun diseño UI
       //Mostrar Titulo de seccion "Todas las Propiedades"
       //Mostrar un Filtro de Busqueda en Banner
