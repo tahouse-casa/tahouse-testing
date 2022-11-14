@@ -166,6 +166,33 @@ class Home {
           })
     }
 
+    checkCards1(text){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.btnProp).click().then(()=>{
+                cy.get(locator.allimgCards1).each(($el)=>{
+                   cy.get(locator.allimgCards1).should(text)
+                })
+            })
+            
+        })
+    }
+
+    checkFilter1(text){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.btnProp).click()
+            cy.log('El filtro de Busqueda debe ir arriba del Titulo')
+            cy.get(locator.titulo2).should('contain',text)
+        })
+    }
+
+    checkPaginacion1(text){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.btnProp).click()
+            cy.log('El Button de Paginacion debe ir arriba del Titulo')
+            cy.get(locator.titulo2).should('contain',text)
+        })
+    }
+
     bucle(num){
         for (let i = 0; i < num ; i++) {
             cy.log("N° "+ i)

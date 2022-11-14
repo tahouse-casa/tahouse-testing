@@ -29,5 +29,7 @@
     "img2":".cgVnsX",
     "logo":".sc-lbVpMG",
     "textlogo":".sc-lbVpMG",
-    "btnProp":".sc-eJDSGI"
+    "btnProp":".sc-eJDSGI",
+    "allimgCards1": "a > .sc-fEXmlR",
+    "titulo2":".sc-bTTELM"
 }

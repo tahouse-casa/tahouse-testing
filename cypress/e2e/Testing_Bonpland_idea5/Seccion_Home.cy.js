@@ -54,7 +54,7 @@ describe('Testing 1er Sprint | Idea 5 - Bonpland', () => {
 
     })
     
-    it('H_004 - Footer Informativo, H_005 Footer Informativo | Titulo Menu', ()=>{ // Mostrar footer en forma de acordeon con sus 4 menuces y logo
+    it('H_004 - Footer Informativo | Contenido, H_005 Footer Informativo | Titulo Menu', ()=>{ // Mostrar footer en forma de acordeon con sus 4 menuces y logo
       cy.fixture('locators').then((locator)=>{
         cy.get(locator.footerItemHomeTit).should('be.visible').and('have.text','Bonplad') // Se Espera: que el titulo/logo exista
 
@@ -79,11 +79,22 @@ describe('Testing 1er Sprint | Idea 5 - Bonpland', () => {
       
     })
 
-    it('H_008 Seccion Todas las Propiedades', ()=>{ // Mostrar un listado de inmuebles en promocion
-  
+    it.only('H_008 Seccion Todas las Propiedades | Filter', () => {
+      home.checkFilter1('filter') // Se Espera: que exista un filtro de Busqueda en seccion "Todas las Propiedades"
+
+    });
+
+    it.only('H_009 Seccion Todas las Propiedades | Paginacion', () => {
+      home.checkPaginacion1('paginacion') // Se Espera: que exista un button de Busqueda en seccion "Todas las Propiedades"
+
+    });
+
+    it('H_010 Seccion Todas las Propiedades | Contenido', ()=>{ // Mostrar un listado de inmuebles en promocion
+      home.checkCards1('be.visible') // Se Espera: el elemento "Imagen" exista en las Card
+      
+
       //Prueba imagen de fondo segun diseño UI
       //Mostrar Titulo de seccion "Todas las Propiedades"
-
       //Mostrar un Filtro de Busqueda en Banner
       //Mostrar elementos de Paginacion
       //Mostrar Footer Informativo de la Inmobiliaria
