@@ -2,7 +2,7 @@ import Home from '../../pages/home'
 
 const home = new Home
 
-describe('Testing 1er Sprint | Idea 5 - Bonpland', () => {
+describe('Testing 1er Sprint | Idea 5 | Bonpland', () => {
 
     beforeEach(() => {
       cy.visit('http://localhost:3000/')
@@ -28,8 +28,8 @@ describe('Testing 1er Sprint | Idea 5 - Bonpland', () => {
 
 
     it('A_001 - Pruebas de Api', () => { // Se probaran status y Endpoints
-      // Prueba elementos Endpoints de Usuario en la tabla "Nombre de Usuario","Passwrord para Usuario","Nombre","Apellido","Apellido","Email","Ciudad","Pais","Telefono"//
-      // Prueba elementos Endpoint en Inmuebles en la tabla "Id para inmuebles","Id para Img","Precio","Direccion","Ciudad","Pais","Tamñano Inmueble","Ambientes","Estado (REservado/Alquilado/Vendido),"Codigo de Zona","Fecha Publicacion","Tipo de Inmueble" 
+      // Prueba de los Endpoints de Usuario en la tabla "Nombre de Usuario","Passwrord para Usuario","Nombre","Apellido","Apellido","Email","Ciudad","Pais","Telefono"//
+      // Prueba de los Endpoints en Inmuebles en la tabla "Id para inmuebles","Id para Img","Precio","Direccion","Ciudad","Pais","Tamñano Inmueble","Ambientes","Estado (REservado/Alquilado/Vendido),"Codigo de Zona","Fecha Publicacion","Tipo de Inmueble" 
       // Pruebas GET y POST
       home.bucle(3)
     });   
@@ -39,15 +39,14 @@ describe('Testing 1er Sprint | Idea 5 - Bonpland', () => {
     
     })
 
-    it('H_002 - Titulo Inmuebles Destacados | Contenido', () => {
-        // Prueba de texto descriptivo en titulo del card container 
-      // Se Espera: que el titulo sea "Inmuebles Destacados"
-      home.checkTitulo1('Inmuebles Destacados')
-
+    it('H_002 - Inmuebles Destacados | Contenido', () => { // Se prueba titulo y Orden de menor a mayor Precio
+      // Prueba de texto descriptivo en titulo del card container 
+      home.checkTitulo1('Inmuebles Destacados') // Se Espera: que el titulo sea "Inmuebles Destacados"
+      // El carrousel debe contener los 5 mejores inmuebles de mayor a menor 
     });
 
     it('H_003 - Inmuebles Destacados | Elementos en Cards', ()=>{ // Se Probaran los textos y elementos dentro de las Card 
-      // El carrousel debe contener los 5 mejores inmuebles de mayor a menor 
+
       // Pruebas de elementos indicando los criterios de aceptacion en las Card
       home.CheckDataCard('m2','amb','dorm','baños')// Se Espera: que el elemento "mt2","ambientes","dormitorios" existan 
       home.CheckDataCard2('usd') // Se Espera: que el elemento "Precio" exista
@@ -60,7 +59,7 @@ describe('Testing 1er Sprint | Idea 5 - Bonpland', () => {
 
     })
 
-    it.only('H_004 - Footer Informativo | Contenido', ()=>{ // Mostrar footer en forma de acordeon con sus 4 menuces y logo
+    it('H_004 - Footer Informativo | Contenido', ()=>{ // Mostrar footer en forma de acordeon con sus 4 menuces y logo
       home.checkFooter1('Sobre nosotros',"be.visible")// Se Espera: que el subtitulo "Sobre Nosotros" y el despliegue del texto existan
       home.checkFooter3('Paises','be.visible') // Se Espera: que el subtitulo "Paises" y despliegue del texto existan 
       home.checkFooter4('Categorias','be.visible') // Se Espera: que el subtitulo "Categorias" y despliegue del texto existan
@@ -68,9 +67,9 @@ describe('Testing 1er Sprint | Idea 5 - Bonpland', () => {
   
     })
 
-    it.only('H_005 Footer Informativo | Titulo', () => {
+    it('H_005 Footer Informativo | Titulo Menu', () => {
       cy.fixture('locators').then((locator)=>{
-        cy.get(locator.footerItemHomeTit).should('be.visible').and('have.text','Bonpland') // Se Espera: que el titulo/logo exista
+        cy.get(locator.footerItemHomeTit).should('be.visible').and('have.text','Bonpland') // Se Espera: que el elemento titulo/logo sea el correcto y exista
 
       }) 
 
@@ -88,7 +87,7 @@ describe('Testing 1er Sprint | Idea 5 - Bonpland', () => {
       
     })
 
-    it('H_008 Seccion Todas las Propiedades | Filter', () => {
+    it('H_008 Seccion Todas las Propiedades | Filtro de Busqueda', () => {
       home.checkFilter1('filter') // Se Espera: que exista un filtro de Busqueda en seccion "Todas las Propiedades"
 
     });
@@ -112,7 +111,7 @@ describe('Testing 1er Sprint | Idea 5 - Bonpland', () => {
       //Mostrar Footer Informativo de la Inmobiliaria
     })
 
-    it('Formulario de Busqueda para Inmuebles', () => { // Mostrar todos los inmuebles que coincidan con el criterio de busqueda realizado por el Usuario
+    it.only('Formulario de Busqueda para Inmuebles', () => { // Mostrar todos los inmuebles que coincidan con el criterio de busqueda realizado por el Usuario
       
       // Prueba Button con filtro desplegable motrando la siguiente lista "Ciudad", "Ambientes", "Cantidad de Baños", "Cantidad de Habitaciones","Mts2 max y min"
       // Prueba Button con el nombre del Mapa mostrando la Ubicacion/Direccion del Inmueble
