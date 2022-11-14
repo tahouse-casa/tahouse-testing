@@ -13,7 +13,7 @@
 📌 [Proyecto de IdForIdeas](https://drive.google.com/file/d/1X7tHO7CpUHDNBqgOVyzlZqUOdyPzViTh/view)
 <br /> 
 
-📌 [Plan de Pruebas ](../Testing_Bonpland/docs/Plan%20de%20Pruebas%20Bonpland%20-%20Idea%205.pdf)
+📌 [Plan de Pruebas ](./Testing_Bonpland/docs/Plan%20de%20Pruebas%20Bonpland%20-%20Idea%205.pdf)
 <br />
 
 📌 [Pruebas en Cypress](https://maxibarbo.github.io/Testing_Bonpland/)
