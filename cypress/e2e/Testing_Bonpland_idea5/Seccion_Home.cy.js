@@ -46,7 +46,7 @@ describe('Testing 1er Sprint | Idea 5 - Bonpland', () => {
 
     });
 
-    it('H_003 - Inmuebles Destacados | Elementos', ()=>{ // Se Probaran los textos y elementos dentro de las Card 
+    it('H_003 - Inmuebles Destacados | Elementos en Cards', ()=>{ // Se Probaran los textos y elementos dentro de las Card 
       // El carrousel debe contener los 5 mejores inmuebles de mayor a menor 
       // Pruebas de elementos indicando los criterios de aceptacion en las Card
       home.CheckDataCard('m2','amb','dorm','baños')// Se Espera: que el elemento "mt2","ambientes","dormitorios" existan 
@@ -59,19 +59,22 @@ describe('Testing 1er Sprint | Idea 5 - Bonpland', () => {
       home.checkCardsLimit2(5) // Se Espera: que la cantidad de Cards a mostrar sean 5
 
     })
-    
-    it('H_004 - Footer Informativo | Contenido, H_005 Footer Informativo | Titulo Menu', ()=>{ // Mostrar footer en forma de acordeon con sus 4 menuces y logo
-      cy.fixture('locators').then((locator)=>{
-        cy.get(locator.footerItemHomeTit).should('be.visible').and('have.text','Bonplad') // Se Espera: que el titulo/logo exista
 
-      })
-
+    it.only('H_004 - Footer Informativo | Contenido', ()=>{ // Mostrar footer en forma de acordeon con sus 4 menuces y logo
       home.checkFooter1('Sobre nosotros',"be.visible")// Se Espera: que el subtitulo "Sobre Nosotros" y el despliegue del texto existan
       home.checkFooter3('Paises','be.visible') // Se Espera: que el subtitulo "Paises" y despliegue del texto existan 
       home.checkFooter4('Categorias','be.visible') // Se Espera: que el subtitulo "Categorias" y despliegue del texto existan
       home.checkFooter2('Nuestra Trayectoria','be.visible') // Se Espera: que el subtitulo "Nuestra Trayecoria" y despliegue del texto existan   
-
+  
     })
+
+    it.only('H_005 Footer Informativo | Titulo', () => {
+      cy.fixture('locators').then((locator)=>{
+        cy.get(locator.footerItemHomeTit).should('be.visible').and('have.text','Bonpland') // Se Espera: que el titulo/logo exista
+
+      }) 
+
+    });
 
     it('H_006 Seccion Guia en el Home', () => { // Mostrar una Guia al usuario para alquilar y/o comprar inmuebles
       cy.contains('Guia de compra').click()// Se Espera: un button de nombre "Guia de Compra"
