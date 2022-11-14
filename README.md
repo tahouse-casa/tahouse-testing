@@ -22,7 +22,7 @@
  <h2 align="left"><em>📋 Datos CP </em></h2>
  
   - <h3><em>Sprint N°1 </em>⚙️</h3>
-   - [Casos de Pruebas Ejecutados]()
+   - [Casos de Pruebas Ejecutados](https://docs.google.com/document/d/1Xx8sjieOoW9J3KxGvVvh4f9f_67qTRfVkMO4sOdOIc0/edit)
    - [Detalle Casos de Pruebas Ejecutados]()
 <br />
 
