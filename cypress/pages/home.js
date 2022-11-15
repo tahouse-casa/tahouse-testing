@@ -52,7 +52,7 @@ class Home {
         cy.document().should('have.property','charset').and('eq','UTF-8')
     }
 
-    chechProperty2(text){
+    checkProperty2(text){
         cy.title().should('eq',text)
     }
 

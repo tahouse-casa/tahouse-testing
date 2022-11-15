@@ -22,10 +22,9 @@ describe('Testing 1er Sprint | Idea 5 | Bonpland', () => {
     });
 
     it('W_002 - Html | Titulo', () => { // Validacion web y prop HTML
-      home.checkProperty('Bonpland')  // Se Espera: que el titulo de la pag sea Bonpland
+      home.checkProperty2('Bonpland')  // Se Espera: que el titulo de la pag sea Bonpland
 
     });
-
 
     it('A_001 - Pruebas de Api', () => { // Se probaran status y Endpoints
       // Prueba de los Endpoints de Usuario en la tabla "Nombre de Usuario","Passwrord para Usuario","Nombre","Apellido","Apellido","Email","Ciudad","Pais","Telefono"//
