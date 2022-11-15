@@ -26,7 +26,7 @@
  - [Resumen de Casos de Pruebas Ejecutados - Google 📘Docs](https://docs.google.com/document/d/1Xx8sjieOoW9J3KxGvVvh4f9f_67qTRfVkMO4sOdOIc0/edit)
  - [Detalle Casos de Pruebas Ejecutados - Google 📗sheet](https://docs.google.com/spreadsheets/d/1AFWnSNzIHXbe13HhTuA2pnjD-wAlpQRj3usGxob2w0g/edit#gid=0)
  - [Reporte de Bugs - Google 📘Docs](https://docs.google.com/document/d/1ZPlk6z2-uWW_8OKjQq3M5jGCeLHwVqpxGv6tzIipkL8/edit)
- - [Detalle Casos de Pruebas Ejecutados en Automation - Cy | Mochawesome ](https://maxibarbo.github.io/Testing_Bonpland/)
+ - [Detalle Casos de Pruebas Ejecutados en Automation - Cypress.io | Mochawesome ](https://maxibarbo.github.io/Testing_Bonpland/)
 <br />
 <br />
 
