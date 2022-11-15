@@ -213,6 +213,14 @@ class Home {
         })
     }
 
+    checkBtnFilter1(text){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.btnFilter).click().then(()=>{
+                cy.get(locator.btnFilter).should('contain',text)
+            })
+        })
+    }
+
     bucle(num){
         for (let i = 0; i < num ; i++) {
             cy.log("N° "+ i)

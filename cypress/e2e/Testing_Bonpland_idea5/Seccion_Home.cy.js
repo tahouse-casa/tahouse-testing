@@ -110,25 +110,24 @@ describe('Testing 1er Sprint | Idea 5 | Bonpland', () => {
       //Mostrar Footer Informativo de la Inmobiliaria
     })
 
-    it('Formulario de Busqueda para Inmuebles', () => { // Mostrar todos los inmuebles que coincidan con el criterio de busqueda realizado por el Usuario
-
-      home.search('argentina')
-      cy.contains('Filtros').click()
-
-
-
-      
+    it('B_001 Filtro de Busqueda | Contenido ', () => { // Mostrar todos los inmuebles que coincidan con el criterio de busqueda realizado por el Usuario
+      home.search('Argentina') // Accedemos al filtro buscando por pais "Argentina"
+  
       // Prueba Button con filtro desplegable motrando la siguiente lista "Ciudad", "Ambientes", "Cantidad de Baños", "Cantidad de Habitaciones","Mts2 max y min"
       // Prueba Button con el nombre del Mapa mostrando la Ubicacion/Direccion del Inmueble
       // Filtramos por Ciudad mostrando ciudad buscada y quedar seleccionada
       // Filtramos por cantidad de Ambientes y validando que sean numeros enteros
       // Filtramos por cantidad de Habitaciones y validando que sean numeros enteros
       // Filtramos por cantidad de Baños y validando que sean numeros enteros
-      // Filtramos por Mts2 Min/Max y validando que se sean 
+      // Filtramos por Mts2 Min / Max y validando que se sean 
+    });
+
+    it('B_002 Filtro de Busqueda | Button Submit', () => {
+      home.checkBtnFilter1('Button Submit') // Se Espera: Un button para confirmar datos ingresados en Filtro 
 
     });
 
-    it('Check de todos los elementos diseñados en seccion Home', ()=>{ //Checkeamos todos lo elementos del dom existentes segun diseño UI
+    it('Check de todos los elementos diseñados en seccion Home', ()=>{ // Checkeamos todos lo elementos del dom existentes segun diseño UI
       // Prueba de todos los elementos del Dom
 
     }) 
