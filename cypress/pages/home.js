@@ -168,7 +168,7 @@ class Home {
               cy.get('.sc-ckEbSK > .sc-gGvHcT').should('have.text',`${estado}`)// Probamos que el titulo no es correcto
             }else{
               cy.log('El titulo contiene "Inmuebles destacados"')
-              cy.get('.sc-ckEbSK > .sc-gGvHcT').should('have.text','Inmueble Destacado')// Probamos que el titulo es correcto
+              cy.get('.sc-ckEbSK > .sc-gGvHcT').should('have.text','Inmuebles Destacados')// Probamos que el titulo es correcto
             }
           })
     }
