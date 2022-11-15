@@ -35,7 +35,7 @@ describe('Testing 1er Sprint | Idea 5 | Bonpland', () => {
     });   
 
     it('H_001 - Filtro de Busqueda en Banner', ()=>{ // Mostrar inmuebles segun Pais filtrado
-      home.search('uruguay') // Se espera: que el filtro busque por pais ingresado en "Search"
+      home.search('mexico') // Se espera: que el filtro busque por pais ingresado en "Search"
     
     })
 
@@ -111,7 +111,13 @@ describe('Testing 1er Sprint | Idea 5 | Bonpland', () => {
       //Mostrar Footer Informativo de la Inmobiliaria
     })
 
-    it.only('Formulario de Busqueda para Inmuebles', () => { // Mostrar todos los inmuebles que coincidan con el criterio de busqueda realizado por el Usuario
+    it('Formulario de Busqueda para Inmuebles', () => { // Mostrar todos los inmuebles que coincidan con el criterio de busqueda realizado por el Usuario
+
+      home.search('argentina')
+      cy.contains('Filtros').click()
+
+
+
       
       // Prueba Button con filtro desplegable motrando la siguiente lista "Ciudad", "Ambientes", "Cantidad de Baños", "Cantidad de Habitaciones","Mts2 max y min"
       // Prueba Button con el nombre del Mapa mostrando la Ubicacion/Direccion del Inmueble

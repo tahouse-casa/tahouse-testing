@@ -30,7 +30,7 @@ class Home {
     checkFooter4(text,text2){
         cy.fixture('locators').then((locator)=>{
             cy.get(locator.footerItemHome4).should(text2).and('have.text',text).then(()=>{
-                cy.get(locator.footerItemHome4).click()
+                cy.get(locator.footerItemHome4).click({force: true})
                 cy.get(locator.textFooter4).should(text2)
             })
         })
@@ -40,6 +40,10 @@ class Home {
             cy.get(locator.inputSearch).type(text)
             cy.get(locator.InputTitulo).should('be.visible')
             cy.get(locator.btnSearch).click()
+            cy.request('http://localhost:3000/').should((response)=>{
+                expect(response.status).to.eq(200)
+                cy.log('status 200 ok')
+            })
         })
     }
 
