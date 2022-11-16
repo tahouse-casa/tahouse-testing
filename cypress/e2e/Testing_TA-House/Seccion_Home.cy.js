@@ -2,7 +2,7 @@ import Home from '../../pages/home'
 
 const home = new Home
 
-describe('Testing 1er Sprint | Idea 5 | Bonpland', () => {
+describe('Testing 1er Sprint | Idea 5 | TA-House', () => {
 
     beforeEach(() => {
       cy.visit('http://localhost:3000/')
@@ -22,7 +22,7 @@ describe('Testing 1er Sprint | Idea 5 | Bonpland', () => {
     });
 
     it('W_002 - Html | Titulo', () => { // Validacion web y prop HTML
-      home.checkProperty2('Bonpland')  // Se Espera: que el titulo de la pag sea Bonpland
+      home.checkProperty2('TA-House')  // Se Espera: que el titulo de la pag sea TA-House
 
     });
 
@@ -68,7 +68,7 @@ describe('Testing 1er Sprint | Idea 5 | Bonpland', () => {
 
     it('H_005 Footer Informativo | Titulo Menu', () => {
       cy.fixture('locators').then((locator)=>{
-        cy.get(locator.footerItemHomeTit).should('be.visible').and('have.text','Bonpland') // Se Espera: que el elemento titulo/logo sea el correcto y exista
+        cy.get(locator.footerItemHomeTit).should('be.visible').and('have.text','TA-House') // Se Espera: que el elemento titulo/logo sea el correcto y exista
 
       }) 
 
@@ -97,7 +97,7 @@ describe('Testing 1er Sprint | Idea 5 | Bonpland', () => {
     });
 
     it('H_010 Seccion Todas las Propiedades | Contenido', () => {
-      home.checkCardsLimit(4) // Se Espera: que el limite de Cards visibles sean 4
+      home.checkCardsLimit(8) // Se Espera: que el limite de Cards visibles sean 4
     });
 
     it('H_011 Seccion Todas las Propiedades | Contenido', ()=>{ // Mostrar un listado de inmuebles en promocion
@@ -112,26 +112,24 @@ describe('Testing 1er Sprint | Idea 5 | Bonpland', () => {
 
     it('B_001 Filtro de Busqueda | Contenido ', () => { // Mostrar todos los inmuebles que coincidan con el criterio de busqueda realizado por el Usuario
       home.search('Argentina') // Accedemos al filtro buscando por pais "Argentina"
-  
-      // Prueba Button con filtro desplegable motrando la siguiente lista "Ciudad", "Ambientes", "Cantidad de Baños", "Cantidad de Habitaciones","Mts2 max y min"
+      home.inputsMts2(5) // Se Espera: 5 inputs en total dentro del Form de Filtro "Cantidad de Ambientes", "Cantidad de Baños", "Cantidad de Habitaciones", "Precio", "Mts2"
+
+    });
+
+    it('B_002 Filtro de Busqueda | Button Submit y Button Clear', () => {
+      home.search('Argentina')
+      home.checkBtnFilter1('Button Submit y Button Clear') // Se Espera: Un button para confirmar datos ingresados en Filtro 
+     
+    });
+
+    it('B_003 Filtro de Busqueda | Inputs dentro del Form', () => { // Mostrar Buttons en Filtro Form "Submit" y "Clear"       
+    // Prueba Button con filtro desplegable motrando la siguiente lista "Ciudad", "Ambientes", "Cantidad de Baños", "Cantidad de Habitaciones","Mts2 max y min"
       // Prueba Button con el nombre del Mapa mostrando la Ubicacion/Direccion del Inmueble
       // Filtramos por Ciudad mostrando ciudad buscada y quedar seleccionada
       // Filtramos por cantidad de Ambientes y validando que sean numeros enteros
       // Filtramos por cantidad de Habitaciones y validando que sean numeros enteros
       // Filtramos por cantidad de Baños y validando que sean numeros enteros
       // Filtramos por Mts2 Min / Max y validando que se sean 
-    });
-
-    it('B_002 Filtro de Busqueda | Button Submit', () => {
-      home.checkBtnFilter1('Button Submit') // Se Espera: Un button para confirmar datos ingresados en Filtro 
-      home.checkBtnFilter1('Button Submit y Button Clear') // Se Espera: Un button para confirmar y limpiar datos ingresados en Filtro 
-
-    });
-
-    it.only('B_003 Filtro de Busqueda | Inputs Mts2', () => { // Mostrar Buttons en Filtro Form "Submit" y "Clear"
-      home.search('Argentina')
-      home.inputsMts2(1) // Se Espera: Un button para confirmar y limpiar datos ingresados en Filtro 
-
     });
 
     it('Check de todos los elementos diseñados en seccion Home', ()=>{ // Checkeamos todos lo elementos del dom existentes segun diseño UI

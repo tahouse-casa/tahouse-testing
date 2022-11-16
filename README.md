@@ -21,7 +21,7 @@
 
 <h2 align="left"><em>📋 Datos CP </em></h2>
 
-- ### <em>Sprint N°1 </em>⚙️
+- ### <em>Sprint N°1</em>⚙️
 
  - [Resumen de Casos de Pruebas Ejecutados - Google 📘Docs](https://docs.google.com/document/d/1Xx8sjieOoW9J3KxGvVvh4f9f_67qTRfVkMO4sOdOIc0/edit)
  - [Detalle Casos de Pruebas Ejecutados - Google 📗sheet](https://docs.google.com/spreadsheets/d/1AFWnSNzIHXbe13HhTuA2pnjD-wAlpQRj3usGxob2w0g/edit#gid=0)
