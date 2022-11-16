@@ -1,5 +1,5 @@
 
- <h1 align="center"><em>Ta-House</em></h1>
+ <h1 align="left"><em>Ta-House | Idea 5</em></h1>
 
  <br />
 
