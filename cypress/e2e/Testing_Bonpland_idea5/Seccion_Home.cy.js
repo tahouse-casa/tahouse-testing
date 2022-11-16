@@ -124,6 +124,13 @@ describe('Testing 1er Sprint | Idea 5 | Bonpland', () => {
 
     it('B_002 Filtro de Busqueda | Button Submit', () => {
       home.checkBtnFilter1('Button Submit') // Se Espera: Un button para confirmar datos ingresados en Filtro 
+      home.checkBtnFilter1('Button Submit y Button Clear') // Se Espera: Un button para confirmar y limpiar datos ingresados en Filtro 
+
+    });
+
+    it.only('B_003 Filtro de Busqueda | Inputs Mts2', () => { // Mostrar Buttons en Filtro Form "Submit" y "Clear"
+      home.search('Argentina')
+      home.inputsMts2(1) // Se Espera: Un button para confirmar y limpiar datos ingresados en Filtro 
 
     });
 

@@ -221,6 +221,16 @@ class Home {
         })
     }
 
+    inputsMts2(num){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.btnFilter).click().then(()=>{
+                cy.get(locator.filterInputs1).should('have.length',num)
+                cy.log(data)
+            })
+            
+        })
+    }
+
     bucle(num){
         for (let i = 0; i < num ; i++) {
             cy.log("N° "+ i)
