@@ -1,4 +1,5 @@
 
+
 class Home {
 
     checkFooter1(text,text2){
@@ -35,6 +36,14 @@ class Home {
             })
         })
     }
+
+    checkFooterTitulo(){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.footerItemHomeTit).should('have.text','TA-House')
+            cy.log('El titulo en footer debe contener "TA House"')
+          }) 
+    }
+
     search(text){
         cy.fixture('locators').then((locator)=>{
             cy.get(locator.inputSearch).type(text)
@@ -229,6 +238,25 @@ class Home {
             
         })
     }
+
+    checkBtnMap(text,text2){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.btnMap).click().then(()=>{
+                cy.get(locator.GoogleMap).should(text2)
+                cy.get(locator.btnMap).should('contain',text)    
+            })
+        })
+    }
+
+    chechInputAmb(){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.btnFilter).click().then(()=>{
+                cy.get(locator.formInputs).eq(0).should('exist')
+            })
+        })
+    }
+
+
 
     bucle(num){
         for (let i = 0; i < num ; i++) {

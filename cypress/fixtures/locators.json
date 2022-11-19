@@ -33,5 +33,8 @@
     "allimgCards1": "a > .sc-fEXmlR",
     "titulo2":".sc-bTTELM",
     "btnFilter":".ezpHLW",
-    "inputsForm1":".sc-gikAfH"
+    "inputsForm1":".sc-gikAfH",
+    "btnMap":".bMMJZB",
+    "GoogleMap":".leaflet-container",
+    "formInputs":"div > .sc-gikAfH"
 }

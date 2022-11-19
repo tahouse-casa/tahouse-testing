@@ -34,7 +34,7 @@ describe('Testing 1er Sprint | Idea 5 | TA-House', () => {
     });   
 
     it('H_001 - Filtro de Busqueda en Banner', ()=>{ // Mostrar inmuebles segun Pais filtrado
-      home.search('mexico') // Se espera: que el filtro busque por pais ingresado en "Search"
+      home.search('Uruguay') // Se espera: que el filtro busque por pais ingresado en "Search"
     
     })
 
@@ -66,11 +66,8 @@ describe('Testing 1er Sprint | Idea 5 | TA-House', () => {
   
     })
 
-    it('H_005 Footer Informativo | Titulo Menu', () => {
-      cy.fixture('locators').then((locator)=>{
-        cy.get(locator.footerItemHomeTit).should('be.visible').and('have.text','TA-House') // Se Espera: que el elemento titulo/logo sea el correcto y exista
-
-      }) 
+    it('H_005 Footer Informativo | Titulo Menu', () =>{
+      home.checkFooterTitulo() // Se Espera: que el elemento titulo/logo sea el correcto y exista
 
     });
 
@@ -122,15 +119,38 @@ describe('Testing 1er Sprint | Idea 5 | TA-House', () => {
      
     });
 
-    it('B_003 Filtro de Busqueda | Inputs dentro del Form', () => { // Mostrar Buttons en Filtro Form "Submit" y "Clear"       
-    // Prueba Button con filtro desplegable motrando la siguiente lista "Ciudad", "Ambientes", "Cantidad de Baños", "Cantidad de Habitaciones","Mts2 max y min"
-      // Prueba Button con el nombre del Mapa mostrando la Ubicacion/Direccion del Inmueble
-      // Filtramos por Ciudad mostrando ciudad buscada y quedar seleccionada
-      // Filtramos por cantidad de Ambientes y validando que sean numeros enteros
-      // Filtramos por cantidad de Habitaciones y validando que sean numeros enteros
-      // Filtramos por cantidad de Baños y validando que sean numeros enteros
-      // Filtramos por Mts2 Min / Max y validando que se sean 
+    it('B_003 Filtro de Busqueda | Ubicacion (Maps)', () => { // Mostrar Buttons Maps para mostrar la ubicacion del inmueble
+      home.search('Argentina')
+      home.checkBtnMap('Mapa','be.visible') // Se Espera: Que el Button contenga el nombre "Mapa" y al realizar click el mismo se despliegue
+
     });
+
+    it('B_004 Filtro de Busqueda | Cantidad de Ambientes', () => { // Mostrar el texto "Cantidad de Amibentes" y su input de busqueda      
+      home.search('Argentina')
+      home.chechInputAmb()
+    });
+
+    it('B_005 Filtro de Busqueda | Cantidad de Habitaciones', () => { //       
+    
+    });
+
+    it('B_006 Filtro de Busqueda | Cantidad de Baños', () => { //       
+    
+    });
+
+    it('B_007 Filtro de Busqueda | Cantidad de Mts2', () => { //       
+    
+    });
+
+    it('Inputs dentro del Form', () => { // Mostrar Buttons en Filtro Form "Submit" y "Clear"       
+      // Prueba Button con filtro desplegable motrando la siguiente lista "Ciudad", "Ambientes", "Cantidad de Baños", "Cantidad de Habitaciones","Mts2 max y min"
+        // Prueba Button con el nombre del Mapa mostrando la Ubicacion/Direccion del Inmueble
+        // Filtramos por Ciudad mostrando ciudad buscada y quedar seleccionada
+        // Filtramos por cantidad de Ambientes y validando que sean numeros enteros
+        // Filtramos por cantidad de Habitaciones y validando que sean numeros enteros
+        // Filtramos por cantidad de Baños y validando que sean numeros enteros
+        // Filtramos por Mts2 Min / Max y validando que se sean 
+      });
 
     it('Check de todos los elementos diseñados en seccion Home', ()=>{ // Checkeamos todos lo elementos del dom existentes segun diseño UI
       // Prueba de todos los elementos del Dom
