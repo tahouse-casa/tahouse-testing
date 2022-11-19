@@ -119,7 +119,7 @@ describe('Testing 1er Sprint | Idea 5 | TA-House', () => {
      
     });
 
-    it('B_003 Filtro de Busqueda | Ubicacion (Maps)', () => { // Mostrar Buttons Maps para mostrar la ubicacion del inmueble
+    it('B_003 Filtro de Busqueda | Ubicacion (Maps)', () => { // Mostrar Button Maps y ubicacion del inmueble
       home.search('Argentina')
       home.checkBtnMap('Mapa','be.visible') // Se Espera: Que el Button contenga el nombre "Mapa" y al realizar click el mismo se despliegue
 
