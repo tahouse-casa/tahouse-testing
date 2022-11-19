@@ -248,10 +248,10 @@ class Home {
         })
     }
 
-    chechInputAmb(){
+    chechInputAmb(text){
         cy.fixture('locators').then((locator)=>{
             cy.get(locator.btnFilter).click().then(()=>{
-                cy.get(locator.formInputs).eq(0).should('exist')
+                cy.get(locator.formInputs).eq(0).should(text)
             })
         })
     }

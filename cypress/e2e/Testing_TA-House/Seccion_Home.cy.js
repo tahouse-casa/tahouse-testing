@@ -94,7 +94,7 @@ describe('Testing 1er Sprint | Idea 5 | TA-House', () => {
     });
 
     it('H_010 Seccion Todas las Propiedades | Contenido', () => {
-      home.checkCardsLimit(8) // Se Espera: que el limite de Cards visibles sean 4
+      home.checkCardsLimit(8) // Se Espera: que el limite de Cards visibles sean 8
     });
 
     it('H_011 Seccion Todas las Propiedades | Contenido', ()=>{ // Mostrar un listado de inmuebles en promocion
@@ -125,20 +125,20 @@ describe('Testing 1er Sprint | Idea 5 | TA-House', () => {
 
     });
 
-    it('B_004 Filtro de Busqueda | Cantidad de Ambientes', () => { // Mostrar el texto "Cantidad de Amibentes" y su input de busqueda      
+    it('B_004 Filtro de Busqueda | Cantidad de Ambientes', () => { // Mostrar el texto "Cantidad de Amibentes" y su inputs para solicitar datos      
       home.search('Argentina')
-      home.chechInputAmb()
+      home.chechInputAmb('be.visible') // Se Espera: Que el Button contenga el nombre "Cantidad de Ambientes" y su input de busqueda
     });
 
-    it('B_005 Filtro de Busqueda | Cantidad de Habitaciones', () => { //       
+    it('B_005 Filtro de Busqueda | Cantidad de Habitaciones', () => { // Mostrar el texto "Cantidad de Habitaciones" y su inputs para solicitar datos       
     
     });
 
-    it('B_006 Filtro de Busqueda | Cantidad de Baños', () => { //       
+    it('B_006 Filtro de Busqueda | Cantidad de Baños', () => { // Mostrar el texto "Cantidad de Baños" y su inputs para solicitar datos     
     
     });
 
-    it('B_007 Filtro de Busqueda | Cantidad de Mts2', () => { //       
+    it('B_007 Filtro de Busqueda | Cantidad de Mts2', () => { // Mostrar el texto "Cantidad de Mts2" y su inputs para solicitar datos      
     
     });
 
