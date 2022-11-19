@@ -3,7 +3,7 @@
 
  <br />
 
- ![logo](https://user-images.githubusercontent.com/86979361/198842663-82f943bc-53a8-4e45-a4b5-2de48b80af1b.jpg)
+ <!-- ![logo](https://user-images.githubusercontent.com/86979361/198842663-82f943bc-53a8-4e45-a4b5-2de48b80af1b.jpg) -->
 
 <br />
 
