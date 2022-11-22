@@ -1,6 +1,8 @@
+import Card from '../../pages/card'
 import Home from '../../pages/home'
 
 const home = new Home
+const card = new Card
 
 describe('Testing 1er Sprint | Idea 5 | TA-House', () => {
 
@@ -98,18 +100,13 @@ describe('Testing 1er Sprint | Idea 5 | TA-House', () => {
     });
 
     it('H_011 Seccion Todas las Propiedades | Contenido', ()=>{ // Mostrar un listado de inmuebles en promocion
-      home.checkCards1('be.visible') // Se Espera: el elemento "Imagen" exista en las Card
-      
-      //Prueba imagen de fondo segun diseño UI
-      //Mostrar Titulo de seccion "Todas las Propiedades"
-      //Mostrar un Filtro de Busqueda en Banner
-      //Mostrar elementos de Paginacion
-      //Mostrar Footer Informativo de la Inmobiliaria
+      home.checkCards1('be.visible') // Se Espera: el elemento "Imagen" exista en las Card 
+
     })
 
     it('B_001 Filtro de Busqueda | Contenido ', () => { // Mostrar todos los inmuebles que coincidan con el criterio de busqueda realizado por el Usuario
       home.search('Argentina') // Accedemos al filtro buscando por pais "Argentina"
-      home.inputsMts2(5) // Se Espera: 5 inputs en total dentro del Form de Filtro "Cantidad de Ambientes", "Cantidad de Baños", "Cantidad de Habitaciones", "Precio", "Mts2"
+      home.inputsMts2(5) // Se Espera: un total de 5 inputs dentro del Form de Filtro "Cantidad de Ambientes", "Cantidad de Baños", "Cantidad de Habitaciones", "Precio", "Mts2"
 
     });
 
@@ -127,21 +124,89 @@ describe('Testing 1er Sprint | Idea 5 | TA-House', () => {
 
     it('B_004 Filtro de Busqueda | Cantidad de Ambientes', () => { // Mostrar el texto "Cantidad de Amibentes" y su inputs para solicitar datos      
       home.search('Argentina')
-      home.chechInputAmb('be.visible') // Se Espera: Que el Button contenga el nombre "Cantidad de Ambientes" y su input de busqueda
+      home.checkInputAmb('be.visible','Cantidad de ambientes') // Se Espera: Que el Button contenga el nombre "Cantidad de Ambientes" y su input de busqueda
+
     });
 
     it('B_005 Filtro de Busqueda | Cantidad de Habitaciones', () => { // Mostrar el texto "Cantidad de Habitaciones" y su inputs para solicitar datos       
-    
+      home.search('Argentina')
+      home.checkInputDorm('be.visible','Cantidad de habitaciones')
+
     });
 
     it('B_006 Filtro de Busqueda | Cantidad de Baños', () => { // Mostrar el texto "Cantidad de Baños" y su inputs para solicitar datos     
-    
+      home.search('Argentina')
+      home.checkInputBaños('be.visible','Cantidad de baños')
+        
     });
 
     it('B_007 Filtro de Busqueda | Cantidad de Mts2', () => { // Mostrar el texto "Cantidad de Mts2" y su inputs para solicitar datos      
-    
+      home.search('Argentina')
+      
     });
 
+    it('B_008 Filtro de Busqueda | Lista Paises', () => { // Mostrar un inputs tipo Option con los Paises      
+      home.search('Argentina')
+      home.checkInputsPais('País')
+    });
+
+    it('B_009 Filtro de Busqueda | Precio', () => { // Mostrar un inputs tipo Option con los Paises      
+      home.search('Argentina')
+      home.checkInputPrecio('be.visible','Precio')
+
+    });
+
+    it('C_001 Card Detail | Imagenes', () => { // Mostrar un Carrousel con 3 imagenes x Inmueble      
+      card.checkCarrouselCards('be.visible','200px','340px') // Se Espera: que sean visbles las 3 imagenes y su tamaño sea: "heigth: 200px", "whidth: 340px"
+     
+    });
+
+    it('C_002 Card Detail | Precio', () => { // Mostrar el Precio en USD del Inmueble   
+      card.clickCard(0) // Accedemos a la 1er card en Inmuebles Destacados
+      card.checkCardPrice('USD') // Se Espera: que exista el texto "USD" en precio
+    });
+
+    it('C_003 Card Detail | Lugar de locacion del Inmueble', () => { // Mostrar ubicaion la ubicacion (Ciudad / Pais) 
+      card.clickCard(0)      
+      card.checkCardUbi('be.visible')
+
+    });
+
+    it('C_004 Card Detail | Carateristica del Inmueble', () => { // Mostrar el tamaño en "mts2" y canitdad de "Ambientes", "Dormitorios" y "Baños"
+      card.clickCard(0)
+      card.checkCardDetail(0,'m2')
+      card.checkCardDetail(1,'m2')
+      card.checkCardDetail(2,'Ambientes')
+      card.checkCardDetail(3,'dorm')
+      card.checkCardDetail(4,'baños')
+      
+    });
+
+    it('C_005 Card Detail | Tipo y Estado del Inmueble', () => { // Mostrar su tipo "Casa","Piso","Terreno" y su estado "Alquilado", "Vendido", "Reservado"
+      card.clickCard(0)
+      card.checkCardState('be.visible') // Se Espera: que sea visible tipo del inmueble y Estado
+
+    });
+
+    it('C_006 Card Detail | Tipo de Zona (indicar ubicacion destacada)', () => { // Mostrar si tiene una ubicacion destacada     
+      card.clickCard(0)
+      card.checkCardZone('Zona Destacada') // Se Espera que texto sea "Zona Destacada"
+
+    }); 
+    
+    it('C_007 Card Detail | Texto descriptivo de cada Inmueble', () => { //       
+     
+    });    
+
+    it('C_008 Card Detail | Tipo de Zona (indicar ubicacion destacada)', () => { //       
+      
+    });  
+    
+    it('C_009 Card Detail | Fecha de Publicación de cada Inmueble', () => { //      
+      
+    });
+    
+    
     it('Inputs dentro del Form', () => { // Mostrar Buttons en Filtro Form "Submit" y "Clear"       
       // Prueba Button con filtro desplegable motrando la siguiente lista "Ciudad", "Ambientes", "Cantidad de Baños", "Cantidad de Habitaciones","Mts2 max y min"
         // Prueba Button con el nombre del Mapa mostrando la Ubicacion/Direccion del Inmueble

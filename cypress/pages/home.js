@@ -127,6 +127,7 @@ class Home {
         cy.fixture('locators').then((locator)=>{
             cy.get(locator.detail1).each(($el)=>{
                 let data = $el.text()
+                cy.log(data)
                 if(data.includes(amb)){
                     cy.get(locator.detail1).should('contain',amb) 
                   }
@@ -248,15 +249,49 @@ class Home {
         })
     }
 
-    chechInputAmb(text){
+    checkInputAmb(text,text2){
         cy.fixture('locators').then((locator)=>{
             cy.get(locator.btnFilter).click().then(()=>{
                 cy.get(locator.formInputs).eq(0).should(text)
+                cy.get(locator.labelsForm).eq(1).should('have.text',text2)
             })
         })
     }
 
+    checkInputBaños(text,text2){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.btnFilter).click().then(()=>{
+                cy.get(locator.formInputs).eq(1).should(text)
+                cy.get(locator.labelsForm).eq(2).should('have.text',text2)
+            })
+        })
+    }
 
+    checkInputDorm(text,text2){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.btnFilter).click().then(()=>{
+                cy.get(locator.formInputs).eq(2).should(text)
+                cy.get(locator.labelsForm).eq(3).should('have.text',text2)
+            })
+        })
+    }
+
+    checkInputPrecio(text,text2){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.btnFilter).click().then(()=>{
+                cy.get(locator.formInputs).eq(3).should(text)
+                cy.get(locator.labelsForm).eq(4).should('have.text',text2)
+            })
+        })
+    }
+
+    checkInputsPais(text2){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.btnFilter).click().then(()=>{
+                cy.get(locator.labelsForm).eq(0).should('have.text',text2)
+            })
+        })
+    }
 
     bucle(num){
         for (let i = 0; i < num ; i++) {

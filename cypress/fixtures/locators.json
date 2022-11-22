@@ -36,5 +36,13 @@
     "inputsForm1":".sc-gikAfH",
     "btnMap":".bMMJZB",
     "GoogleMap":".leaflet-container",
-    "formInputs":"div > .sc-gikAfH"
+    "formInputs":"div > .sc-gikAfH",
+    "labelsForm":".sc-iJnaPW",
+    "cardImg":".sc-bqWxrE",
+    "sliderLeft":".jIIvBJ",
+    "dataCard1":".sc-ikHGee",
+    "cardPrice":".sc-dEVLtI",
+    "cardUbi":".jAgKxV",
+    "cardState":".sc-gJqSRm",
+    "cardZone":".sc-bWOGAC"
 }
