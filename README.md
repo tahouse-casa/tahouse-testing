@@ -16,7 +16,7 @@
 📌 [Plan de Pruebas ](https://docs.google.com/document/d/1dUFPsR8bqabMhBHuJoDZJEjY0QTFLXMIijpkcEeTWhU/edit)
 <br />
 
-<!-- 📌 [Pruebas en Cypress](https://maxibarbo.github.io/Testing_Bonpland/) -->
+📌 [TA House | App](https://dev.tahouse.casa/) 
 <br />
 
 <h2 align="left"><em>📋 Datos CP </em></h2>
