@@ -7,12 +7,12 @@ const card = new Card
 describe('Testing 1er Sprint | Idea 5 | TA-House', () => {
 
     beforeEach(() => {
-      cy.visit('http://localhost:3000/')
+      cy.visit('https://dev.tahouse.casa/')
 
     })
 
     it('W_001 - Html | XHR request', () => { // Validamos las propiedades del HTML
-      cy.request('http://localhost:3000/')
+      cy.request('https://dev.tahouse.casa/')
         .should((response)=>{
           expect(response.status).to.eq(200) // Se Espera: que el estado de la conexion sea 200
           expect(response).to.have.property('headers') // Se Espera: que exista el header 
@@ -20,11 +20,11 @@ describe('Testing 1er Sprint | Idea 5 | TA-House', () => {
           expect(response).to.have.property('duration')
         })
 
-        home.checkProperty('http://localhost:3000/')  // Se Espera: que la url y charset "UTF-8" sean correctos 
+        home.checkProperty('https://dev.tahouse.casa/')  // Se Espera: que la url y charset "UTF-8" sean correctos 
     });
 
     it('W_002 - Html | Titulo', () => { // Validacion web y prop HTML
-      home.checkProperty2('TA-House')  // Se Espera: que el titulo de la pag sea TA-House
+      home.checkProperty2('TaHouse.casa')  // Se Espera: que el titulo de la pag sea TaHouse.casa
 
     });
 
@@ -61,15 +61,15 @@ describe('Testing 1er Sprint | Idea 5 | TA-House', () => {
     })
 
     it('H_004 - Footer Informativo | Contenido', ()=>{ // Mostrar footer en forma de acordeon con sus 4 menuces y logo
-      home.checkFooter1('Sobre nosotros',"be.visible")// Se Espera: que el subtitulo "Sobre Nosotros" y el despliegue del texto existan
-      home.checkFooter3('Paises','be.visible') // Se Espera: que el subtitulo "Paises" y despliegue del texto existan 
-      home.checkFooter4('Categorias','be.visible') // Se Espera: que el subtitulo "Categorias" y despliegue del texto existan
+      home.checkFooter1('Sobre Nosotros',"be.visible")// Se Espera: que el subtitulo "Sobre Nosotros" y el despliegue del texto existan
+      home.checkFooter3('Categorias','be.visible') // Se Espera: que el subtitulo "Paises" y despliegue del texto existan 
+      home.checkFooter4('Paises','be.visible') // Se Espera: que el subtitulo "Categorias" y despliegue del texto existan
       home.checkFooter2('Nuestra Trayectoria','be.visible') // Se Espera: que el subtitulo "Nuestra Trayecoria" y despliegue del texto existan   
   
     })
 
     it('H_005 Footer Informativo | Titulo Menu', () =>{
-      home.checkFooterTitulo() // Se Espera: que el elemento titulo/logo sea el correcto y exista
+      home.checkFooterTitulo('Ta House') // Se Espera: que el elemento titulo/logo sea el correcto y exista
 
     });
 
@@ -80,18 +80,18 @@ describe('Testing 1er Sprint | Idea 5 | TA-House', () => {
       
     });
 
-    it('H_007 Seccion Todas las Propiedades | Elementos en Home ', ()=>{ // Mostrar un listado de inmuebles en promocion
-      home.chechitems2('be.visible') // Se Espera: que los elementos "Imagen de fondo","logo","texto descriptivo" y "button" existan
-      
+    it('H_007 Seccion Todas las Propiedades | Elementos en Home ', ()=>{ // Mostrar un Button "Ver Mas Propiedades" debajo de cards contenedores Inmuebles Destacados
+      home.checkitems2('be.visible','!Los mejores precios y descuentos los encontras en Ta House!') // Se Espera: que los elementos "Imagen de fondo","logo","texto descriptivo" y "button Ver Mas Propiedades" existan
+
     })
 
     it('H_008 Seccion Todas las Propiedades | Filtro de Busqueda', () => {
-      home.checkFilter1('filter') // Se Espera: que exista un filtro de Busqueda en seccion "Todas las Propiedades"
+      home.checkFilter1('Argentina') // Se Espera: un filtro de busqueda que pueda filtrar por pais
 
     });
 
     it('H_009 Seccion Todas las Propiedades | Paginacion', () => {
-      home.checkPaginacion1('paginacion') // Se Espera: que exista un button de Busqueda en seccion "Todas las Propiedades"
+      home.checkPaginacion1('be.visible') // Se Espera: que exista un button de Busqueda en seccion "Todas las Propiedades"
 
     });
 
@@ -100,64 +100,12 @@ describe('Testing 1er Sprint | Idea 5 | TA-House', () => {
     });
 
     it('H_011 Seccion Todas las Propiedades | Contenido', ()=>{ // Mostrar un listado de inmuebles en promocion
-      home.checkCards1('be.visible') // Se Espera: el elemento "Imagen" exista en las Card 
+      home.checkCards1('be.visible','150px','166.5px','https://') // Se Espera: el elemento "Imagen" exista en las Card, se comprueba su tamñana "heigth: 150px" y "width:166.5px", su "attr(src) contenga link"
 
     })
 
-    it('B_001 Filtro de Busqueda | Contenido ', () => { // Mostrar todos los inmuebles que coincidan con el criterio de busqueda realizado por el Usuario
-      home.search('Argentina') // Accedemos al filtro buscando por pais "Argentina"
-      home.inputsMts2(5) // Se Espera: un total de 5 inputs dentro del Form de Filtro "Cantidad de Ambientes", "Cantidad de Baños", "Cantidad de Habitaciones", "Precio", "Mts2"
-
-    });
-
-    it('B_002 Filtro de Busqueda | Button Submit y Button Clear', () => {
-      home.search('Argentina')
-      home.checkBtnFilter1('Button Submit y Button Clear') // Se Espera: Un button para confirmar datos ingresados en Filtro 
-     
-    });
-
-    it('B_003 Filtro de Busqueda | Ubicacion (Maps)', () => { // Mostrar Button Maps y ubicacion del inmueble
-      home.search('Argentina')
-      home.checkBtnMap('Mapa','be.visible') // Se Espera: Que el Button contenga el nombre "Mapa" y al realizar click el mismo se despliegue
-
-    });
-
-    it('B_004 Filtro de Busqueda | Cantidad de Ambientes', () => { // Mostrar el texto "Cantidad de Amibentes" y su inputs para solicitar datos      
-      home.search('Argentina')
-      home.checkInputAmb('be.visible','Cantidad de ambientes') // Se Espera: Que el Button contenga el nombre "Cantidad de Ambientes" y su input de busqueda
-
-    });
-
-    it('B_005 Filtro de Busqueda | Cantidad de Habitaciones', () => { // Mostrar el texto "Cantidad de Habitaciones" y su inputs para solicitar datos       
-      home.search('Argentina')
-      home.checkInputDorm('be.visible','Cantidad de habitaciones')
-
-    });
-
-    it('B_006 Filtro de Busqueda | Cantidad de Baños', () => { // Mostrar el texto "Cantidad de Baños" y su inputs para solicitar datos     
-      home.search('Argentina')
-      home.checkInputBaños('be.visible','Cantidad de baños')
-        
-    });
-
-    it('B_007 Filtro de Busqueda | Cantidad de Mts2', () => { // Mostrar el texto "Cantidad de Mts2" y su inputs para solicitar datos      
-      home.search('Argentina')
-      
-    });
-
-    it('B_008 Filtro de Busqueda | Lista Paises', () => { // Mostrar un inputs tipo Option con los Paises      
-      home.search('Argentina')
-      home.checkInputsPais('País')
-    });
-
-    it('B_009 Filtro de Busqueda | Precio', () => { // Mostrar un inputs tipo Option con los Paises      
-      home.search('Argentina')
-      home.checkInputPrecio('be.visible','Precio')
-
-    });
-
     it('C_001 Card Detail | Imagenes', () => { // Mostrar un Carrousel con 3 imagenes x Inmueble      
-      card.checkCarrouselCards('be.visible','200px','340px') // Se Espera: que sean visbles las 3 imagenes y su tamaño sea: "heigth: 200px", "whidth: 340px"
+      card.checkCarrouselCards('be.visible','204px','343px') // Se Espera: que sean visbles las 3 imagenes y su tamaño sea: "heigth: 200px", "whidth: 340px"
      
     });
 
@@ -195,15 +143,20 @@ describe('Testing 1er Sprint | Idea 5 | TA-House', () => {
     }); 
     
     it('C_007 Card Detail | Texto descriptivo de cada Inmueble', () => { //       
-     
+      card.clickCard(0)
+      card.checkCardText('be.visible')
+
     });    
 
-    it('C_008 Card Detail | Tipo de Zona (indicar ubicacion destacada)', () => { //       
-      
+    it('C_008 Card Detail | Card Detail | Información y Contacto de cada inmueble', () => { //       
+      card.clickCard(0)
+      card.checkCardContact('mensaje')
+
     });  
     
-    it('C_009 Card Detail | Fecha de Publicación de cada Inmueble', () => { //      
-      
+    it('C_009 Card Detail | Button para adquirir inmueble', () => { //      
+      card.clickCard(0)
+      card.checkCardBtnAdd('be.visible')
     });
     
     

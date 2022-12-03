@@ -12,17 +12,17 @@
     "test_mocha": "cypress run reporter mochawesome --spec cypress/e2e/Testing_TA-House/Seccion_Home.cy.js",
     "test_bonpland_home": "cypress run reporter mochawesome --spec cypress/e2e/Testing_TA-House/Home.cy.js",
     "cy:run:chrome": "cypress run -b chrome",
-    "merge-report":"mochawesome-merge  cypress/mochawesome-report/*.json> cypress/mochawesome-report/report.json",
+    "merge-report": "mochawesome-merge  cypress/mochawesome-report/*.json> cypress/mochawesome-report/report.json",
     "html_generate": ""
   },
   "author": "Bonpland",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^10.10.0",
     "mocha": "^10.1.0",
     "mochawesome-merge": "^4.2.1"
   },
   "devDependencies": {
+    "cypress": "^11.2.0",
     "cypress-mochawesome-reporter": "^3.2.3",
     "cypress-multi-reporters": "^1.6.1",
     "mochawesome": "^7.1.3",

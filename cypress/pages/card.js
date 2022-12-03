@@ -8,20 +8,17 @@ class Card {
                 cy.get(locator.cardImg).should(text)
                 .should('have.css','height',num1)
                 .and('have.css','width',num2)
-                .invoke('attr','src').should('include','s7aIBGDKuRDDEDu7OhI8gFHMHtZNzs6') 
             })
             cy.get(locator.sliderLeft).click().then(()=>{
                 cy.get(locator.cardImg).should('be.visible')
-                .should('have.css','height','200px')
-                .and('have.css','width','344.5454406738281px') 
-                .invoke('attr','src').should('include','1Q6C2lRN0LEnkSoHsrrID_He1uGe-a30E')
+                .should('have.css','height',num1)
+                .and('have.css','width',num2) 
             })
             cy.get(locator.sliderLeft).click().then(()=>{
                 cy.get(locator.cardImg).should('be.visible')
-                .should('have.css','height','200px')
-                .and('have.css','width','344.5454406738281px') 
-                .invoke('attr','src').should('include','n0rGFmHpEZSZvCWST8ugSy7Oz')
-            })
+                .should('have.css','height',num1)
+                .and('have.css','width',num2) 
+            })        
         })
     }
     
@@ -58,6 +55,24 @@ class Card {
     checkCardZone(text){
         cy.fixture('locators').then((locator)=>{
             cy.get(locator.cardZone).should('contain',text)
+        })
+    }
+
+    checkCardText(text){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.cardText).should(text)
+        })
+    }
+
+    checkCardBtnAdd(text){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.cardbtnAdd).should(text)
+        })
+    }
+
+    checkCardContact(text){
+        cy.fixture('locators').then((locator)=>{
+            cy.get(locator.cardContact).should('contain',text)
         })
     }
 }

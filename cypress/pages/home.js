@@ -37,9 +37,9 @@ class Home {
         })
     }
 
-    checkFooterTitulo(){
+    checkFooterTitulo(text){
         cy.fixture('locators').then((locator)=>{
-            cy.get(locator.footerItemHomeTit).should('have.text','TA-House')
+            cy.get(locator.footerItemHomeTit).should('contain',text)
             cy.log('El titulo en footer debe contener "TA House"')
           }) 
     }
@@ -47,9 +47,8 @@ class Home {
     search(text){
         cy.fixture('locators').then((locator)=>{
             cy.get(locator.inputSearch).type(text)
-            cy.get(locator.InputTitulo).should('be.visible')
-            cy.get(locator.btnSearch).click()
-            cy.request('http://localhost:3000/').should((response)=>{
+            cy.get(locator.btnsearch).click()
+            cy.request('https://dev.tahouse.casa/').should((response)=>{
                 expect(response.status).to.eq(200)
                 cy.log('status 200 ok')
             })
@@ -127,7 +126,6 @@ class Home {
         cy.fixture('locators').then((locator)=>{
             cy.get(locator.detail1).each(($el)=>{
                 let data = $el.text()
-                cy.log(data)
                 if(data.includes(amb)){
                     cy.get(locator.detail1).should('contain',amb) 
                   }
@@ -161,33 +159,46 @@ class Home {
         }) 
     }
 
-    chechitems2(text){
+    checkitems2(text,text2){
         cy.fixture('locators').then((locator)=>{
             cy.get(locator.img2).should(text)
+            .should('have.css','height','304px')
+            .and('have.css','width','363px') 
+            // .invoke('attr','src').should('include','57c88479058d0526c2af')
             cy.get(locator.logo).should(text)
-            cy.get(locator.textlogo).should(text)
+            .invoke('attr','src').should('include','logo-bg')
             cy.get(locator.btnProp).should(text)
+            cy.get(locator.textlogo).should('have.text',text2)
         })
     }
 
     checkTitulo1(text){
-        cy.contains('Inmuebles destacados').then((e)=>{ 
+        cy.contains('Inmuebles Destacados').then((e)=>{
+          cy.fixture('locators').then((locator)=>{
             let estado = e.text()
-            if(estado == text){
-              cy.log('El Titulo Contiene Inmuebles Destacados')
-              cy.get('.sc-ckEbSK > .sc-gGvHcT').should('have.text',`${estado}`)// Probamos que el titulo no es correcto
-            }else{
-              cy.log('El titulo contiene "Inmuebles destacados"')
-              cy.get('.sc-ckEbSK > .sc-gGvHcT').should('have.text','Inmuebles Destacados')// Probamos que el titulo es correcto
-            }
+                if(estado == text){
+                    cy.log('El Titulo Contiene Inmuebles Destacados')
+                    cy.get(locator.text2).should('have.text',`${estado}`)// Probamos que el titulo no es correcto
+                }else{
+                    cy.log('El titulo contiene "Inmuebles destacados"')
+                    cy.get(locator.text2).should('have.text','Inmuebles Destacados')// Probamos que el titulo es correcto
+                }
+            })   
           })
     }
 
-    checkCards1(text){
+    checkTitulo2(){
+        cy.fixture('locators')
+    }
+
+    checkCards1(text,height,width,text2){
         cy.fixture('locators').then((locator)=>{
             cy.get(locator.btnProp).click().then(()=>{
-                cy.get(locator.allimgCards1).each(($el)=>{
+                cy.get(locator.allimgCards1).each((e)=>{
                    cy.get(locator.allimgCards1).should(text)
+                   .should('have.css','height',height)
+                   .should('have.css','width',width)
+                   .invoke('attr','src').should('include',text2)
                 })
             })
             
@@ -196,17 +207,25 @@ class Home {
 
     checkFilter1(text){
         cy.fixture('locators').then((locator)=>{
-            cy.get(locator.btnProp).click()
-            cy.log('El filtro de Busqueda debe ir arriba del Titulo y abajo del menu de Navegacion')
-            cy.get(locator.titulo2).should('contain',text)
+            cy.get(locator.btnProp).click().then((e)=>{
+                cy.get(locator.btnAllProp).should('be.visible')
+                cy.get(locator.inputAllProp).type(text)
+                cy.get(locator.btnAllSearch).click()
+            }) 
         })
     }
 
     checkPaginacion1(text){
         cy.fixture('locators').then((locator)=>{
-            cy.get(locator.btnProp).click()
-            cy.log('El Button de Paginacion debe ir abajo de las Card y Arriba del Menu Acordeon')
-            cy.get(locator.titulo2).should('contain',text)
+            cy.get(locator.btnProp).click().then(()=>{
+                cy.get(locator.paginacionLeft).should(text)
+                cy.get(locator.paginacion1).should(text)
+                cy.get(locator.paginacion2).should(text)
+                cy.get(locator.paginacionRight).should(text)
+            })
+            cy.get(locator.inputAllProp).type('brasil')
+            cy.get(locator.btnAllProp).click()
+            cy.get(locator.paginacionRightAll).should(text)
         })
     }
 

@@ -18,6 +18,7 @@
 
 📌 [TA House | App](https://dev.tahouse.casa/) 
 <br />
+<br />
 
 <h2 align="left"><em>📋 Datos CP </em></h2>
 
@@ -30,8 +31,19 @@
 <br />
 <br />
 
+<h2 align="left"><em>📋 Datos CP </em></h2>
+
+- ### <em>Sprint N°2</em>⚙️
+
+ - [Resumen de Casos de Pruebas Ejecutados - Google 📘Docs](https://docs.google.com/document/d/1swu6-Kf0pOFIvucHaunRuRRTVjcrJhYLPK_FneTG3C4/edit)
+ - [Detalle Casos de Pruebas Ejecutados - Google 📗sheet](https://docs.google.com/spreadsheets/d/1XtMFKw-h3ncpF6JtCZXiSvVU7kMd-zShZZRmQg61_Jc/edit#gid=0)
+ - [Reporte de Bugs - Google 📘Docs](https://docs.google.com/spreadsheets/d/1XtMFKw-h3ncpF6JtCZXiSvVU7kMd-zShZZRmQg61_Jc/edit#gid=0)
+ - [Detalle Casos de Pruebas Ejecutados en Automation - Cypress.io | Mochawesome ](https://tahouse-casa.github.io/tahouse-testing/)
+<br />
+<br />
+
 <h2 align="left"><em>✒️ Descripcion del Proyecto</em></h2>
-<h4 align="left">TA House es una app que permite a los usuarios buscar inmuebles para alquilar, comprar o vender </h4>
+<h4 align="left">Ta House es una app que permite a los usuarios buscar inmuebles para alquilar, comprar o vender </h4>
 
 
 
