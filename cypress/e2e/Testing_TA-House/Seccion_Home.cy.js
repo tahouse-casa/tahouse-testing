@@ -160,31 +160,32 @@ describe('Testing 1er Sprint | Idea 5 | TA-House', () => {
     });
     
     
-    it('Inputs dentro del Form', () => { // Mostrar Buttons en Filtro Form "Submit" y "Clear"       
-      // Prueba Button con filtro desplegable motrando la siguiente lista "Ciudad", "Ambientes", "Cantidad de Baños", "Cantidad de Habitaciones","Mts2 max y min"
-        // Prueba Button con el nombre del Mapa mostrando la Ubicacion/Direccion del Inmueble
-        // Filtramos por Ciudad mostrando ciudad buscada y quedar seleccionada
-        // Filtramos por cantidad de Ambientes y validando que sean numeros enteros
-        // Filtramos por cantidad de Habitaciones y validando que sean numeros enteros
-        // Filtramos por cantidad de Baños y validando que sean numeros enteros
-        // Filtramos por Mts2 Min / Max y validando que se sean 
-      });
+//     it('Inputs dentro del Form', () => { // Mostrar Buttons en Filtro Form "Submit" y "Clear"       
+//       // Prueba Button con filtro desplegable motrando la siguiente lista "Ciudad", "Ambientes", "Cantidad de Baños", "Cantidad de Habitaciones","Mts2 max y min"
+//         // Prueba Button con el nombre del Mapa mostrando la Ubicacion/Direccion del Inmueble
+//         // Filtramos por Ciudad mostrando ciudad buscada y quedar seleccionada
+//         // Filtramos por cantidad de Ambientes y validando que sean numeros enteros
+//         // Filtramos por cantidad de Habitaciones y validando que sean numeros enteros
+//         // Filtramos por cantidad de Baños y validando que sean numeros enteros
+//         // Filtramos por Mts2 Min / Max y validando que se sean 
+//       });
 
-    it('Check de todos los elementos diseñados en seccion Home', ()=>{ // Checkeamos todos lo elementos del dom existentes segun diseño UI
-      // Prueba de todos los elementos del Dom
+//     it('Check de todos los elementos diseñados en seccion Home', ()=>{ // Checkeamos todos lo elementos del dom existentes segun diseño UI
+//       // Prueba de todos los elementos del Dom
 
-    }) 
+//     }) 
     
-    it('Menu Navbar', ()=>{ // Mostrar logo, texto descriptivo, input ubicacion, secciones de la web
+//     it('Menu Navbar', ()=>{ // Mostrar logo, texto descriptivo, input ubicacion, secciones de la web
 
-      // Prueba de Img logo segun diseño UI
-      // Prueba icono menu Nav
-      // Prueba Texto descriptivo "Encuentra el Hogar de tus Sueños"
-      // Prueba de Filtro realizando busqueda
-      // Texto descriptivo "En que ciudad desea Vivir"
-      // Link acceso formulario
+//       // Prueba de Img logo segun diseño UI
+//       // Prueba icono menu Nav
+//       // Prueba Texto descriptivo "Encuentra el Hogar de tus Sueños"
+//       // Prueba de Filtro realizando busqueda
+//       // Texto descriptivo "En que ciudad desea Vivir"
+//       // Link acceso formulario
 
-    })
+//     })
+
 })
 
 describe('Testing Exploratorio seccion Home', () => {
