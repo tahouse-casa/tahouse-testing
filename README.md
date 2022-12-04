@@ -16,7 +16,7 @@
 📌 [Plan de Pruebas ](https://docs.google.com/document/d/1dUFPsR8bqabMhBHuJoDZJEjY0QTFLXMIijpkcEeTWhU/edit)
 <br />
 
-📌 [TA House | App](https://dev.tahouse.casa/) 
+📌 [TA House | version Mobile](https://dev.tahouse.casa/) 
 <br />
 <br />
 
