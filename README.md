@@ -39,7 +39,7 @@
  - [Detalle Casos de Pruebas Ejecutados - Google 📗sheet](https://docs.google.com/spreadsheets/d/1XtMFKw-h3ncpF6JtCZXiSvVU7kMd-zShZZRmQg61_Jc/edit#gid=0)
  - [Reporte de Bugs - Google 📘Docs](https://docs.google.com/document/d/1mSHnxoNlqpAGk8XyI00CNfr9uDr0S0aY8IcSiLzEADA/edit)
  - [Detalle Casos de Pruebas Ejecutados en Automation - Cypress.io | Mochawesome ](https://tahouse-casa.github.io/tahouse-testing/)
- - [Postman Coleccion Pruebas en Apis](https://blue-firefly-829336.postman.co/workspace/Idea-5---Bonpland~ed56c536-aed7-45f3-95bd-109b482da220/collection/22531503-08c7d3df-d134-46bf-914c-b7b224e3dd3d?action=share&creator=22531503)
+ - [Pruebas en Apis con Postman](https://blue-firefly-829336.postman.co/workspace/Idea-5---Bonpland~ed56c536-aed7-45f3-95bd-109b482da220/collection/22531503-08c7d3df-d134-46bf-914c-b7b224e3dd3d?action=share&creator=22531503)
 <br />
 <br />
 
