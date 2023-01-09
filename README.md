@@ -28,6 +28,7 @@
  - [Detalle Casos de Pruebas Ejecutados - Google 📗sheet](https://docs.google.com/spreadsheets/d/1AFWnSNzIHXbe13HhTuA2pnjD-wAlpQRj3usGxob2w0g/edit#gid=0)
  - [Reporte de Bugs - Google 📘Docs](https://docs.google.com/document/d/1ZPlk6z2-uWW_8OKjQq3M5jGCeLHwVqpxGv6tzIipkL8/edit)
  - [Detalle Casos de Pruebas Ejecutados en Automation - Cypress.io | Mochawesome ](https://tahouse-casa.github.io/tahouse-testing/)
+ - [Postman]()
 <br />
 <br />
 
