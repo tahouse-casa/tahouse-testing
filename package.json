@@ -18,6 +18,7 @@
   "author": "Bonpland",
   "license": "ISC",
   "dependencies": {
+    "cypress-xpath": "^2.0.1",
     "mocha": "^10.1.0",
     "mochawesome-merge": "^4.2.1"
   },

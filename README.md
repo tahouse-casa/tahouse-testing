@@ -42,6 +42,7 @@
 <br />
 <br />
 
+
 <h2 align="left"><em>✒️ Descripcion del Proyecto</em></h2>
 <h4 align="left">Ta House es una app que permite a los usuarios buscar inmuebles para alquilar, comprar o vender </h4>
 
