@@ -121,7 +121,7 @@ html {
         align-items:flex-start;
         padding: 1.5rem;
         border-radius: 2rem;
-        height: 25rem;
+        height: 35rem;
         width: 33rem;
         margin: 1rem;
         -moz-box-shadow: 1px 0px 7px #6d71bf;
@@ -134,7 +134,7 @@ html {
         align-items:flex-start;
         padding: 1.5rem;
         border-radius: 2rem;
-        height: 50rem;
+        height: 55rem;
         width: 33rem;
         margin: 1rem;
         -moz-box-shadow: 1px 0px 7px #6d71bf;
@@ -246,6 +246,11 @@ html {
     
     @media only screen and (max-width: 400px) {
     
+    main{
+        margin-top: 0;
+        
+    }
+
     .blocksEhs {align-items: center;}   
         
     }    
