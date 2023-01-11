@@ -72,7 +72,7 @@ html {
     h3 {font-size: 1.2em;
         letter-spacing: 1px;
         font-weight: bold;
-        color: silver;}    
+        color: whitesmoke;}    
     
     h3:hover{
         color: #9D8420;
@@ -140,7 +140,13 @@ html {
         -moz-box-shadow: 1px 0px 7px #6d71bf;
         -webkit-box-shadow: 1px 0px 7px #6d71bf;
         box-shadow: 1px 0px 7px #6d71bf;
-    }    
+    }  
+    
+    .tools{
+        color: silver;
+        font-size: 1.5em;
+        list-style-type:circle;
+    }
 /* Switch cambiar tema */
 .switch{
     margin-bottom: 1rem;
@@ -189,6 +195,55 @@ html {
     gap:3rem;
     margin-top: 10%; }
 
+/* Dropdown Desplegable con sprints*/
+
+    .dropbtn {
+        text-align: left;
+        margin-top: 2rem;
+        background-color: transparent;
+        width: 25rem;
+        height: 4rem;
+        color: silver;
+        padding: 5px;
+        font-size: 16px;
+        border-color: silver;
+        cursor: pointer;
+      }
+      
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        text-align: center;
+        display: none;
+        width: 25rem;
+        position: absolute;
+        background-color: transparent;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content a:hover {background-color: transparent}
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      
+      .dropdown:hover .dropbtn {
+        background-color: transparent;
+      }
+
+    
     @media only screen and (max-width: 400px) {
     
     .blocksEhs {align-items: center;}   
