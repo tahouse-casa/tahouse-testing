@@ -16,6 +16,7 @@ a {
   text-decoration: none; }
 
 html {
+  font-family:fantasy;  
   font-size: 62.5%; }
 
 @keyframes aparecer {
@@ -35,15 +36,23 @@ html {
     opacity: 1; } }
 
     body {
+        background-image: url('./img/descarga\ \(3\).jpg');
         display: flex;
         flex-direction: column;
         background-color: #313638;
         width: auto;
-        height: 300vh; }
+        height: 100vh; }
 
     .iconify {
-        color: black; }
-          
+        color: black; }  
+    
+    main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+        margin-top: 3rem;
+    }  
+    
     label {
         width: 100%;
         letter-spacing: 1px;
@@ -51,12 +60,24 @@ html {
         text-transform: uppercase; }
       
     h2 {
+        letter-spacing: 2px;
         font-size: 2em;
         color: whitesmoke; }
+
+    h2:hover{
+        color: #9D8420;
+        transition: 0.2s;
+    }    
     
-    h3 {font-size: 1.4em;
+    h3 {font-size: 1.2em;
+        letter-spacing: 1px;
         font-weight: bold;
         color: silver;}    
+    
+    h3:hover{
+        color: #9D8420;
+        transition: 0.3s;
+    }    
 
     #navText {
         letter-spacing: 1px;
@@ -64,6 +85,10 @@ html {
         color: black;
         font-weight: bold; }
     
+    #navText:hover{
+        transition: 0.4s;
+        color: #FBFEF9;
+    }    
     /* .logotp {
         display: flex;
         flex-direction: row;
@@ -76,7 +101,6 @@ html {
 
     .blocksEhs {
         justify-content: center;
-        margin-top: 3rem;
         gap: 3rem;
         display: flex;
         flex-direction: row;
@@ -91,19 +115,32 @@ html {
         letter-spacing: 1px;
         font-weight: bold; }
 
-    .blockThree, .blockTwo, .blockOne, .blockFour {
+    .blockTwo, .blockOne, .blockFour {
         display: flex;
         flex-direction: column;
         align-items:flex-start;
         padding: 1.5rem;
         border-radius: 2rem;
-        height: 22rem;
+        height: 25rem;
         width: 33rem;
         margin: 1rem;
         -moz-box-shadow: 1px 0px 7px #6d71bf;
         -webkit-box-shadow: 1px 0px 7px #6d71bf;
         box-shadow: 1px 0px 7px #6d71bf; }
 
+    .blockThree{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        padding: 1.5rem;
+        border-radius: 2rem;
+        height: 50rem;
+        width: 33rem;
+        margin: 1rem;
+        -moz-box-shadow: 1px 0px 7px #6d71bf;
+        -webkit-box-shadow: 1px 0px 7px #6d71bf;
+        box-shadow: 1px 0px 7px #6d71bf;
+    }    
 /* Switch cambiar tema */
 .switch{
     margin-bottom: 1rem;
@@ -145,6 +182,12 @@ html {
     border-radius: 50%;
     top: 2px;
     left: 2px; }
+
+    .iconosFooter{
+    display: flex;
+    justify-content: center;
+    gap:3rem;
+    margin-top: 10%; }
 
     @media only screen and (max-width: 400px) {
     
