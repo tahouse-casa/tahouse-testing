@@ -36,7 +36,9 @@ html {
     opacity: 1; } }
 
     body {
-        background-image: url('./img/descarga\ \(3\).jpg');
+        background-image: url('./img/Visual\ Studio\ Code\ Wallpapers\ -\ Wallpaper\ Cave.png');
+        
+        background-size: cover;
         display: flex;
         flex-direction: column;
         background-color: #313638;
