@@ -4,17 +4,19 @@ let body = document.querySelector('body');
 
 // Funcion Cambio de 'Tema'
 
-let theme = true;
+let theme = false;
 function changeTheme(){
 theme = !theme;
     if(theme){
-
-        // body.style.backgroundColor = '#313638'
+       
+        body.style.backgroundImage = "url('./img/descarga.png')"
+        body.style.transition = '1s'
+        localStorage.setItem('body','light')
     }
 
     else{
-
-        // body.style.backgroundColor = '#E8E9EB'  
+        body.style.backgroundImage = "url('./img/Deviate\ Labs\ Logo.gif')";  
+        localStorage.setItem('body','dark')
     }   
 }
 
@@ -23,18 +25,14 @@ function loadPage() {
     // se cambia el color tema Background en LocalStorade al iniciar pagina
     if (localStorage.getItem('body')){
 
-        if (localStorage.getItem('body') === 'dark'){
-            for (let i = 0; i < body.length; i++) {
-                body[i].style.backgroundImage = "url('../Imagenes/fonfo-game27.png')";
-                
-            }  
-        }
-        else{
+        if (localStorage.getItem('body') === 'light'){
             
-            for (let i = 0; i < body.length; i++) {
-                body[i].style.backgroundImage = "url('../Imagenes/body-f9.jpg')";
-                
-            }
+            body.style.backgroundImage = "url('./img/descarga.png')";
+            body.style.transition = '1s'       
+        }
+        else{  
+            body.style.backgroundImage = "url('./img/Deviate\ Labs\ Logo.gif')";   
+
         }      
     }   
 }
