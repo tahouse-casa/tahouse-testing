@@ -23,7 +23,7 @@ if(theme){
     for (let i = 0; i < tools.length; i++) {
         tools[i].style.color = 'black'
         tools[i].style.transition = '1s'
-        localStorage.getItem('tools','light')
+        localStorage.setItem('tools','light')
     }    
 
 //Cambio de estilo en los Buttons    
@@ -113,4 +113,17 @@ else{
         button[i].style.color = 'whitesmoke'
         }        
     }
+
+if (localStorage.getItem('tools') === 'light'){
+    for (let i = 0; i < tools.length; i++) {
+        tools[i].style.color = 'black'
+    }
+}
+
+else{
+    for (let i = 0; i < tools.length; i++) {
+        tools[i].style.color = 'whitesmoke';
+    }
+}
+    
 }
