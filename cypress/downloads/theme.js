@@ -100,7 +100,19 @@ else{
         h2[i].style.color = 'whitesmoke'      
     }
 }
+
+if (localStorage.getItem('h3') === 'light') {
+    for (let i = 0; i < h3.length; i++) {
+        h3[i].style.color ='black'
+    }
+}
     
+else{
+    for (let i = 0; i < h3.length; i++) {
+        h3[i].style.color = 'whitesmoke'
+    }
+}
+
 if (localStorage.getItem('button') === 'light'){
     for (let i = 0; i < button.length; i++) {
         button[i].style.color = 'black'
