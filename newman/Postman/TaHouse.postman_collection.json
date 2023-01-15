@@ -1,0 +1,619 @@
+{
+	"info": {
+		"_postman_id": "08c7d3df-d134-46bf-914c-b7b224e3dd3d",
+		"name": "TaHouse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25254146"
+	},
+	"item": [
+		{
+			"name": "Test - Consultas Get",
+			"item": [
+				{
+					"name": "Api Properties",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Estados Ok de conexion 200/201/202\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201,200,202])\r",
+									"});\r",
+									"pm.test(\"Content-Type is present in header\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"pm.test(\"Date is present in header\", function () {\r",
+									"    pm.response.to.have.header(\"Date\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'ID' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"id\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Id' sea de tipo Number\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData[0].id).to.be.a('number')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'City' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"City\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'City' sea de tipo String\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData[0].city).to.be.a('string')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento tipo de 'State' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"state\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos segun el tipo de 'State' contenga (Libre, Reservado, Alquilado, Vendido) y ademas que sea de tipo String\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData[0].state).to.be.oneOf(['Alquilado','Libre','Reservado','Vendido'])\r",
+									"    pm.expect(jsonData[0].state).to.be.a('string')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Type' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"type\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body que 'Type' contenga (Casa, Departamento, Hotel, Terreno, Monoambiente) y ademas sea de tipo string\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData[0].type).to.be.oneOf(['Casa','Departamento','Hotel','Terreno','Monoambiente'])\r",
+									"    pm.expect(jsonData[0].type).to.be.a('string')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Country' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"country\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Country' sea de tipo string\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData[0].country).to.be.a('string')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Address' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"address\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Address' sea de tipo string\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData[0].address).to.be.a('string')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Meters' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"meters\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Meters' sea de tipo Number\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData[0].meters).to.be.a('number')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Rooms' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"rooms\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Rooms' sea de tipo Number\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData[0].rooms).to.be.a('number')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Environments' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"environments\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Environments' sea de tipo Number\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData[0].environments).to.be.a('number')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Bathrooms' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"bathrooms\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Bathrooms' sea de tipo Number\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData[0].bathrooms).to.be.a('number')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Price' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"price\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Price' sea de tipo Number\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData[0].price).to.be.a('number')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Phone' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"phone\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Phone' sea de tipo string\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData[0].phone).to.be.a('string')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Email' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"email\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Email' sea de tipo string\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData[0].email).to.be.a('string')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'UrlImage' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"urlImage\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'UrlImage' sea de tipo array\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData[0].urlImage).to.be.a('array')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Description' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"description\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Description' sea de tipo string\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData[0].description).to.be.a('string')\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{TaHouse_properties}}",
+							"host": [
+								"{{TaHouse_properties}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Api Countries",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Content-Type is present in header\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"pm.test(\"Date is present in header\", function () {\r",
+									"    pm.response.to.have.header(\"Date\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'ID' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"id\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Id' sea un Number\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"     pm.expect(jsonData[0].id).to.be.a('number')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Country' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"country\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Country' sea un String\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"     pm.expect(jsonData[0].country).to.be.a('string')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Latitud' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"latitud\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Latitud' sea un String\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"     pm.expect(jsonData[0].latitud).to.be.a('string')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Longitud' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"longitud\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Longitud' sea un String\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"     pm.expect(jsonData[0].longitud).to.be.a('string')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'City' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"city\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'City' sea un Array\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"     pm.expect(jsonData[0].citys).to.be.a('array')\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{TaHouse_countries}}",
+							"host": [
+								"{{TaHouse_countries}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Api Users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Id' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"id\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Id' sea un Number\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"     pm.expect(jsonData[0].id).to.be.a('number')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Email' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"email\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Email' sea un String\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"     pm.expect(jsonData[0].email).to.be.a('string')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Role' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"role\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Role' sea de tipo (Admin o Client) y ademas sea una String\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"    pm.expect(jsonData[0].role).to.be.oneOf(['admin','client'])\r",
+									"    pm.expect(jsonData[0].role).to.be.a('string')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Name' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Name' sea un String\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"     pm.expect(jsonData[0].name).to.be.a('string')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'City' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'City' sea un String\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"     pm.expect(jsonData[0].city).to.be.a('string')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Country' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"country\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Country' sea un String\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"     pm.expect(jsonData[0].country).to.be.a('string')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Phone' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"phone\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Phone' sea un String\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"     pm.expect(jsonData[0].phone).to.be.a('string')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Fecha creacion Card' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"phone\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Date Create' sea un String\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"     pm.expect(jsonData[0].createdAt).to.be.a('string')\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{TaHouse_Users}}",
+							"host": [
+								"{{TaHouse_Users}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Api favorites",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'Id' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"id\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'Id' sea un Number\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"     pm.expect(jsonData[0].id).to.be.a('number')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'UserId' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"userId\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'UserId' sea un Number\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"     pm.expect(jsonData[0].id).to.be.a('number')\r",
+									"});\r",
+									"pm.test(\"Comprobamos en Body si el elemento 'PropertyId' existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"propertyId\");\r",
+									"});\r",
+									"pm.test(\"Comprobamos que 'PropertyId' sea un Number\", function () {\r",
+									"    var jsonData = pm.response.json(); \r",
+									"     pm.expect(jsonData[0].id).to.be.a('number')\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{TaHouse_Favorites}}",
+							"host": [
+								"{{TaHouse_Favorites}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Api countries por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.dev.tahouse.casa/api/v1/countries/1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"dev",
+								"tahouse",
+								"casa"
+							],
+							"path": [
+								"api",
+								"v1",
+								"countries",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test - Consultas Post",
+			"item": [
+				{
+					"name": "Api Properties",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401 (Unauthorized)\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{TaHouse_properties}}",
+							"host": [
+								"{{TaHouse_properties}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Api Countries",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401 (Unauthorized)\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{TaHouse_countries}}",
+							"host": [
+								"{{TaHouse_countries}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Api Users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401 (Unauthorizaed)\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "root123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admintahouse@mail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{TaHouse_Users}}",
+							"host": [
+								"{{TaHouse_Users}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Api Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401 (Unauthorizaed)\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{TaHouse_Login}}",
+							"host": [
+								"{{TaHouse_Login}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Api Login/Recovery",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401 (Unauthorizaed)\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{TaHouse_Login/Recovery}}",
+							"host": [
+								"{{TaHouse_Login/Recovery}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Api Login/Change-Password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401 (Unauthorizaed)\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.dev.tahouse.casa/api/v1/auth/change-password",
+							"protocol": "https",
+							"host": [
+								"api",
+								"dev",
+								"tahouse",
+								"casa"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
