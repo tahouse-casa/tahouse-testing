@@ -1,12 +1,10 @@
 
+// Selectores del DOM
 const body = document.querySelector('body');
 const h2 = document.getElementsByTagName('h2')
 const button = document.getElementsByTagName('button')
 const h3 = document.getElementsByTagName('h3')
 const tools = document.querySelectorAll('.tools')
-
-
-console.log(tools)
 
 // Funcion Cambio de 'Tema'
 let theme = false;
@@ -137,5 +135,5 @@ else{
         tools[i].style.color = 'whitesmoke';
     }
 }
-    
+
 }
