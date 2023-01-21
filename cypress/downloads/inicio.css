@@ -83,7 +83,7 @@ h3:hover{
 
 #navText {
   letter-spacing: 1px;
-  font-size: 2em;
+  font-size: 1.6em;
   color: black;
   font-weight: bold; }
     
@@ -91,6 +91,7 @@ h3:hover{
   transition: 0.4s;
   color: #FBFEF9;
 }    
+
     /* .logotp {
         display: flex;
         flex-direction: row;
