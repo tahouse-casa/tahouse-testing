@@ -1,8 +1,6 @@
 
  const urlLogin = 'https://dev.tahouse.casa/login'
-
 class Admin {
-
     loginAdmin(){
         cy.visit(urlLogin)
         cy.fixture('credenciales').then((testdata)=>{
@@ -11,7 +9,5 @@ class Admin {
         cy.wait(5000)
         })
     }
-
 }
-
 export default Admin

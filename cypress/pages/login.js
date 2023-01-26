@@ -15,6 +15,7 @@ class Login {
         cy.get('button').eq(0).click()
         
     }
+
     msjError(text,text2){
         cy.get('.sc-hZNxer').as('msjError').should(text2)
         .and('contain',text)
@@ -39,10 +40,12 @@ class Login {
         cy.get('.sc-gGWvLE > :nth-child(2)').should(text)
         cy.get('.sc-dkcEsn > .sc-bTUVah').should(text)
     }
+
     itemEmail(text,text2){
         cy.get('[name="email"]').should('have.attr', 'type', text)
         .and('have.attr', 'placeholder', 'E-mail')
     }
+    
     itemPassword(text,text2){
         cy.get('[name="password"]').should('have.attr', 'type', text)
         .and('have.attr', 'placeholder', text2)
