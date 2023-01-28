@@ -6,7 +6,7 @@ module.exports = defineConfig({
     baseUrl:'https://dev.tahouse.casa/',
     setupNodeEvents(on, config) {
       require('cypress-mochawesome-reporter/plugin')(on);
-      // require('cypress-xpath')
+      
     },
     reporterOptions:{
       charts:true,

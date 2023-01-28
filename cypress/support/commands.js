@@ -41,6 +41,37 @@
         cy.get('[name="email"]').type(email)
     })
     
+    Cypress.Commands.add('deleteInmueble',()=>{
+        cy.get('.sc-Dmqmp > :nth-child(1) > :nth-child(2) > :nth-child(2)').click()// Click en Borrar
+    })
+
+    Cypress.Commands.add('editPais',()=>{
+        cy.get('.sc-Dmqmp > :nth-child(10) > :nth-child(2) > :nth-child(1)').click()// Click en Modificar
+    })
+
+    Cypress.Commands.add('latitud',(num1,num2,num3,num4)=>{
+        cy.get('[name="value1"]').eq(0).type(num1)
+        cy.get('[name="value2"]').eq(0).type(num2)
+        cy.get('[name="value3"]').eq(0).type(num3)
+        cy.get('[name="value4"]').eq(0).type(num4)
+    })
+
+    Cypress.Commands.add('longitud',(num1,num2,num3,num4)=>{ 
+        cy.get('[name="value1"]').eq(1).type(num1)
+        cy.get('[name="value2"]').eq(1).type(num2)
+        cy.get('[name="value3"]').eq(1).type(num3)
+        cy.get('[name="value4"]').eq(1).type(num4)
+    })
+
+    Cypress.Commands.add('addcountry',(pais,city)=>{
+        cy.get('[name="country"]').type(pais)
+        cy.get('[name="0"]').type(city)
+    })
+
+    Cypress.Commands.add('deletecountry',()=>{
+      
+    })
+//
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
