@@ -27,6 +27,11 @@ pipeline{
                 echo "Deploying de App"
             }
         }
+        stage('Git'){
+            steps{
+                echo "Deploying de App new"
+            }
+        }
     }
 
 }
