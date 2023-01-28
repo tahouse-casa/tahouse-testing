@@ -4,6 +4,7 @@
   "description": "Qa",
   "main": "index.js",
   "scripts": {
+    "cypress:chrome":"cypress run --browser chrome --spec cypress/e2e/Testing_TA-House/*.cy.js",
     "cypress_open": "cypress open",
     "test_all": "cypress run reporter mochawesome",
     "test_chrome": "cypress run --spec cypress/e2e/Testing_TA-House/Seccion_Home.cy.js --browser chrome",
