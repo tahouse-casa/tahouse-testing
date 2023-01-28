@@ -2,7 +2,7 @@ pipeline{
     agent any
 
     parameters{
-        string(name: "SPEC", default:"cypress/e2e/**/**" description:"Ejemplo 1")
+        string(name: "SPEC", default:"cypress/e2e/" description:"Ejemplo 1")
         choice(name:"BROWSER", choice:['chrome','edge','firefox'], description:"Ejemplo 2")
     }
 
