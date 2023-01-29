@@ -10,7 +10,7 @@ const panel = new Panel
 describe('Testing 2do Sprint | Panel Administracion - Imagenes', () => {
 
     beforeEach(() => {
-        panel.loginAdmin()
+        cy.visit('/')
         
       })
 

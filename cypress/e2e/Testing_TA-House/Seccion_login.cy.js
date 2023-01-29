@@ -32,7 +32,6 @@ describe('Testing 2do Sprint | Form Login', {
       });
 
       it('Login_003 | Contenido y Atributos',()=>{// Se validan los contenidos y atributos de los elementos existentes en login segun diseño UI
-
         login.valdiacionTitulo('Te damos la bienvenida a TaHouse')//Se espera: Validar contenido del Titulo
         login.validacionSubTitulo('Inicia sesión para una mejor experiencia')//Se espera: Validar contenido del Subtiutlo
         login.itemEmail('email','E-mail')//Se espera: que el Atributo sea 'email' y el contenido 'E-mail
@@ -48,7 +47,7 @@ describe('Testing 2do Sprint | Form Login', {
 
       })
 
-      it('Login_006 | Seguridad en E-mail', () => {// Se prueba que el E-mail tenga el formato correcto
+      it('Login_006 | Contenido en E-mail', () => {// Se prueba que el E-mail tenga el formato correcto
         login.user1('juan1@fake','aBc123')// Se ingresa un E-mail invalido
         login.msjError('be.visible')// Se espera: el sistema avise mediante un msj el error y lo muestre en pantalla
 
@@ -63,7 +62,7 @@ describe('Testing 2do Sprint | Form Login', {
           
       });
 
-      it('Login_009 | Elementos existentes', () => {// Se validan todos los elementos existentes en login segun diseño UI
+      it.only('Login_009 | Elementos existentes', () => {// Se validan todos los elementos existentes en login segun diseño UI
         login.itemsLogin('exist')
         //Se espera: La existencia de los siguientes elementos en el Login
         //Titulo

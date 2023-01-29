@@ -7,7 +7,7 @@
     "cypress:run": "cypress run --dev",
     "start": "http-server",
     "cypress:chrome": "cypress run --browser chrome --spec cypress/e2e/Testing_TA-House/*.cy.js",
-    "cypress_open": "cypress open",
+    "cypress:open": "cypress open",
     "test_all": "cypress run reporter mochawesome",
     "test_chrome": "cypress run --spec cypress/e2e/Testing_TA-House/Seccion_Home.cy.js --browser chrome",
     "test:edge": "cypress run --spec cypress/e2e/Testing_TA-House/Seccion_login.cy.js --browser edge",
