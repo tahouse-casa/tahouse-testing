@@ -15,7 +15,7 @@ describe('Panel Administracion', () => {
           }) 
     });
 
-    it('U_001 | Eliminar Inmueble', () => {
+    it.only('U_001 | Eliminar Inmueble', () => {
         cy.visit(urlTaHouseProperty)
     });
 

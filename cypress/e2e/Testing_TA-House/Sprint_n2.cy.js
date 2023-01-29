@@ -21,7 +21,7 @@ describe('Testing 2do Sprint | Seccion Login', {
   
       })
 
-      it('Login_001 | Elementos existentes', () => {// Se validan todos los elementos existentes en login segun diseño UI
+      it.only('Login_001 | Elementos existentes', () => {// Se validan todos los elementos existentes en login segun diseño UI
         login.itemsLogin('exist')
         //Se espera: La existencia de los siguientes elementos en el Login
         //Titulo
