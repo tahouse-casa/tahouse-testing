@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cypress:run": "cypress run --dev",
-    "cypress:run:ct": "cypress run-ct --dev",
+    "start": "http-server",
     "cypress:chrome": "cypress run --browser chrome --spec cypress/e2e/Testing_TA-House/*.cy.js",
     "cypress_open": "cypress open",
     "test_all": "cypress run reporter mochawesome",
