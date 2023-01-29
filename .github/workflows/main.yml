@@ -1,10 +1,9 @@
-nname: Cypress Tests
+name: Cypress Tests
 
 on: [push]
 
 jobs:
   cypress-run:
-    runs-on: ubuntu-latest
     runs-on: self-hosted
     steps:
       - name: Checkout
