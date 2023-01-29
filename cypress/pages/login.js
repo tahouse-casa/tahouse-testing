@@ -10,14 +10,15 @@ class Login {
         cy.go('back')
     }
 
-    user1(text,text2){
-        cy.login(text,text2)
+    user1(text1,text2){
+        cy.get('[name="email"]').type(text1)
+        cy.get('[name="password"]').type(text2)
         cy.get('button').eq(0).click()
         
     }
 
     msjError(text,text2){
-        cy.get('.sc-hZNxer').as('msjError').should(text2)
+        cy.contains('La contraseña debe tener al menos 6 caracteres').should(text2)
         .and('contain',text)
     }
 

@@ -17,7 +17,7 @@ describe('Testing 2do Sprint | Form Registro', {
 
       })
 
-      it.only('Registro_000 | Validaciones Html Request', () => {
+      it('Registro_000 | Validaciones Html Request', () => {
         cy.url().should('equal',urlTaHouseRegister) //Se espera: Validar la URL 'https://dev.tahouse.casa/register'
         cy.title().should('eq','TaHouse.casa')// Validamos el Tiutlo del Html
           expect(cy.config('viewportWidth')).to.equal(380) // Validamos MaxWhidth 380px

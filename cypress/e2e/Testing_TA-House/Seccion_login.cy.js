@@ -25,7 +25,7 @@ describe('Testing 2do Sprint | Form Login', {
           
       });
       
-      it.only('Login_002 | Seguridad en Password', () => {// Se Prueban la cantidad de caracteres combinando letras y numeros 
+      it('Login_002 | Seguridad en Password', () => {// Se Prueban la cantidad de caracteres combinando letras y numeros 
         login.user1('juan1@mail.com','aBc12')// Se ingresan menos de 6 caracteres en el password
         login.msjError('La contraseña debe tener al menos 6 caracteres','be.visible')// Se espera: el sistema avise mediante un msj el error y lo muestre en pantalla
 

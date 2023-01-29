@@ -29,7 +29,7 @@ describe('Panel Countries', () => {
         })
     });
 
-    it.only('Api Inmueble', () => {
+    it('Api Inmueble', () => {
         cy.visit(urlTaHouseProperty)
         cy.wait(2000).then(()=>{
          cy.request('GET','https://api.dev.tahouse.casa/api/v1/properties')

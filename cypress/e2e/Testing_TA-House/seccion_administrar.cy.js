@@ -15,7 +15,7 @@ describe('Panel Administracion', () => {
           }) 
     });
 
-    it.only('U_001 | Eliminar Inmueble', () => {
+    it('U_001 | Eliminar Inmueble', () => {
         cy.visit(urlTaHouseProperty)
     });
 
@@ -28,13 +28,13 @@ describe('Panel Administracion', () => {
             expect(location.pathname).to.eq('/administration/properties')// Se espera: Validar la ruta Path dentro de la app "/properties"
           })   
 
-        cy.wait(2000)
-        cy.get('.leJsSn').click()
+        cy.wait(1000)
+        cy.get('.jIcsPA').click()
         cy.get('button').click()
-        cy.selectGroup('Alquiler','Departamento','Alquilado','Argentina','Funes')// Se generan datos random en options
-        cy.inputGroup1('av 11st',4,150,3,3,99000,'Excelente Ubicacion')// Se generan datos random en inputs de datos
+        cy.selectGroup('Venta','Casa','Vendido','Argentina','Funes')// Se generan datos random en options
+        cy.inputGroup1('av 22st',4,850,4,3,125000,'Excelente Ubicacion')// Se generan datos random en inputs de datos
         cy.get('button').click()
-        cy.inputGroup2(11236547968746,'nuevo1@mail.com')// Se generan datos randon en inputs de datos
+        cy.inputGroup2(11230002214746,'nuevo2@mail.com')// Se generan datos randon en inputs de datos
         cy.get('button').click()
         cy.contains('PUBLICAR').click({force:true})
         cy.contains('CONTINUAR').click()
@@ -43,8 +43,7 @@ describe('Panel Administracion', () => {
     it('U_000 |', () => {
         cy.visit(urlTaHouseCountries)
         cy.wait(4000)
-        
-        
+          
     });
     
 });
