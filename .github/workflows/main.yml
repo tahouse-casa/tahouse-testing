@@ -10,8 +10,15 @@ jobs:
         uses: actions/checkout@v3
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v5 # use the explicit version number
+      - name: Cypress install
+        uses: cypress-io/github-action@v2 # use the explicit version number
         with:
           build: npm run build
           start: npm start
+
+        name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          install: false
+          working-directory: Cypress/e2e
+          
