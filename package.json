@@ -4,7 +4,9 @@
   "description": "Qa",
   "main": "index.js",
   "scripts": {
-    "cypress:chrome":"cypress run --browser chrome --spec cypress/e2e/Testing_TA-House/*.cy.js",
+    "cypress:run": "cypress run --dev",
+    "cypress:run:ct": "cypress run-ct --dev",
+    "cypress:chrome": "cypress run --browser chrome --spec cypress/e2e/Testing_TA-House/*.cy.js",
     "cypress_open": "cypress open",
     "test_all": "cypress run reporter mochawesome",
     "test_chrome": "cypress run --spec cypress/e2e/Testing_TA-House/Seccion_Home.cy.js --browser chrome",
@@ -18,7 +20,11 @@
     "newman:reporter:local": "newman run newman/Postman/TaHouse.postman_collection.json -e newman/Postman/Ta_House.postman_environment.json -r htmlextra",
     "test:sprint2:mocha": "cypress run reporter mochawesome --spec cypress/e2e/Testing_TA-House/Sprint_n2.cy.js"
   },
-  "author": "Bonpland",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tahouse-casa/tahouse-testing.git"
+  },
+  "author": "TaHouse",
   "license": "ISC",
   "dependencies": {
     "chai": "^4.3.7",
@@ -29,6 +35,7 @@
     "newman-reporter-htmlextra": "^1.22.1"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^9.0.0",
     "cypress": "^12.3.0",
     "cypress-mochawesome-reporter": "^3.2.3",
     "cypress-multi-reporters": "^1.6.1",
