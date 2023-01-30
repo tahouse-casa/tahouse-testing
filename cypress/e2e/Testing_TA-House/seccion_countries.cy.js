@@ -1,4 +1,5 @@
 
+import { expect } from "chai";
 import Admin from "../../pages/loginAdmin";
 
 const admin = new Admin
@@ -29,18 +30,15 @@ describe('Panel Countries', () => {
         })
     });
 
-    it('Api Inmueble', () => {
+    it.only('Api Inmueble', () => {
         cy.visit(urlTaHouseProperty)
         cy.wait(2000).then(()=>{
          cy.request('GET','https://api.dev.tahouse.casa/api/v1/properties')
         }).then((e)=>{
-            let body = e.body[0].typeOperation
-
-            console.log(body) 
-            cy.get('.jIcsPA').click()
-            cy.get('button').click()
-            cy.get('select').eq(0).select(body).should('contain','')
-            
+            expect(e).property('status').to.equal(200)
+            expect(e.body[0]).property('address').to.be.a('string')
+            expect(e.body[0]).property('bathrooms').to.be.a('number')
+            console.log(e.body)
         })
     });
 
