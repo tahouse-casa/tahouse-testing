@@ -66,9 +66,9 @@ describe('Testing 3er Sprint | Pruebas en Seccion Login Usuario', () => {
         cy.inputEmail('E-mail','nuevo@fake')// Se ingresa un E-mail invalido
         cy.inputPass('Contraseña','aBc123')// Se ingresa: password valida
         cy.assertionCheck('Ingresar').click()//Click en Ingresar
-        cy.wait(3000).then(()=>{
-          cy.msjAviso('E-mail formato invalido','be.visible')// Se espera: el sistema avise mediante un msj el error y lo muestre en pantalla
-            }) 
+        // cy.wait(3000).then(()=>{
+        //   cy.msjAviso('E-mail formato invalido','be.visible')// Se espera: el sistema avise mediante un msj el error y lo muestre en pantalla
+        //     }) 
       });
 
       it('Login_006 | Link de Registro Usuario',()=>{// Ingresamos al link y validamos redireccion

@@ -1,5 +1,7 @@
 node_modules/
 cypress/downloads/nav.html
 .github/workflows/main.yml
+.github/workflows/docker.yml
 newman/
 .github/workflows/learn-github-actions.yml
+.github/workflows/stand.yml

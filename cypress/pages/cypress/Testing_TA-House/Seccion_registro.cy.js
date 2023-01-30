@@ -1,6 +1,6 @@
 
 
-import Registro from "../../pages/registro"
+import Registro from "../../registro"
 
 const registro = new Registro 
 
