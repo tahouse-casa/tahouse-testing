@@ -98,7 +98,7 @@ describe('Testing 3er Sprint | Pruebas en Seccion Login Usuario', () => {
         cy.inputEmail('E-mail','nuevo100@mail.com')// Se intenta realizar login con usuario no registrado
         cy.inputPass('Contraseña','aBc123')//Se ingresa password random
         cy.assertionCheck('Ingresar').click()
-        cy.wait(4000).then(()=>{
+        cy.wait(5000).then(()=>{
           cy.msjAviso('Los datos ingresados son incorrectos','be.visible')// Se espera: el sistema avise mediante un msj el error y lo muestre en pantalla
         })      
       });
