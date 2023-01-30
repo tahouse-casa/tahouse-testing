@@ -1,4 +1,5 @@
 node_modules/
 cypress/downloads/nav.html
+.github/workflows/main.yml
 newman/
 .github/workflows/learn-github-actions.yml
