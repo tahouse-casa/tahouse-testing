@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import Login from "../../pages/login"
+import Login from "../login"
 
 const login = new Login
 const apiUser = 'https://api.dev.tahouse.casa/api/v1/users'

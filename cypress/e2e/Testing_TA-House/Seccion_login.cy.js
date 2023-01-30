@@ -42,7 +42,7 @@ describe('Testing 3er Sprint | Pruebas en Seccion Login Usuario', () => {
         cy.assertionCheck('Ingresar').click()  // Se espera: login con usuario previamente registrado y luego validar URL ingresada
       });
       
-      it('Login_002 | Seguridad en Password', () => {// Se Prueban la cantidad de caracteres combinando letras y numeros 
+      it('Login_003 | Validacion en Password', () => {// Se Prueban la cantidad de caracteres combinando letras y numeros 
         cy.visit(urlLogin)
         cy.inputEmail('E-mail','nuevo20@mail.com')
         cy.inputPass('Contraseña','aBc12') // Se ingresan menos de 6 caracteres en el password
@@ -53,7 +53,7 @@ describe('Testing 3er Sprint | Pruebas en Seccion Login Usuario', () => {
 
       });
  
-      it('Login_003 | Ingreso con campo de datos vacios', () => {// Se prueba ingresar al sistema con los campos de datos E-mail y Password vacios
+      it('Login_004 | Ingreso con campo de datos vacios', () => {// Se prueba ingresar al sistema con los campos de datos E-mail y Password vacios
         cy.visit(urlLogin)
         cy.assertionCheck('Ingresar').click()// Se realiza click sobre el button 'Ingresar' 
         cy.wait(3000).then(()=>{
@@ -61,7 +61,7 @@ describe('Testing 3er Sprint | Pruebas en Seccion Login Usuario', () => {
         })                                                           // Se espera: el sistema avise mediante un msj el error y lo muestre en pantalla
       })
 
-      it('Login_004 | Validacion E-mail', () => {// Se prueba elensaje en pantalla al ingresar un mail invalido
+      it('Login_005 | Validacion E-mail', () => {// Se prueba elensaje en pantalla al ingresar un mail invalido
         cy.visit(urlLogin)
         cy.inputEmail('E-mail','nuevo@fake')// Se ingresa un E-mail invalido
         cy.inputPass('Contraseña','aBc123')// Se ingresa: password valida
@@ -71,7 +71,7 @@ describe('Testing 3er Sprint | Pruebas en Seccion Login Usuario', () => {
             }) 
       });
 
-      it('Login_005 | Link de Registro Usuario',()=>{// Ingresamos al link y validamos redireccion
+      it('Login_006 | Link de Registro Usuario',()=>{// Ingresamos al link y validamos redireccion
         cy.visit(urlLogin)
         cy.assertionCheck('¿No tienes cuenta? Registrate').click()
         cy.wait(1000).then(()=>{
@@ -81,7 +81,7 @@ describe('Testing 3er Sprint | Pruebas en Seccion Login Usuario', () => {
         cy.get('a').eq(0).click({force:true})//Click para volver a seccion /login
       })
 
-      it('Login_006 | Link Recueprar Contraseña', () => {// Ingresamos al link y validamos redireccion
+      it('Login_007 | Link Recueprar Contraseña', () => {// Ingresamos al link y validamos redireccion
         cy.visit(urlLogin)
         cy.assertionCheck('Recuperar contraseña').click()
           cy.wait(2000).then(()=>{
@@ -93,19 +93,7 @@ describe('Testing 3er Sprint | Pruebas en Seccion Login Usuario', () => {
           cy.get('a').click()//Click para volver al Registro
       });
 
-      it('Login_007 | Check elementos | Link Recuperar Contraseña', () => {
-        cy.visit('/recovery-password')
-        cy.title().should('include', 'TaHouse.casa')
-        cy.assertionCheck('Recuperar contraseña')
-        cy.assertionCheck('Ingresa la dirección de email')
-        cy.get('[name="sendEmail"]').should('have.attr','placeholder','Email')
-        cy.assertionCheck('ENVIAR')
-        cy.assertionCheck('¿No recibiste el correo aún?')
-        cy.assertionCheck('Puedes reintentarlo')
-      });
-
-
-      it('Login_011 | Usuario no Registrado', () => {// Se prueba Ingresar al sistema con una cuenta no registrada 
+      it('Login_008 | Usuario no Registrado', () => {// Se prueba Ingresar al sistema con una cuenta no registrada 
         cy.visit(urlLogin)
         cy.inputEmail('E-mail','nuevo100@mail.com')// Se intenta realizar login con usuario no registrado
         cy.inputPass('Contraseña','aBc123')//Se ingresa password random
