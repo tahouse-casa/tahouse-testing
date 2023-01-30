@@ -40,7 +40,7 @@ describe('Panel Administracion', () => {
         cy.contains('CONTINUAR').click()
     });
 
-    it.only('U_000 | Check Elementos | ', () => {
+    it('U_000 | Check Elementos | ', () => {
         cy.visit(urlTaHouseCountries)
         cy.wait(4000)
           

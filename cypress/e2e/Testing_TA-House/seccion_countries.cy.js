@@ -30,7 +30,7 @@ describe('Panel Countries', () => {
         })
     });
 
-    it.only('Api Inmueble', () => {
+    it('Api Inmueble', () => {
         cy.visit(urlTaHouseProperty)
         cy.wait(2000).then(()=>{
          cy.request('GET','https://api.dev.tahouse.casa/api/v1/properties')
@@ -53,7 +53,7 @@ describe('Panel Countries', () => {
         })
         cy.wait(1000).then(()=>{
             cy.get('.cbJJdJ').click()
-            cy.addcountry('Mexico','Cancun')
+            cy.addcountry('Alemania','Berlin')
             cy.longitud(11,35,92,34)
             cy.latitud(14,13,22,45)
             cy.get('button').click()

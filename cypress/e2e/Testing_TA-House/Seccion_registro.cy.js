@@ -72,7 +72,7 @@ describe('Testing 2do Sprint | Form Registro', {
 
       });
 
-      it.only('Regitro_010 | Link de redireccion a Login', () => {// Se prueba la redireccion del link
+      it('Regitro_010 | Link de redireccion a Login', () => {// Se prueba la redireccion del link
         registro.linkLogin(urlTaHouseLogin)// Se espera: Al realizar click en el button de volver al login, este redireccione correctamente al mismo
           
       });
