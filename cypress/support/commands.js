@@ -84,14 +84,27 @@
         cy.get('[name="password"]').should('have.attr', 'placeholder', text).type(text2)
     })
 
+    Cypress.Commands.add('inputPass2',(text,text2)=>{
+        cy.get('[name="password2"]').should('have.attr', 'placeholder', text).type(text2)
+    })
+
     Cypress.Commands.add('msjAviso',(text,text2)=>{
         cy.contains(text).should(text2)
         .and('contain',text)
     })
 
-    Cypress.Commands.add('linkRecoveryPass',(text,text1,text2)=>{
-        const urlRecoverypass = 'https://dev.tahouse.casa/recovery-password'
-         cy.url().should('')
+    Cypress.Commands.add('searchInputName',(text,text2)=>{
+        cy.get(`[name="${text}"]`).should(text2)
+        
+    })
+
+    Cypress.Commands.add('typeInputName',(text,text2)=>{
+        cy.get(`[name="${text}"]`).type(text2)
+        
+    })
+
+    Cypress.Commands.add('searchPlaceholder',(text,text2)=>{
+        cy.get(`[name="${text}"]`).should('have.value',text2)
     })
 
     Cypress.Commands.add('path',(text,text1)=>{

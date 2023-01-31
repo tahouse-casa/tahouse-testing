@@ -10,7 +10,8 @@ const urlLogin = 'https://dev.tahouse.casa/login'
 const urlRegister = 'https://dev.tahouse.casa/register'
 const urlRecoverypass = 'https://dev.tahouse.casa/recovery-password'
 
-describe('Testing 3er Sprint | Pruebas en Seccion Login Usuario', () => {
+describe('Testing 3er Sprint | Pruebas en Seccion Login Usuario', {  
+  viewportWidth:380,viewportHeight:670},() => {
 
     beforeEach(() => {
         cy.session('login',()=>{
@@ -71,7 +72,7 @@ describe('Testing 3er Sprint | Pruebas en Seccion Login Usuario', () => {
         //     }) 
       });
 
-      it('Login_006 | Link de Registro Usuario',()=>{// Ingresamos al link y validamos redireccion
+      it('Login_006 | Link Registro Usuario',()=>{// Ingresamos al link y validamos redireccion
         cy.visit(urlLogin)
         cy.assertionCheck('¿No tienes cuenta? Registrate').click()
         cy.wait(1000).then(()=>{
@@ -81,7 +82,7 @@ describe('Testing 3er Sprint | Pruebas en Seccion Login Usuario', () => {
         cy.get('a').eq(0).click({force:true})//Click para volver a seccion /login
       })
 
-      it('Login_007 | Link Recueprar Contraseña', () => {// Ingresamos al link y validamos redireccion
+      it('Login_007 | Link Recuperar Contraseña', () => {// Ingresamos al link y validamos redireccion
         cy.visit(urlLogin)
         cy.assertionCheck('Recuperar contraseña').click()
           cy.wait(2000).then(()=>{
@@ -93,13 +94,13 @@ describe('Testing 3er Sprint | Pruebas en Seccion Login Usuario', () => {
           cy.get('a').click()//Click para volver al Registro
       });
 
-      // it('Login_008 | Usuario no Registrado', () => {// Se prueba Ingresar al sistema con una cuenta no registrada 
-      //   cy.visit(urlLogin)
-      //   cy.inputEmail('E-mail','nuevo100@mail.com')// Se intenta realizar login con usuario no registrado
-      //   cy.inputPass('Contraseña','aBc123')//Se ingresa password random
-      //   cy.assertionCheck('Ingresar').click()
-      //   cy.wait(5000).then(()=>{
-      //     cy.msjAviso('Los datos ingresados son incorrectos','be.visible')// Se espera: el sistema avise mediante un msj el error y lo muestre en pantalla
-      //   })      
-      // });
+      it('Login_008 | Login Usuario no Registrado', () => {// Se prueba Ingresar al sistema con una cuenta no registrada 
+        cy.visit(urlLogin)
+        cy.inputEmail('E-mail','nuevo100@mail.com')// Se intenta realizar login con usuario no registrado
+        cy.inputPass('Contraseña','aBc123')//Se ingresa password random
+        cy.assertionCheck('Ingresar').click()
+        cy.wait(5000).then(()=>{
+          cy.msjAviso('Los datos ingresados son incorrectos','be.visible')// Se espera: el sistema avise mediante un msj el error y lo muestre en pantalla
+        })      
+      });
 });

@@ -2,7 +2,9 @@
 
 const urlRecoverypass = 'https://dev.tahouse.casa/recovery-password'
 
-describe('Testing 3er Sprint | Pruebas en Seccion Recovery-Pass', () => {
+describe('Testing 3er Sprint | Pruebas en Seccion Recovery-Pass',{  
+  viewportWidth:380,viewportHeight:670},() => {
+
     beforeEach(() => {
         cy.session('login',()=>{
             cy.visit('/')
@@ -27,7 +29,7 @@ describe('Testing 3er Sprint | Pruebas en Seccion Recovery-Pass', () => {
           cy.visit('recovery-password')
           cy.get('[name="sendEmail"]').should('have.attr','placeholder','Email').type('nuevo@mail.com')
           cy.assertionCheck('ENVIAR').click()
-          cy.wait(2000).then(()=>{
+          cy.wait(3000).then(()=>{
             cy.msjAviso('El mail fue enviado con éxito','be.visible')
             cy.assertionCheck('CONTINUAR').click()
           })

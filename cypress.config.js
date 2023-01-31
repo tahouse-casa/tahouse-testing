@@ -16,8 +16,8 @@ module.exports = defineConfig({
       reporterDir:"cypress/mochawesome-report"
 
     },
-      viewportHeight:670,
-      viewportWidth:380,
+      // viewportHeight:670,
+      // viewportWidth:380,
       chromeWebSecurity:false
   },
 
