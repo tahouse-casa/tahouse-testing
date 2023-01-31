@@ -2,7 +2,7 @@ const { defineConfig } = require("cypress");
 const cypressSplit = require('cypress-split')
 
 module.exports = defineConfig({
-  // reporter: 'cypress-mochawesome-reporter',
+  reporter: 'cypress-mochawesome-reporter',
   e2e: {
     baseUrl:'https://dev.tahouse.casa/',
     setupNodeEvents(on, config) {
@@ -10,17 +10,18 @@ module.exports = defineConfig({
     cypressSplit(on, config)
       return config
     },
-    reporter:'mochawesome',
+    // reporter:'cypress-multi-reporters',
     reporterOptions:{
+      reportDir: 'cypress/results/json',
+      reportFilename: '[name].html',
       charts:true,
       overwrite:false,
-      html:true,
+      html:false,
       json:true,
       // reporterDir:"cypress/mochawesome-report"
-      reportDir: 'cypress/results'
     },
       // viewportHeight:670,
       // viewportWidth:380,
-      chromeWebSecurity:false
+      // chromeWebSecurity:false
   },
 });
