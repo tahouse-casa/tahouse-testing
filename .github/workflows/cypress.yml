@@ -7,6 +7,6 @@ jobs:
     # https://github.com/bahmutov/cypress-workflows
     uses: bahmutov/cypress-workflows/.github/workflows/standard.yml@v1.7.2
     with: 
-      start: npm start
+      n: 2
       
       
