@@ -32,7 +32,7 @@ const titleToFileName = (title) =>
 Cypress.on('test:after:run', (test, runnable) => {
   if (test.state === 'failed') {
     let parent = runnable.parent
-    let filename = ''
+    let filename = 'index'
     while (parent && parent.title) {
       filename = `${titleToFileName(
         parent.title,

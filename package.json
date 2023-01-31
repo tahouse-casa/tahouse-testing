@@ -24,8 +24,7 @@
     "dev": "start-test 3000 cypress",
     "print-tests": "find-cypress-specs --names --tags",
     "lint": "tsc --noEmit --pretty",
-    "ci": "start-test 3000 cy:run",
-    "cy:run": "cypress run"
+    "ci": "start-test 3000 cy:run"
   },
   "repository": {
     "type": "git",
