@@ -1,4 +1,3 @@
 node_modules/
-cypress/downloads/nav.html
 newman/
 .github/workflows/cypress_artifacts.yml

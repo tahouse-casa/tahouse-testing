@@ -1,8 +1,7 @@
 
-
 const urlRecoverypass = 'https://dev.tahouse.casa/recovery-password'
 
-describe('Testing 3er Sprint | Pruebas en Seccion Recovery-Pass',{  
+describe('Tests en Seccion Recovery-Pass de Usuario',{  
   viewportWidth:380,viewportHeight:670},() => {
 
     beforeEach(() => {

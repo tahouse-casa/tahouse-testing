@@ -7,7 +7,7 @@ const urlTaHouse = 'https://dev.tahouse.casa'
 const urlTaHouseProperty = 'https://dev.tahouse.casa/administration/properties'
 const urlTaHouseCountries = 'https://dev.tahouse.casa/administration/countries'
 
-describe('Panel Administracion', () => {
+describe('Tests en Panel de Administrar Inmueble', () => {
     beforeEach(() => {
         cy.session('login', () => {
             admin.loginAdmin(urlTaHouseLogin)

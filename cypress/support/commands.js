@@ -113,6 +113,15 @@
             expect(location.pathname).to.eq(text1)
           }) 
     })
+
+    Cypress.Commands.add('searchImg',(num,text)=>{
+        cy.get('img').eq(num).should('have.attr','src',text)
+    })
+
+    Cypress.Commands.add('link',(num,text)=>{
+        cy.get('a').eq(num).click()
+        .and('equal',text)
+    })
 //
 //
 // -- This is a child command --
