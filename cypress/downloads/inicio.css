@@ -1,0 +1,264 @@
+/*Utils*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+ul {  
+  list-style-type:none; }
+
+li {
+    margin-top: 1rem; }  
+
+a {
+  text-decoration: none; }
+
+html {
+  font-family:fantasy;  
+  font-size: 62.5%; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes aparecer2 {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0.25; }
+  50% {
+    opacity: 0.50; }
+  100% {
+    opacity: 1; } }
+
+body {
+  background-image: url('./img/Deviate\ Labs\ Logo.gif');
+  /* background-image: url('./img/Encyclopedia.gif'); */
+  background-size: 85%;
+  display: flex;
+  flex-direction: column;
+  background-color: #313638;
+  width: auto;
+  height: 100vh; }
+
+.iconify {
+  color: black; }  
+    
+main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  margin-top: 3rem;
+}  
+    
+label {
+  width: 100%;
+  letter-spacing: 1px;
+  font-size: 1.2em;
+  text-transform: uppercase; }
+      
+h2 {
+  letter-spacing: 2px;
+  font-size: 2em;
+  color: whitesmoke; }
+
+h2:hover{
+  color: #9D8420;
+  transition: 0.2s;
+}    
+    
+h3 {font-size: 1.2em;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: whitesmoke;}    
+    
+h3:hover{
+  color: #9D8420;
+  transition: 0.3s;
+}    
+
+#navText {
+  letter-spacing: 1px;
+  font-size: 2em;
+  color: black;
+  font-weight: bold; }
+    
+#navText:hover{
+  transition: 0.4s;
+  color: #FBFEF9;
+}    
+    /* .logotp {
+        display: flex;
+        flex-direction: row;
+        margin-right: 2rem;
+        margin-top: 2.7rem; } */
+
+    /* .logotp .imgLogo {
+        height: 2.5rem;
+        margin-top: -1rem; }     */
+
+    .blocksEhs {
+        justify-content: center;
+        gap: 3rem;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        flex-wrap: wrap;
+        justify-items: center; }
+
+    .blocksEhs .spanTwo {
+        margin-bottom: 1rem;
+        font-size: 1.5em;
+        color: grey;
+        letter-spacing: 1px;
+        font-weight: bold; }
+
+    .blockTwo, .blockOne, .blockFour {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        padding: 1.5rem;
+        border-radius: 2rem;
+        height: 35rem;
+        width: 33rem;
+        margin: 1rem;
+        -moz-box-shadow: 1px 0px 7px #6d71bf;
+        -webkit-box-shadow: 1px 0px 7px #6d71bf;
+        box-shadow: 1px 0px 7px #6d71bf; }
+
+.blockThree{
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  height: 55rem;
+  width: 33rem;
+  margin: 1rem;
+  -moz-box-shadow: 1px 0px 7px #6d71bf;
+  -webkit-box-shadow: 1px 0px 7px #6d71bf;
+  box-shadow: 1px 0px 7px #6d71bf;
+}  
+    
+.tools{
+  color: whitesmoke;
+  font-size: 1.5em;
+  list-style-type:circle;
+  font-weight: 400;
+}
+
+/* Switch cambiar tema */
+
+.switch{
+  margin-bottom: 1rem;
+}
+.inputOne[type=checkbox] {
+  visibility: hidden; }
+  
+  .inputOne[type=checkbox]:checked + .labelOne {
+    transform: rotate(360deg);
+    background-color: black;
+   }
+  
+  .inputOne[type=checkbox]:checked + .labelOne:before {
+    transform: translateX(60px);
+    background-color: whitesmoke; }
+  
+  .labelOne {
+    background-color: whitesmoke;
+    display: flex;
+    width: 100px;
+    height: 40px;
+    border: 3px solid;
+    border-radius: 99em;
+    position: relative;
+    transition: transform 0.75s ease-in-out;
+    transform-origin: 50% 50%;
+    cursor: pointer; }
+  
+  .labelOne:before {
+    transition: transform 0.75s ease;
+    transition-delay: 0.5s;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    background-size: 115%;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px; }
+
+    .iconosFooter{
+    display: flex;
+    justify-content: center;
+    gap:3rem;
+    margin-top: 10%; }
+
+.iconosLogin{
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+  margin-right: 1rem;
+}
+
+/* Dropdown Desplegable con sprints*/
+
+.dropbtn {
+  text-align: left;
+  margin-top: 2rem;
+  background-color: transparent;
+  width: 25rem;
+  height: 4rem;
+  color: whitesmoke;
+  font-weight:500;
+  padding: 5px;
+  font-size: 16px;
+  border-color: silver;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}      
+.dropdown-content {
+  text-align: center;
+  display: none;
+  width: 25rem;
+  position: absolute;
+  background-color: transparent;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+  z-index: 1;
+}  
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: transparent}
+      
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+      
+.dropdown:hover .dropbtn {
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 400px) {
+    
+main{
+  margin-top: -5rem;   
+}
+.blocksEhs {align-items: center;}     
+}    
+.iconosLogin{
+  align-content: flex-end;
+}

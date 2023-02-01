@@ -1,4 +1,4 @@
-import Home from '../home'
+import Home from '../../pages/home'
 
 const home = new Home
 
