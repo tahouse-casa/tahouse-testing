@@ -72,7 +72,7 @@
       
     })
 
-    Cypress.Commands.add('assertionCheck',(text,text2)=>{
+    Cypress.Commands.add('assertionCheck',(text)=>{
         cy.contains(text).should('contain',text)
     })
 
@@ -121,6 +121,10 @@
     Cypress.Commands.add('link',(num,text)=>{
         cy.get('a').eq(num).click()
         .and('equal',text)
+    })
+
+    Cypress.Commands.add('checkInputType',(text,text2,text3)=>{
+        cy.get(`[name="${text}"]`).should('have.attr',text2,text3)
     })
 //
 //

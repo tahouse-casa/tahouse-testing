@@ -5,7 +5,7 @@ const urlTaHouseLogin = 'https://dev.tahouse.casa/login'
 const registerPath = '/register'
 const urlTaHouse = 'https://dev.tahouse.casa'
 
-describe('Tests en Seccion Registro de Usuarios',{  
+describe('Mobile | Tests en Seccion Registro de Usuarios',{  
   viewportWidth:380,viewportHeight:670},()=>{
     beforeEach(() => {
         cy.visit(registerPath)
@@ -90,9 +90,9 @@ describe('Tests en Seccion Registro de Usuarios',{
        cy.typeInputName('email','nuevo@mail.com')// Ingresamos mail registrado
        cy.typeInputName('password','aBc123')// Ingresamos password random
        cy.typeInputName('password2','aBc123')// Repetimos password random ingresada
-       cy.assertionCheck('Ingresar').click()// CLick en Ingresar
+       cy.assertionCheck('Ingresar').click()// Click en Ingresar
        cy.wait(2000).then(()=>{
-        cy.msjAviso('Esta cuenta ya está registrada','be.visible')//Se espera: Un mensaje en pantalla notificando que la cuenta esta registrada 
+        cy.msjAviso('Esta cuenta ya está registrada','be.visible')//Se espera: Un mensaje en pantalla notificando que la cuenta ya esta registrada 
        })
       });
 
