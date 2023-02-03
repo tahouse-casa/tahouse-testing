@@ -12,7 +12,7 @@
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
 //
-    Cypress.Commands.add('loginAdmin',(user,password)=>{
+    Cypress.Commands.add('login',(user,password)=>{
         cy.get('[name="email"]').type(user)
         cy.get('[name="password"]').type(password)
         cy.get('button').eq(0).click()

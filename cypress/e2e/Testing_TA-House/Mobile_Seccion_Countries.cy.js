@@ -1,5 +1,4 @@
 
-import { expect } from "chai";
 import Admin from "../../pages/loginAdmin";
 
 const admin = new Admin

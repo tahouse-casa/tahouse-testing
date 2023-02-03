@@ -4,7 +4,7 @@ const cypressSplit = require('cypress-split')
 module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
   e2e: {
-    baseUrl:'https://dev.tahouse.casa/',
+    // baseUrl:'https://dev.tahouse.casa/',
     setupNodeEvents(on, config) {
     require('cypress-mochawesome-reporter/plugin')(on);
     cypressSplit(on, config)

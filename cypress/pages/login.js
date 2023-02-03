@@ -1,46 +1,18 @@
-
 class Login {
-
-    valdiacionTitulo(text){
-        cy.contains(text).should('contain',text).and('exist')
+    loginAdmin(urlLogin){
+        cy.visit(urlLogin)
+        cy.fixture('credenciales').then((testdata)=>{
+            this.testdata = testdata
+        cy.login(this.testdata.username,this.testdata.password)
+        })
     }
 
-    validacionSubTitulo(text){
-        cy.contains(text).should('contain',text).and('exist')
+    loginUser1(urlLogin){
+        cy.visit(urlLogin)
+        cy.fixture('credenciales').then((dataUser)=>{
+            this.dataUser = dataUser
+        cy.login(this.dataUser.user1,this.dataUser.password1) 
+        })
     }
-
-    
-    itemEmail(text,text2){
-        cy.get('[name="email"]').should('have.attr', 'type', text)
-        .and('have.attr', 'placeholder', 'E-mail')
-    }
-    
-    itemPassword(text,text2){
-        cy.get('[name="password"]').should('have.attr', 'type', text)
-        .and('have.attr', 'placeholder', text2)
-    }
-
-    buttonSubmit(text){
-        cy.contains(text).should('contain',text)
-    }
-
-    linkRegistro(text,text1,text2){
-        const urlRegister = 'https://dev.tahouse.casa/register'
-        cy.get('.sc-dkKxlM').find('a').should('contain',text)
-          .and('have.attr','href',text1)
-          .and(text2).click()
-        cy.url().should('equal',urlRegister)
-        cy.go('back')      
-    }
-
-    linkRecoveyPass(text,text2,text3){
-        const urlRecoveyPass = 'https://dev.tahouse.casa/recovery-password'
-        cy.contains(text).should('contain',text)
-          .and(text3).click()
-        cy.url().should('equal',urlRecoveyPass)
-        cy.go('back')
-    }
-
 }
-
 export default Login
