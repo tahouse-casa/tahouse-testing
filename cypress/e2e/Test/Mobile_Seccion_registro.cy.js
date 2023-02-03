@@ -8,7 +8,7 @@ const urlTaHouse = 'https://dev.tahouse.casa'
 describe('Mobile | Tests en Seccion Registro de Usuarios',{  
   viewportWidth:380,viewportHeight:670},()=>{
     beforeEach(() => {
-        cy.visit(registerPath)
+        cy.visit(urlTaHouseRegister)
         expect(cy.config('viewportWidth')).to.equal(380)
         expect(cy.config('viewportHeight')).to.equal(670)
     })
@@ -59,7 +59,7 @@ describe('Mobile | Tests en Seccion Registro de Usuarios',{
         cy.typeInputName('email','nuevo@mail.com') // Se espera: al ingresar menos de 6 caracteres en los campos contraseña y repetir contraseña se muestre un mensaje en pantalla notificando el mismo
         cy.typeInputName('password','Abc12')// Ingresamos < de 6 caracteres random
         cy.typeInputName('password2','Abc12')// Repetimos caracteres random ingresados
-        cy.assertionCheck('Ingresar').click()
+        cy.assertionCheck('Ingresar').click({force:true})
         cy.wait(2000).then(()=>{
           cy.msjAviso('La contraseña debe tener al menos 6 caracteres','be.visible')//Se espera: un msj en pantalla notificando el minimo de caracteres
         })

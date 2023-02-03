@@ -1,3 +1,4 @@
 node_modules/
 newman/
 .github/workflows/cypress_artifacts.yml
+.github/workflows/Cypress Test.yml

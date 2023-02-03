@@ -94,7 +94,7 @@ h3:hover{
 
 .blocksEhs {
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
   display: flex;
   flex-direction: row;
   height: 100%;
@@ -138,6 +138,7 @@ h3:hover{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 2rem;
 }
     
 .tools{

@@ -5,7 +5,7 @@ const pathRecoveryPass = '/recovery-password'
 describe('Mobile | Tests en Seccion Recovery-Pass de Usuario',{  
   viewportWidth:380,viewportHeight:670},() => {
     beforeEach(() => {
-            cy.visit(pathRecoveryPass)
+            cy.visit(urlRecoverypass)
             expect(cy.config('viewportWidth')).to.equal(380)
             expect(cy.config('viewportHeight')).to.equal(670)
           }) 
