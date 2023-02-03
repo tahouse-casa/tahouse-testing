@@ -176,25 +176,25 @@ h3:hover{
     transform-origin: 50% 50%;
     cursor: pointer; }
   
-  .labelOne:before {
-    transition: transform 0.75s ease;
-    transition-delay: 0.5s;
-    content: "";
-    display: block;
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-color: black;
-    background-size: 115%;
-    border-radius: 50%;
-    top: 2px;
-    left: 2px; }
-
-    .iconosFooter{
-    display: flex;
-    justify-content: center;
-    gap:3rem;
-    margin-top: 10%; }
+.labelOne:before {
+  transition: transform 0.75s ease;
+  transition-delay: 0.5s;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  background-size: 115%;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px; }
+.iconosFooter{
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  gap:3rem;
+  margin-top: 10%; }
 
 .iconosLogin{
   display: flex;
@@ -251,6 +251,8 @@ h3:hover{
 @media only screen and (max-width: 400px) {
     
 main{margin-top: 1rem;}
-.blocksEhs {align-items: center}     }    
-.blockOne,.blockTwo{align-items: center;}
+.blocksEhs {align-items: center}    
+.blockOne,.blockTwo,.blocks{align-items: center;}
 .iconosLogin{align-content: flex-end;}
+
+}    
