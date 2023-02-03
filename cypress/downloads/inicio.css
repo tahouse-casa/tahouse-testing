@@ -90,45 +90,36 @@ h3:hover{
 #navText:hover{
   transition: 0.4s;
   color: #FBFEF9;
-}    
-    /* .logotp {
-        display: flex;
-        flex-direction: row;
-        margin-right: 2rem;
-        margin-top: 2.7rem; } */
+}
 
-    /* .logotp .imgLogo {
-        height: 2.5rem;
-        margin-top: -1rem; }     */
+.blocksEhs {
+  justify-content: center;
+  gap: 3rem;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-items: center; }
 
-    .blocksEhs {
-        justify-content: center;
-        gap: 3rem;
-        display: flex;
-        flex-direction: row;
-        height: 100%;
-        flex-wrap: wrap;
-        justify-items: center; }
+.blocksEhs .spanTwo {
+  margin-bottom: 1rem;
+  font-size: 1.5em;
+  color: grey;
+  letter-spacing: 1px;
+  font-weight: bold; }
 
-    .blocksEhs .spanTwo {
-        margin-bottom: 1rem;
-        font-size: 1.5em;
-        color: grey;
-        letter-spacing: 1px;
-        font-weight: bold; }
-
-    .blockTwo, .blockOne, .blockFour {
-        display: flex;
-        flex-direction: column;
-        align-items:flex-start;
-        padding: 1.5rem;
-        border-radius: 2rem;
-        height: 35rem;
-        width: 33rem;
-        margin: 1rem;
-        -moz-box-shadow: 1px 0px 7px #6d71bf;
-        -webkit-box-shadow: 1px 0px 7px #6d71bf;
-        box-shadow: 1px 0px 7px #6d71bf; }
+.blockTwo, .blockOne, .blockFour {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  height: 35rem;
+  width: 33rem;
+  margin: 1rem;
+  -moz-box-shadow: 1px 0px 7px #6d71bf;
+  -webkit-box-shadow: 1px 0px 7px #6d71bf;
+  box-shadow: 1px 0px 7px #6d71bf; }
 
 .blockThree{
   display: flex;
@@ -233,7 +224,7 @@ h3:hover{
   position: absolute;
   background-color: transparent;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
   z-index: 1;
 }  
 .dropdown-content a {
@@ -254,11 +245,7 @@ h3:hover{
 
 @media only screen and (max-width: 400px) {
     
-main{
-  margin-top: -5rem;   
-}
-.blocksEhs {align-items: center;}     
-}    
-.iconosLogin{
-  align-content: flex-end;
-}
+main{margin-top: -6rem;margin-bottom: 5rem;}
+.blocksEhs {align-items: center;margin-bottom: 5rem;}     }    
+.blockOne,.blockTwo{margin-bottom: -10rem;align-items: center;}
+.iconosLogin{align-content: flex-end;}
