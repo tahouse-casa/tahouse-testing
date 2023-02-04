@@ -8,6 +8,17 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 //
+    Cypress.Commands.overwrite('type',(originalFn,element,text,options)=>{
+        if(options && options.sensitive){
+            options.log = false
+            Cypress.log({
+               $el: element,
+               name: 'type',
+               message: '*'.repeat(text.length) 
+            })
+        }
+        return originalFn(element,text,options)
+    })
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
@@ -81,11 +92,11 @@
     })
 
     Cypress.Commands.add('inputPass',(text,text2)=>{
-        cy.get('[name="password"]').should('have.attr', 'placeholder', text).type(text2)
+        cy.get('[name="password"]').should('have.attr', 'placeholder', text).type(text2,{sensitive:true})
     })
 
     Cypress.Commands.add('inputPass2',(text,text2)=>{
-        cy.get('[name="password2"]').should('have.attr', 'placeholder', text).type(text2)
+        cy.get('[name="password2"]').should('have.attr', 'placeholder', text).type(text2,{sensitive:true})
     })
 
     Cypress.Commands.add('msjAviso',(text,text2)=>{

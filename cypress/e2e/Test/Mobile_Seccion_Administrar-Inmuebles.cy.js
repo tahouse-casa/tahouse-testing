@@ -26,13 +26,13 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
         cy.url().should('equal',urlTaHouseProperty)// Se espera: Validar la URL 'https://dev.tahouse.casa/administration/properties'   
     });
 
-    it.only('U_002 | Publicar Inmueble', () => {
+    it('U_002 | Publicar Inmueble', () => {
         cy.visit(urlTaHouseProperty)
-        cy.wait(4000).then(()=>{
+        cy.wait(3000).then(()=>{
             cy.get('.cMYiAX').click()
             cy.get('button').click()
-            cy.selectGroup('Venta','Casa','Vendido','Argentina','Funes')// Se generan datos random en options
-            cy.inputGroup1('av 22st',4,850,4,3,125000,'Excelente Ubicacion')// Se generan datos random en inputs de datos
+            cy.selectGroup('Venta','Casa','Vendido','España','Alicante')// Se generan datos random en options
+            cy.inputGroup1('av 33st',4,550,4,4,140000,'Excelente Ubicacion')// Se generan datos random en inputs de datos
             cy.get('button').click()
             cy.inputGroup2(11230002214746,'nuevo2@mail.com')// Se generan datos randon en inputs de datos
             cy.get('button').click()

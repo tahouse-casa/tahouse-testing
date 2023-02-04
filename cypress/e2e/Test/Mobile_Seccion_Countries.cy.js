@@ -1,42 +1,45 @@
+import Login from "../../pages/login"
 
-import Admin from "../../pages/loginAdmin";
-
-const admin = new Admin
 const urlTaHouseLogin = 'https://dev.tahouse.casa/login'
 const urlTaHouse = 'https://dev.tahouse.casa'
 const urlTaHouseProperty = 'https://dev.tahouse.casa/administration/properties'
 const urlTaHouseCountries = 'https://dev.tahouse.casa/administration/countries'
+const apiProperties = 'https://api.dev.tahouse.casa/api/v1/properties'
 
-describe('Tests en Panel de administrar Paises', () => {
+const login = new Login
+
+describe('Tests en Panel de administrar Paises',{  
+    viewportWidth:380,viewportHeight:670},() => {
+
     beforeEach(() => {
         cy.session('login', () => {
-            admin.loginAdmin(urlTaHouseLogin)
-            cy.visit('/')
+            login.loginAdmin(urlTaHouseLogin)
           }) 
     });
 
     it('Api Countries', () => {
-        cy.visit(urlTaHouseCountries)
+        cy.visit(urlTaHouse)
         cy.wait(2000).then(()=>{
             fetch('https://api.dev.tahouse.casa/api/v1/countries')
             .then((res)=>res.json())
             .then((data)=>{ 
                 data.map((e)=>{
                     console.log(e.country)
-
                 })
             })    
         })
     });
 
-    it('Api Inmueble', () => {
+    it.only('Api Inmueble', () => {
         cy.visit(urlTaHouseProperty)
         cy.wait(2000).then(()=>{
-         cy.request('GET','https://api.dev.tahouse.casa/api/v1/properties')
+        cy.request('GET','https://api.dev.tahouse.casa/api/v1/properties')
         }).then((e)=>{
             expect(e).property('status').to.equal(200)
             expect(e.body[0]).property('address').to.be.a('string')
             expect(e.body[0]).property('bathrooms').to.be.a('number')
+            expect(e.body[0]).property('city').to.be.a('string')
+            
             console.log(e.body)
         })
     });
@@ -50,6 +53,7 @@ describe('Tests en Panel de administrar Paises', () => {
             expect(location.pathname).to.eq('/administration/countries')// Se espera: Validar la ruta Path dentro de la app "/coutries"
           }) 
         })
+
         cy.wait(1000).then(()=>{
             cy.get('.cbJJdJ').click()
             cy.addcountry('Alemania','Berlin')
