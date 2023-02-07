@@ -5,12 +5,24 @@ const h2 = document.getElementsByTagName('h2')
 const button = document.getElementsByTagName('button')
 const h3 = document.getElementsByTagName('h3')
 const tools = document.querySelectorAll('.tools')
+const nav = document.querySelector('nav')
+const navText = document.querySelectorAll('#navText')
 
+console.log(navText)
 // Funcion Cambio de 'Tema'
 let theme = false;
 function changeTheme(){
 theme = !theme;
 if(theme){   
+    nav.style.backgroundColor = '#474448'
+    nav.style.transition = '1s'
+    localStorage.setItem('nav','light')
+
+    for (let i = 0; i < navText.length; i++) {
+        navText[i].style.color = 'whitesmoke' 
+        navText[i].style.transition = '1s'
+        localStorage.setItem('navText','light')
+    }
 //Cambio de estilo en Body       
     body.style.backgroundImage = "url('./img/Encyclopedia.gif')"
     body.style.transition = '1s'
@@ -46,6 +58,13 @@ if(theme){
     }
     
     else{
+        nav.style.backgroundColor = '#DDDBF1'
+        localStorage.setItem('nav','dark')
+
+        for (let i = 0; i < navText.length; i++) {
+            navText[i].style.color = 'black'  
+            localStorage.setItem('navText','dark')
+        }
 //Cambio de estilo en Body 
         body.style.backgroundImage = "url('./img/Deviate\ Labs\ Logo.gif')";  
         localStorage.setItem('body','dark')
@@ -75,6 +94,28 @@ if(theme){
 }
 
 function loadPage() {
+// Estilos en Navbar al iniciar 
+if (localStorage.getItem('nav') === 'light') {
+    nav.style.backgroundColor = '#474448'
+    nav.style.transition = '1s'
+}
+ 
+else{
+    nav.style.backgroundColor = '#DDDBF1' 
+}
+
+//Estilos en el texto del navbar al inciar
+if (localStorage.getItem('navText') === 'light') {
+    for (let i = 0; i < navText.length; i++) {
+        navText[i].style.color = 'whitesmoke' 
+    }
+}
+
+else{
+    for (let i = 0; i < navText.length; i++) {
+        navText[i].style.color = 'black'  
+    }
+}
 // se cambia el color tema Background en LocalStorade al iniciar pagina
 
 if (localStorage.getItem('body') === 'light'){ 
