@@ -58,7 +58,7 @@ if(theme){
     }
     
     else{
-        nav.style.backgroundColor = '#DDDBF1'
+        nav.style.backgroundColor = '#3E517A'
         localStorage.setItem('nav','dark')
 
         for (let i = 0; i < navText.length; i++) {
@@ -101,7 +101,7 @@ if (localStorage.getItem('nav') === 'light') {
 }
  
 else{
-    nav.style.backgroundColor = '#DDDBF1' 
+    nav.style.backgroundColor = '#3E517A' 
 }
 
 //Estilos en el texto del navbar al inciar

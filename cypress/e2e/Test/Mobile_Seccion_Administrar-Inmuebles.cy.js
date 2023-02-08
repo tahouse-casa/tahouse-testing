@@ -26,17 +26,17 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
         cy.url().should('equal',urlTaHouseProperty)// Se espera: Validar la URL 'https://dev.tahouse.casa/administration/properties'   
     });
 
-    it('U_002 | Publicar Inmueble', () => {
+    it.only('U_002 | Publicar Inmueble', () => {
         cy.visit(urlTaHouseProperty)
-        cy.wait(3000).then(()=>{
-            cy.get('.cMYiAX').click()
+        cy.wait(2000).then(()=>{
+            cy.get('.icon-of-create-properties').click()
             cy.get('button').click()
-            cy.selectGroup('Venta','Casa','Vendido','España','Alicante')// Se generan datos random en options
+            cy.selectGroup('Venta','Casa','Alquilado','Argentina','Funes')// Se generan datos random en options
             cy.inputGroup1('av 33st',4,550,4,4,140000,'Excelente Ubicacion')// Se generan datos random en inputs de datos
             cy.get('button').click()
             cy.inputGroup2(11230002214746,'nuevo2@mail.com')// Se generan datos randon en inputs de datos
             cy.get('button').click()
-            // cy.contains('PUBLICAR').click({force:true})
+            cy.contains('PUBLICAR').click({force:true})
             cy.contains('CONTINUAR').click()
         })      
     });

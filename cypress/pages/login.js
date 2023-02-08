@@ -4,6 +4,7 @@ class Login {
         cy.fixture('credenciales').then((testdata)=>{
             this.testdata = testdata
         cy.login(this.testdata.username,this.testdata.password)
+        cy.wait(4000)
         })
     }
 

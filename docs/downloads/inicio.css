@@ -194,8 +194,7 @@ h3:hover{
   margin-bottom: 5%;
   display: flex;
   justify-content: center;
-  gap:3rem;
-  margin-top: 10%; }
+  gap:3rem;}
 
 .iconosLogin{
   display: flex;

@@ -26,7 +26,7 @@
     Cypress.Commands.add('login',(user,password)=>{
         cy.get('[name="email"]').type(user)
         cy.get('[name="password"]').type(password)
-        cy.get('button').eq(0).click()
+        cy.get('button').eq(1).click()
     })
 
     Cypress.Commands.add('selectGroup',(op,type,state,pais,city)=>{
