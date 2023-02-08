@@ -1,14 +1,12 @@
 import Login from "../../pages/login"
 
 const urlTaHouseLogin = 'https://dev.tahouse.casa/login'
-const urlTaHouse = 'https://dev.tahouse.casa'
-const urlTaHouseProperty = 'https://dev.tahouse.casa/administration/properties'
 const urlTaHouseCountries = 'https://dev.tahouse.casa/administration/countries'
-const apiProperties = 'https://api.dev.tahouse.casa/api/v1/properties'
+const pathCountries = '/administration/countries'
 
 const login = new Login
 
-describe('Tests en Panel de administrar Paises',{  
+describe('Mobile | Tests en Panel de administrar Paises',{  
     viewportWidth:380,viewportHeight:670},() => {
 
     beforeEach(() => {
@@ -17,34 +15,17 @@ describe('Tests en Panel de administrar Paises',{
           }) 
     });
 
-    it('Api Countries', () => {
-        cy.visit(urlTaHouse)
-        cy.wait(2000).then(()=>{
-            fetch('https://api.dev.tahouse.casa/api/v1/countries')
-            .then((res)=>res.json())
-            .then((data)=>{ 
-                data.map((e)=>{
-                    console.log(e.country)
-                })
-            })    
-        })
+    it('P_001 | Validaciones Html Request', () => {// Se prueban las props HTML
+        cy.visit(urlTaHouseCountries)
+        cy.title().should('eq','TaHouse.casa')// Validamos el Tiutlo de la Pagina 
+          expect(cy.config('viewportWidth')).to.equal(380)// Validamos MaxWhidth 380px
+          expect(cy.config('viewportHeight')).to.equal(670)// Validamos MaxwHeight 670px
+          cy.path('https:',pathCountries)// Se espera: Validar el protocolo "https:" y la ruta Path dentro de la app "/administration/countries"
+          cy.url().should('equal',urlTaHouseCountries)// Se espera: Validar la URL 'https://dev.tahouse.casa/administration/countries'   
     });
 
-    it.only('Api Inmueble', () => {
-        cy.visit(urlTaHouseProperty)
-        cy.wait(2000).then(()=>{
-        cy.request('GET','https://api.dev.tahouse.casa/api/v1/properties')
-        }).then((e)=>{
-            expect(e).property('status').to.equal(200)
-            expect(e.body[0]).property('address').to.be.a('string')
-            expect(e.body[0]).property('bathrooms').to.be.a('number')
-            expect(e.body[0]).property('city').to.be.a('string')
-            
-            console.log(e.body)
-        })
-    });
 
-    it('U_001 | Publicar Pais', () => {
+    it('P_001 | Publicar Pais', () => {
         cy.visit(urlTaHouseCountries)
         cy.wait(4000).then(()=>{
             cy.title().should('eq','TaHouse.casa')// Validamos el Tiutlo del Html

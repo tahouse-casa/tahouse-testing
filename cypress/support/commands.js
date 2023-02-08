@@ -25,7 +25,7 @@
 //
     Cypress.Commands.add('login',(user,password)=>{
         cy.get('[name="email"]').type(user)
-        cy.get('[name="password"]').type(password)
+        cy.get('[name="password"]').type(password,{sensitive:true})
         cy.get('button').eq(1).click()
     })
 
@@ -47,9 +47,24 @@
         cy.get('textarea').type(descipt)
     })
 
+    Cypress.Commands.add('clearInputsGroup1',()=>{
+        cy.get('[name="address"]').clear()
+        cy.get('[name="environments"]').clear()
+        cy.get('[name="meters"]').clear()
+        cy.get('[name="rooms"]').clear()
+        cy.get('[name="bathrooms"]').clear()
+        cy.get('[name="price"]').clear()
+        cy.get('textarea').clear()
+    })
+
     Cypress.Commands.add('inputGroup2',(phone,email)=>{
         cy.get('[name="phone"]').type(phone)
         cy.get('[name="email"]').type(email)
+    })
+
+    Cypress.Commands.add('clearInputsGroup2',()=>{
+        cy.get('[name="phone"]').clear()
+        cy.get('[name="email"]').clear()
     })
     
     Cypress.Commands.add('deleteInmueble',()=>{

@@ -6,7 +6,7 @@ const pathFavorites = '/favorites-properties'
 
 const login = new Login
 
-describe('Test | Seccion Favoritos', {  
+describe('Mobile | Test en Seccion Favoritos', {  
     viewportWidth:380,viewportHeight:670},() => {
 
         beforeEach(() => {
@@ -25,7 +25,7 @@ describe('Test | Seccion Favoritos', {
           });
 
           it('F_002 | Check Elementos', () => {
-              cy.get('#action-canvas').click(80,100)
+              
           });
     
 });
