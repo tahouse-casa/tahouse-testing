@@ -82,6 +82,13 @@
         cy.get('[name="value4"]').eq(0).type(num4)
     })
 
+    Cypress.Commands.add('clearLatitud',()=>{
+        cy.get('[name="value1"]').eq(0).clear()
+        cy.get('[name="value2"]').eq(0).clear()
+        cy.get('[name="value3"]').eq(0).clear()
+        cy.get('[name="value4"]').eq(0).clear()
+    })
+
     Cypress.Commands.add('longitud',(num1,num2,num3,num4)=>{ 
         cy.get('[name="value1"]').eq(1).type(num1)
         cy.get('[name="value2"]').eq(1).type(num2)
@@ -89,13 +96,29 @@
         cy.get('[name="value4"]').eq(1).type(num4)
     })
 
+    Cypress.Commands.add('clearLongitud',()=>{
+        cy.get('[name="value1"]').eq(1).clear()
+        cy.get('[name="value2"]').eq(1).clear()
+        cy.get('[name="value3"]').eq(1).clear()
+        cy.get('[name="value4"]').eq(1).clear()
+    })
+
     Cypress.Commands.add('addcountry',(pais,city)=>{
         cy.get('[name="country"]').type(pais)
         cy.get('[name="0"]').type(city)
     })
 
-    Cypress.Commands.add('deletecountry',()=>{
-      
+    Cypress.Commands.add('clearCountry',()=>{
+        cy.get('[name="country"]').clear()
+        cy.get('[name="0"]').clear()
+    })
+
+    Cypress.Commands.add('deletecountry',(num)=>{
+        cy.get('.button-delete-country').eq(num).click()
+    })
+
+    Cypress.Commands.add('editCountry',(num)=>{
+        cy.get('.button-edit-country').eq(num).click()
     })
 
     Cypress.Commands.add('assertionCheck',(text)=>{
