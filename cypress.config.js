@@ -18,6 +18,7 @@ module.exports = defineConfig({
       overwrite:false,
       html:false,
       json:true,
+      video:true,
       // reporterDir:"cypress/mochawesome-report"
     },
       // viewportHeight:670,

@@ -78,7 +78,7 @@ describe('Mobile | Tests en Seccion Login de Usuario', {
         cy.get('a').eq(0).click({force:true})// Click para volver a seccion /login
       })
 
-      it('Login_008 | Link Recuperar Contraseña', () => {// Ingresamos al link y validamos redireccion 
+      it.only('Login_008 | Link Recuperar Contraseña', () => {// Ingresamos al link y validamos redireccion 
         cy.assertionCheck('Recuperar contraseña').click()
           cy.wait(2000).then(()=>{
             cy.url().should('equal',urlRecoverypass)// Validamos el correcto ingreso a la url
