@@ -32,7 +32,7 @@ describe('Mobile | Test en Seccion Favoritos', {
               })
           });
           
-          it.only('F_003 | Check elementos', () => {// Se prueba la redireccion del button "/all-properties"
+          it('F_003 | Check elementos', () => {// Se prueba la redireccion del button "/all-properties"
             cy.visit(urlTaHouseFavorites)
             cy.wait(2000).then(()=>{
                 cy.get('a').eq(4).should('be.visible')// Se espera: que el btn de redireccion a /all-properties este visible

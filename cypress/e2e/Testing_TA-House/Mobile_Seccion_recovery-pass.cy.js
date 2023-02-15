@@ -36,7 +36,7 @@ describe('Mobile | Tests en Seccion Recovery-Pass de Usuario',{
         cy.get('button').should('have.css','width','328px')// Se espera: que le width del button sea 328px
     });
 
-    it('Recovery_005 | Recuperar Contraseña Exitosamente', () => {// Se prueba realizar el recupero de la contraseña en Email previamente registrado
+    it('Recovery_005 | Recuperar Contraseña Exitosamente', () => {// Se prueba realizar el recupero de la contraseña en Email previamente registrado y mostrando un msj en pantalla
         cy.typeInputName('sendEmail','nuevo@mail.com')// Ingresamos un email registrado
         cy.assertionCheck('ENVIAR').click()// Realizamos click en "ENVIAR"
         cy.wait(3000).then(()=>{
