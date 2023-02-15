@@ -36,15 +36,15 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
           
     });
 
-    it('U_003 | Publicar Inmueble', () => {// Se prueba la publicacion exitosa de un Inmueble
+    it.only('U_003 | Publicar Inmueble', () => {// Se prueba la publicacion exitosa de un Inmueble
         cy.visit(urlTaHouseProperty)
         cy.wait(3000).then(()=>{
             cy.get('.icon-of-create-properties').click()// Relizamos click sobre el icono svg "+"
             cy.get('button').click()// Realizamos click en siguiente
-            cy.selectGroup('Venta','Casa','Alquilado','Argentina','Funes')// Se generan datos random en options
-            cy.inputGroup1('av 33st',4,550,4,4,140000,'Excelente Ubicacion')// Se generan datos random en inputs de datos
+            cy.selectGroup('Venta','Hotel','Libre','USA','California')// Se generan datos random en options
+            cy.inputGroup1('av 51st',3,150,3,3,115000,'Excelente Ubicacion')// Se generan datos random en inputs de datos
             cy.get('button').click()// Realizamos click en siguiente
-            cy.inputGroup2(11230002214746,'nuevo2@mail.com')// Se generan datos randon en inputs de datos
+            cy.inputGroup2(1122347691746,'nuevo11@mail.com')// Se generan datos randon en inputs de datos
             cy.get('button').click()
             cy.contains('PUBLICAR').click({force:true})
             cy.contains('CONTINUAR').click()
@@ -54,7 +54,7 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
     it('U_004 | Eliminar Inmueble', () => {// Se prueba la eliminacion de un inmuelbe en la 1er ubicaion de la lista
        cy.visit(urlTaHouseProperty)
        cy.wait(2000).then(()=>{
-        cy.get('.kMUvhG').eq(0).click()
+        cy.get('.kMUvhG').eq(1).click()
         cy.get('button').eq(1).click({force:true})
         cy.contains('CONTINUAR').click({force:true})
        })

@@ -18,7 +18,7 @@ describe('Mobile | Tests en Seccion Recovery-Pass de Usuario',{
         cy.url().should('equal',urlRecoverypass)// Se espera: Validar la URL 'https://dev.tahouse.casa/register'   
     });
 
-    it('Recovery_002 | Check Elementos | Recovery-Pass', () => {// Se realiza un check de todos los elementos visibles
+    it('Recovery_002 | Check Elementos ', () => {// Se realiza un check de todos los elementos visibles
         cy.assertionCheck('Recuperar contraseña')// Titulo en Header 
         cy.assertionCheck('Ingresa la dirección de email')// Subtitulo en Header
         cy.assertionCheck('ENVIAR')// Button para confirmar solicitud
@@ -26,17 +26,36 @@ describe('Mobile | Tests en Seccion Recovery-Pass de Usuario',{
         cy.assertionCheck('Puedes reintentarlo')// Parrafo con mensaje informativo
       });
     
-    it('Recovery_003 | Contenido y Attr | Input SendEmail', () => {// Se prueba contenido y atributos en inputs
+    it('Recovery_003 | Contenido y Attr | Input SendEmail', () => {// Se prueba contenido y atributos en input
       cy.checkInputType('sendEmail','type','text')// Se espera: el input sea de tipo text
       cy.checkInputType('sendEmail','placeholder','Email')// Se espera: el name del placeholder se Email
-    });  
+      cy.inputWidth('sendEmail','328px')// Se espera: que el width del input email sea de 328px
+    }); 
+    
+    it('Recovery_004 | Contenido y Attr | Button Enviar', () => {// se prueba contenido y atributos en button
+        cy.get('button').should('have.css','width','328px')// Se espera: que le width del button sea 328px
+    });
 
-    it('Recovery_004 | Recuperar Contraseña Exitosamente', () => {// Se prueba realizar el recupero de la contraseña en Email previamente registrado
+    it('Recovery_005 | Recuperar Contraseña Exitosamente', () => {// Se prueba realizar el recupero de la contraseña en Email previamente registrado
         cy.typeInputName('sendEmail','nuevo@mail.com')// Ingresamos un email registrado
-        cy.assertionCheck('ENVIAR').click()
+        cy.assertionCheck('ENVIAR').click()// Realizamos click en "ENVIAR"
         cy.wait(3000).then(()=>{
         cy.msjAviso('El mail fue enviado con éxito','be.visible')// Se espera: Un mensaje del sistema indicando la respuesta del sistema
-        cy.assertionCheck('CONTINUAR').click()
+        cy.assertionCheck('CONTINUAR').click()// Realizamos click en "CONTINUAR"
       })   
+    });
+
+    it('Recovery_006 | Menu de navegacion no visible', () => {// Se prueba los elementos que no deben estar visibles en esta seccion
+      cy.get('nav').should('not.be.visible')// Se espera: que el menu de navegacion no este visible en esta seccion
+        
+    });
+
+    it('Recovery_007 | Icon Back Login', () => {// Se prueba que el icono de volver sea visible para redireccionar al Login
+        cy.get('svg').eq(0)// Se espera: que el button para volver al login exista
+    });
+
+    it('Recovery_008 | Input Email sin datos', () => {// Se prueba que el sistema avise mediante un mensaje en pantalla al no ingresar email en campo de datos
+        cy.get('button').click()// Realizamos click sobre el button "ENVIAR"
+        cy.msjAviso('El email ingresado no es válido','be.visible')// Se espera: el sistema avise mediante un mensaje en pantalla el error
     });
 });

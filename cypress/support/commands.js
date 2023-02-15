@@ -67,14 +67,6 @@
         cy.get('[name="email"]').clear()
     })
     
-    Cypress.Commands.add('deleteInmueble',()=>{
-        cy.get('.sc-Dmqmp > :nth-child(1) > :nth-child(2) > :nth-child(2)').click()// Click en Borrar
-    })
-
-    Cypress.Commands.add('editPais',()=>{
-        cy.get('.sc-Dmqmp > :nth-child(10) > :nth-child(2) > :nth-child(1)').click()// Click en Modificar
-    })
-
     Cypress.Commands.add('latitud',(num1,num2,num3,num4)=>{
         cy.get('[name="value1"]').eq(0).type(num1)
         cy.get('[name="value2"]').eq(0).type(num2)
@@ -156,6 +148,10 @@
         cy.get(`[name="${text}"]`).should('have.value',text2)
     })
 
+    Cypress.Commands.add('inputWidth',(text,width)=>{
+        cy.get(`[name="${text}"]`).should('have.css','width',width)
+    })
+
     Cypress.Commands.add('path',(text,text1)=>{
         cy.location().should((location)=>{
             expect(location.protocol).to.eq(text)
@@ -174,6 +170,10 @@
 
     Cypress.Commands.add('checkInputType',(text,text2,text3)=>{
         cy.get(`[name="${text}"]`).should('have.attr',text2,text3)
+    })
+
+    Cypress.Commands.add('Cardsize',(num,width,height)=>{
+        cy.get('.cAOvxN').eq(num).should('have.css','width',width).and('have.css','height',height)
     })
 //
 //

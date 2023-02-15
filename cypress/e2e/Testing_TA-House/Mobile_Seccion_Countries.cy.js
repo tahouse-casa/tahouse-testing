@@ -25,7 +25,7 @@ describe('Mobile | Tests en Panel de administrar Paises',{
     });
 
 
-    it('P_001 | Publicar Pais / Ciudad', () => {// Se prueba publicar un nuevo pais exitosamente
+    it('P_002 | Publicar Pais / Ciudad', () => {// Se prueba publicar un nuevo pais exitosamente
         cy.visit(urlTaHouseCountries)
         cy.wait(1000).then(()=>{
             cy.get('.sc-fTJzqL').click()// Relizamos click sobre el signo "+"
@@ -38,16 +38,16 @@ describe('Mobile | Tests en Panel de administrar Paises',{
          
     });
 
-    it('P_002 | Eliminar Pais / Ciudad', () => {// Se prueba eliminar exitosamente el 1er pais de la lista "Paises"
+    it('P_003 | Eliminar Pais / Ciudad', () => {// Se prueba eliminar exitosamente el 1er pais de la lista "Paises"
         cy.visit(urlTaHouseCountries)
         cy.wait(2000).then(()=>{
             cy.deletecountry(0)// Realizamos click sobre el 1er elemento "pais" de la lista
-            cy.get('button').eq(1).click// Realizamos click en "ELIMINAR"
+            cy.get('button').eq(1).click()// Realizamos click en "ELIMINAR"
         })  
          
     });
 
-    it('P_003 | Editar Pais / Ciudad', () => {// Se prueba editar exitosamente el 1er pais y/o ciudad de la lista "Paises"
+    it('P_004 | Editar Pais / Ciudad', () => {// Se prueba editar exitosamente el 1er pais y/o ciudad de la lista "Paises"
         cy.visit(urlTaHouseCountries)
         cy.wait(2000).then(()=>{
             cy.editCountry(0)// Realizamos click en el icono "edit"
