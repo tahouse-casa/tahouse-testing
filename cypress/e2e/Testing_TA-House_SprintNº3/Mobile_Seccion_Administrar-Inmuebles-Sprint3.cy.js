@@ -23,7 +23,7 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
         expect(cy.config('viewportWidth')).to.equal(380)// Validamos MaxWhidth 380px
         expect(cy.config('viewportHeight')).to.equal(670)// Validamos MaxwHeight 670px
         cy.path('https:',pathAdminProperties)// Se espera: Validar el protocolo "https:" y la ruta Path dentro de la app "/administration/properties"
-        cy.url().should('equal',urlTaHouseProperty)// Se espera: Validar la URL 'https://dev.tahouse.casa/administration/properties'   
+        cy.url().should('equal',urlTaHouseProperty)// Se espera: Validar la URL 'https://dev.tahouse.cºasa/administration/properties'   
     });
 
     it('U_002 | Check Elementos | ', () => {

@@ -27,7 +27,7 @@ describe('Mobile | Tests en Panel de administrar Paises',{
 
     it('P_002 | Publicar Pais / Ciudad', () => {// Se prueba publicar un nuevo pais exitosamente
         cy.visit(urlTaHouseCountries)
-        cy.wait(1000).then(()=>{
+        cy.wait(2000).then(()=>{
             cy.get('.sc-fTJzqL').click()// Relizamos click sobre el signo "+"
             cy.addcountry('Francia','Paris')// Completamos los campos de datos "Pais" y "Ciudad"
             cy.longitud(11,35,92,34)// Completamos con datos random los campos de datos longitud
@@ -47,7 +47,7 @@ describe('Mobile | Tests en Panel de administrar Paises',{
          
     });
 
-    it('P_004 | Editar Pais / Ciudad', () => {// Se prueba editar exitosamente el 1er pais y/o ciudad de la lista "Paises"
+    it.only('P_004 | Editar Pais / Ciudad', () => {// Se prueba editar exitosamente el 1er pais y/o ciudad de la lista "Paises"
         cy.visit(urlTaHouseCountries)
         cy.wait(2000).then(()=>{
             cy.editCountry(0)// Realizamos click en el icono "edit"

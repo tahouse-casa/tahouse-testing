@@ -85,7 +85,7 @@ describe('Mobile | Tests en Seccion Registro de Usuarios',{
           
       });
 
-      it('Registro_007 | Multiples Registros', () => {// Se prueba ingresar un usuario previemente registrado
+      it('Registro_008 | Multiples Registros', () => {// Se prueba ingresar un usuario previemente registrado
        // se espera: al ingresar un usuario ya registrado el sistema no continue el proceso y muestre un mensaje en pantalla notificando el error
        cy.typeInputName('email','nuevo@mail.com')// Ingresamos mail registrado
        cy.typeInputName('password','aBc123')// Ingresamos password random
@@ -96,18 +96,18 @@ describe('Mobile | Tests en Seccion Registro de Usuarios',{
        })
       });
 
-      it('Registro_008 | Contenido y Atributos | Button ingresar', () => {// Se prueba el nombre del button submit en form de registro
+      it('Registro_009 | Contenido y Atributos | Button ingresar', () => {// Se prueba el nombre del button submit en form de registro
        // Se espera: El nombre sea Registrar y que su type "Submit"
        cy.get('button').eq(2).should('have.attr','type','submit')// Validamos que sea de type Submit
          .and('have.text','Ingresar')// Se espera: que el nombre del button sea Registrarse 
       });
       
-      it('Registro_009 | Links de Img en Button FB y Google', () => {// se prueban las rutas src de las imagenes en los buttons
+      it('Registro_010 | Links de Img en Button FB y Google', () => {// se prueban las rutas src de las imagenes en los buttons
         cy.searchImg(0,'/static/media/Facebook.9f77d10e26cc26dd4371274fdd426a08.svg')// Validamos la ruta src de la Imagen Facebook
         cy.searchImg(1,'/static/media/Google.735a08524e3537e3cd2430c1aee63076.svg')// Validamos la ruta src de la Imagen Google
       });
 
-      it('Registro_010 | Link de redireccion a Login', () => {// Se prueba la redireccion del link
+      it('Registro_012 | Link de redireccion a Login', () => {// Se prueba la redireccion del link
         cy.get('a').eq(0).click() // Realizamos Click sobre link con redireccion a Login
         cy.wait(2000).then(()=>{
           cy.url().should('equal',urlTaHouseLogin)// Validamos la url de ingreso al Login y luego retornamos a Registro
