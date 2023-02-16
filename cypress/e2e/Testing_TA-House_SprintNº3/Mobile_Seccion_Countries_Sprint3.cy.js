@@ -47,7 +47,7 @@ describe('Mobile | Tests en Panel de administrar Paises',{
          
     });
 
-    it.only('P_004 | Editar Pais / Ciudad', () => {// Se prueba editar exitosamente el 1er pais y/o ciudad de la lista "Paises"
+    it('P_004 | Editar Pais / Ciudad', () => {// Se prueba editar exitosamente el 1er pais y/o ciudad de la lista "Paises"
         cy.visit(urlTaHouseCountries)
         cy.wait(2000).then(()=>{
             cy.editCountry(0)// Realizamos click en el icono "edit"

@@ -41,7 +41,7 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
         cy.wait(3000).then(()=>{
             cy.get('.icon-of-create-properties').click()// Relizamos click sobre el icono svg "+"
             cy.get('button').click()// Realizamos click en siguiente
-            cy.selectGroup('Venta','Hotel','Libre','USA','California')// Se generan datos random en options
+            cy.selectGroup('Venta','Hotel','Libre','USA','Los Angeles')// Se generan datos random en options
             cy.inputGroup1('av 51st',3,150,3,3,115000,'Excelente Ubicacion')// Se generan datos random en inputs de datos
             cy.get('button').click()// Realizamos click en siguiente
             cy.inputGroup2(1122347691746,'nuevo11@mail.com')// Se generan datos randon en inputs de datos
@@ -61,7 +61,7 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
 
     });
 
-    it('U_005 | Editar Inmueble', () => {// Se prueba la edicion del 1er inmueble de la lista modificando todos sus datos ingresado previamente
+    it.only('U_005 | Editar Inmueble', () => {// Se prueba la edicion del 1er inmueble de la lista modificando todos sus datos ingresado previamente
         cy.visit(urlTaHouseProperty)
         cy.wait(2000).then(()=>{
             cy.get('.gysgEo').eq(0).click()// Realizamos Click sobre la 1er card de inmueble existente
