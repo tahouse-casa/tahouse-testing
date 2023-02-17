@@ -68,7 +68,7 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
             cy.get('button').eq(0).click({force:true})
             cy.selectGroup('Venta','Terreno','Alquilado','USA','California')// Se generan nuevos datos random en options
             cy.clearInputsGroup1()// Se realiza un clear sobre todos los campos de datos en inmuebles
-            cy.inputGroup1('av 12st',3,600,4,3,125000,'Excelente Ubicacion')// Se generan nuevos datos random en inputs 
+            cy.inputGroup1('av 12st',3,500,4,3,125000,'Excelente Ubicacion')// Se generan nuevos datos random en inputs 
             cy.get('button').click()// Realizamos clieck en "Siguiente"
             cy.clearInputsGroup2()// Se realiza un clear sobre todos los campos de datos en contacto
             cy.inputGroup2(9341568532451,'nuevo55@mail.com')// Se generan datos randon en inputs de datos
