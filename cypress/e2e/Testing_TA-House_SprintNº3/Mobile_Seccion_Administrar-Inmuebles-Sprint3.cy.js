@@ -38,7 +38,7 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
 
     it('U_003 | Publicar Inmueble', () => {// Se prueba la publicacion exitosa de un Inmueble
         cy.visit(urlTaHouseProperty)
-        cy.wait(3000).then(()=>{
+        cy.wait(2000).then(()=>{
             cy.get('.icon-of-create-properties').click()// Relizamos click sobre el icono svg "+"
             cy.get('button').click()// Realizamos click en siguiente
             cy.selectGroup('Venta','Hotel','Libre','USA','Los Angeles')// Se generan datos random en options
