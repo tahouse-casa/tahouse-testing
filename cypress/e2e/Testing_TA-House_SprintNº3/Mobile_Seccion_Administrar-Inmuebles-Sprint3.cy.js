@@ -61,7 +61,7 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
 
     });
 
-    it.only('U_005 | Editar Inmueble', () => {// Se prueba la edicion del 1er inmueble de la lista modificando todos sus datos ingresado previamente
+    it('U_005 | Editar Inmueble', () => {// Se prueba la edicion del 1er inmueble de la lista modificando todos sus datos ingresado previamente
         cy.visit(urlTaHouseProperty)
         cy.wait(2000).then(()=>{
             cy.get('.gysgEo').eq(0).click()// Realizamos Click sobre la 1er card de inmueble existente
