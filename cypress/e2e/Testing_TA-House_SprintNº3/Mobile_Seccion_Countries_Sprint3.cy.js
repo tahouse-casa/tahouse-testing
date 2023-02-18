@@ -27,7 +27,7 @@ describe('Mobile | Tests en Panel de administrar Paises',{
         cy.visit(urlTaHouseCountries)
         cy.wait(2000).then(()=>{
             cy.get('.sc-fTJzqL').click()// Relizamos click sobre el signo "+"
-            cy.addcountry('España','Alicante')// Completamos los campos de datos "Pais" y "Ciudad"
+            cy.addcountry('Italia','Roma')// Completamos los campos de datos "Pais" y "Ciudad"
             cy.longitud(11,35,92,34)// Completamos con datos random los campos de datos longitud
             cy.latitud(14,13,22,45)// Completamos con datos random los campos de datos latitud
             cy.get('button').click()// Realizamos click en "Guardar"
