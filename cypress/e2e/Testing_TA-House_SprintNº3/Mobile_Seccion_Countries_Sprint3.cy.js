@@ -10,9 +10,7 @@ describe('Mobile | Tests en Panel de administrar Paises',{
     viewportWidth:380,viewportHeight:670},() => {
 
     beforeEach(() => {
-        cy.session('login', () => {
-            login.loginAdmin(urlTaHouseLogin)
-          }) 
+        login.loginAdmin(urlTaHouseLogin)     
     });
 
     it('P_001 | Validaciones Html Request', () => {// Se prueban las props HTML
