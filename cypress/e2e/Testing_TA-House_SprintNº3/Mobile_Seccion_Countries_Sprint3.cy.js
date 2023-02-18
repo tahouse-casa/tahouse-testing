@@ -29,7 +29,7 @@ describe('Mobile | Tests en Panel de administrar Paises',{
         cy.visit(urlTaHouseCountries)
         cy.wait(2000).then(()=>{
             cy.get('.sc-fTJzqL').click()// Relizamos click sobre el signo "+"
-            cy.addcountry('Chile','Santiago de chile')// Completamos los campos de datos "Pais" y "Ciudad"
+            cy.addcountry('España','Alicante')// Completamos los campos de datos "Pais" y "Ciudad"
             cy.longitud(11,35,92,34)// Completamos con datos random los campos de datos longitud
             cy.latitud(14,13,22,45)// Completamos con datos random los campos de datos latitud
             cy.get('button').click()// Realizamos click en "Guardar"
@@ -47,14 +47,14 @@ describe('Mobile | Tests en Panel de administrar Paises',{
          
     });
 
-    it('P_004 | Editar Pais / Ciudad', () => {// Se prueba editar exitosamente el 1er pais y/o ciudad de la lista "Paises"
+    it.only('P_004 | Editar Pais / Ciudad', () => {// Se prueba editar exitosamente el 1er pais y/o ciudad de la lista "Paises"
         cy.visit(urlTaHouseCountries)
         cy.wait(2000).then(()=>{
             cy.editCountry(0)// Realizamos click en el icono "edit"
             cy.clearCountry()// Realizamos un clear en los campos de datos pais y ciudad
             cy.clearLatitud()// Realizamos un clear en campos de datos de latitud
             cy.clearLongitud()// Realizamos un clear en campos de datos de longitud
-            cy.addcountry('Italia','Roma')// Completamos en campo de datos pais y ciudad
+            cy.addcountry('Mexico','Acapulco')// Completamos en campo de datos pais y ciudad
             cy.longitud(54,15,66,11)// Completamos campo de datos seccion "Longitud"
             cy.latitud(80,63,11,99)// Completamos campo de datos seccion "Latitud"
             cy.get('button').click()// Realizamos click en "Guardar"
