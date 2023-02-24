@@ -7,7 +7,8 @@
 // commands please read more here:
 // https://on.cypress.io/custom-commands
 // ***********************************************
-//
+
+// Funcion para ocultar caracteres en al typear datos en los campos de entrada de datos
     Cypress.Commands.overwrite('type',(originalFn,element,text,options)=>{
         if(options && options.sensitive){
             options.log = false

@@ -17,10 +17,10 @@ describe('Mobile | Test en Seccion Favoritos', {
         it('F_001 | Validaciones Html Request', () => {// Se prueban las props HTML
             cy.visit(urlTaHouseFavorites)
             cy.title().should('eq','TaHouse.casa')// Validamos el Tiutlo de la Pagina 
-              expect(cy.config('viewportWidth')).to.equal(380)// Validamos MaxWhidth 380px
-              expect(cy.config('viewportHeight')).to.equal(670)// Validamos MaxwHeight 670px
-              cy.path('https:',pathFavorites)// Se espera: Validar el protocolo "https:" y la ruta Path dentro de la app "/login"
-              cy.url().should('equal',urlTaHouseFavorites)// Se espera: Validar la URL 'https://dev.tahouse.casa/login'   
+            expect(cy.config('viewportWidth')).to.equal(380)// Validamos MaxWhidth 380px
+            expect(cy.config('viewportHeight')).to.equal(670)// Validamos MaxwHeight 670px
+            cy.path('https:',pathFavorites)// Se espera: Validar el protocolo "https:" y la ruta Path dentro de la app "/login"
+            cy.url().should('equal',urlTaHouseFavorites)// Se espera: Validar la URL 'https://dev.tahouse.casa/login'   
           });
 
           it('F_002 | Check Elementos | Card div size', () => {// Se prueba el tamaños en divs contenedores de las cards
