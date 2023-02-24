@@ -8,7 +8,6 @@ const tools = document.querySelectorAll('.tools')
 const nav = document.querySelector('nav')
 const navText = document.querySelectorAll('#navText')
 
-console.log(navText)
 // Funcion Cambio de 'Tema'
 let theme = false;
 function changeTheme(){
