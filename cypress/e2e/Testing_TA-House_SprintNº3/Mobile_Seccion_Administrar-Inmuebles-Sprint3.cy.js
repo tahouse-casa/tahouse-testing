@@ -12,7 +12,7 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
         login.loginAdmin(urlTaHouseLogin)
     });
 
-    it('U_001 | Validaciones Html Request', () => {// Se prueban las props HTML
+    it.only('U_001 | Validaciones Html Request', () => {// Se prueban las props HTML
         cy.visit(urlTaHouseProperty)
         cy.title().should('eq','TaHouse.casa')// Validamos el Tiutlo de la Pagina 
         expect(cy.config('viewportWidth')).to.equal(380)// Validamos MaxWhidth 380px
