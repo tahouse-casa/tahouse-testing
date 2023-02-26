@@ -57,6 +57,12 @@ describe('Mobile | Test en Seccion Favoritos', {
                   cy.get('li').eq(2).click()// Se Espera: ordenar por "Mas Antiguo"
                 })
             })
-
           });
+
+          it('F_005 | Agregar Inmueble a favoritos', () => {
+            cy.visit(urlAllproperties)
+            cy.get('a').eq(4).click().then(()=>{
+              cy.get('svg').eq(5).click()
+            })
+        });
 });

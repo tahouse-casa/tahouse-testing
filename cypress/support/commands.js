@@ -176,6 +176,20 @@
     Cypress.Commands.add('Cardsize',(num,width,height)=>{
         cy.get('.cAOvxN').eq(num).should('have.css','width',width).and('have.css','height',height)
     })
+
+    Cypress.Commands.add('ResultSearch',(text,pais)=>{
+        cy.typeInputName('country',`${pais}`)
+        cy.contains('Buscar').click()
+        cy.wait(2000).then(()=>{
+            cy.get('h2').eq(1).should('contain',text).and('contain',`${pais}`)
+        }) 
+    })
+
+    Cypress.Commands.add('FilterOption',(num1,num2)=>{
+        cy.get('input').eq(num1).type(num2)
+    })
+
+    
 //
 //
 // -- This is a child command --

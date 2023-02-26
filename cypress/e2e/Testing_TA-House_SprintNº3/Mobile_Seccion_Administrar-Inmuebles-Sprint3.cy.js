@@ -3,10 +3,7 @@ import Login from "../../pages/login";
 const login = new Login
 const urlTaHouseLogin = 'https://dev.tahouse.casa/login'
 const urlTaHouseProperty = 'https://dev.tahouse.casa/administration/properties'
-const urlTaHouseCountries = 'https://dev.tahouse.casa/administration/countries'
 const pathAdminProperties = '/administration/properties'
-const pathAdminCountries = '/administration/countries'
-const apiProperties = 'https://api.dev.tahouse.casa/api/v1/properties'
 
 describe('Mobile | Tests en Panel de Administrar Inmueble', {  
     viewportWidth:380,viewportHeight:670},() => {
@@ -24,7 +21,7 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
         cy.url().should('equal',urlTaHouseProperty)// Se espera: Validar la URL 'https://dev.tahouse.cºasa/administration/properties'   
     });
 
-    it('U_002 | Check Elementos | ', () => {
+    it('U_002 | Check Elementos', () => {
         cy.visit(urlTaHouseProperty)
         cy.wait(2000).then(()=>{
             cy.assertionCheck('INMUEBLES').should('be.visible')
@@ -34,18 +31,18 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
           
     });
 
-    it('U_003 | Publicar Inmueble', () => {// Se prueba la publicacion exitosa de un Inmueble
+    it.only('U_003 | Publicar Inmueble', () => {// Se prueba la publicacion exitosa de un Inmueble
         cy.visit(urlTaHouseProperty)
         cy.wait(2000).then(()=>{
             cy.get('.icon-of-create-properties').click()// Relizamos click sobre el icono svg "+"
             cy.get('button').click()// Realizamos click en siguiente
-            cy.selectGroup('Venta','Casa','Libre','Hungria','Budapest')// Se generan datos random en options
-            cy.inputGroup1('av 10st',3,150,3,3,115000,'Excelente Ubicacion')// Se generan datos random en inputs de datos
+            cy.selectGroup('Alquiler','Casa','Vendido','COLOMBIA','Cartagena')// Se generan datos random en options
+            cy.inputGroup1('av 140st',3,165,4,3,123000,'Excelente Ubicacion')// Se generan datos random en inputs de datos
             cy.get('button').click()// Realizamos click en siguiente
-            cy.inputGroup2(1122347691746,'nuevo11@mail.com')// Se generan datos randon en inputs de datos
+            cy.inputGroup2(11223366746,'nuevo18@mail.com')// Se generan datos randon en inputs de datos
             cy.get('button').click()
             cy.contains('PUBLICAR').click({force:true})
-            cy.contains('CONTINUAR').click()
+            cy.contains('CONTINUAR').click({force:true})
         })      
     });
 
