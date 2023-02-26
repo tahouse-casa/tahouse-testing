@@ -27,7 +27,7 @@ describe('Mobile | Tests en Panel de administrar Paises',{
         cy.visit(urlTaHouseCountries)
         cy.wait(2000).then(()=>{
             cy.get('.fjUtIG').click({force:true})// Relizamos click sobre el signo "+"
-            cy.addcountry('Francia','Paris')// Completamos los campos de datos "Pais" y "Ciudad"
+            cy.addcountry('Chile','Santiago de Chile')// Completamos los campos de datos "Pais" y "Ciudad"
             cy.longitud(11,35,92,34)// Completamos con datos random los campos de datos longitud
             cy.latitud(14,13,22,45)// Completamos con datos random los campos de datos latitud
             cy.get('button').click()// Realizamos click en "Guardar"
@@ -48,7 +48,7 @@ describe('Mobile | Tests en Panel de administrar Paises',{
     it('P_004 | Editar Pais / Ciudad', () => {// Se prueba editar exitosamente el 1er pais y/o ciudad de la lista "Paises"
         cy.visit(urlTaHouseCountries)
         cy.wait(2000).then(()=>{
-            cy.editCountry(0)// Realizamos click en el icono "edit"
+            cy.editCountry(7)// Realizamos click en el icono "edit"
             cy.clearCountry()// Realizamos un clear en los campos de datos pais y ciudad
             cy.clearLatitud()// Realizamos un clear en campos de datos de latitud
             cy.clearLongitud()// Realizamos un clear en campos de datos de longitud
