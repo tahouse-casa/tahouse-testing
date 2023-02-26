@@ -45,7 +45,7 @@ describe('Mobile | Tests en Seccion Recovery-Pass de Usuario',{
       })   
     });
 
-    it('Recovery_006 | Menu de navegacion no visible', () => {// Se prueba los elementos que no deben estar visibles en esta seccion
+    it('Recovery_006 | Menu de navegacion No visible', () => {// Se prueba los elementos que no deben estar visibles en esta seccion
       cy.get('nav').should('not.be.visible')// Se espera: que el menu de navegacion no este visible en esta seccion
         
     });

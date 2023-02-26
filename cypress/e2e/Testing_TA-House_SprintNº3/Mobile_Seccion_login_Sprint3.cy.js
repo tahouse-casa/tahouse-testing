@@ -78,13 +78,13 @@ describe('Mobile | Tests en Seccion Login de Usuario', {
         cy.get('a').eq(0).click({force:true})// Click para volver a seccion /login
       })
 
-      it('Login_008 | Link Recuperar Contraseña', () => {// Ingresamos al link y validamos redireccion 
+      it.only('Login_008 | Link Recuperar Contraseña', () => {// Ingresamos al link y validamos redireccion 
         cy.assertionCheck('Recuperar contraseña').click()
           cy.wait(2000).then(()=>{
             cy.url().should('equal',urlRecoverypass)// Validamos el correcto ingreso a la url
             cy.path('https:',pathRecoveryPass)// Se espera: Validar el protocolo "https:" y la ruta Path "/recovery-password"
           })
-          cy.get('a').click()//Click para volver al Registro
+          cy.get('a').should('contain','Icon Arrow Back')//Click para volver al Registro
       });
 
       it('Login_009 | Login Usuario no Registrado', () => {// Se prueba Ingresar al sistema con una cuenta no registrada 

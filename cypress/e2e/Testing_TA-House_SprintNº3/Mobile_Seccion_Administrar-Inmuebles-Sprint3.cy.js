@@ -31,7 +31,7 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
           
     });
 
-    it.only('U_003 | Publicar Inmueble', () => {// Se prueba la publicacion exitosa de un Inmueble
+    it('U_003 | Publicar Inmueble', () => {// Se prueba la publicacion exitosa de un Inmueble
         cy.visit(urlTaHouseProperty)
         cy.wait(2000).then(()=>{
             cy.get('.icon-of-create-properties').click()// Relizamos click sobre el icono svg "+"

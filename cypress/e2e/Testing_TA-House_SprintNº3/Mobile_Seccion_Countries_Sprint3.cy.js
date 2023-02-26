@@ -27,11 +27,11 @@ describe('Mobile | Tests en Panel de administrar Paises',{
         cy.visit(urlTaHouseCountries)
         cy.wait(2000).then(()=>{
             cy.get('.fjUtIG').click({force:true})// Relizamos click sobre el signo "+"
-            cy.addcountry('Mexico','Acapulco')// Completamos los campos de datos "Pais" y "Ciudad"
+            cy.addcountry('Japon','Tokio')// Completamos los campos de datos "Pais" y "Ciudad"
             cy.longitud(11,35,92,34)// Completamos con datos random los campos de datos longitud
             cy.latitud(14,13,22,45)// Completamos con datos random los campos de datos latitud
             cy.get('button').click()// Realizamos click en "Guardar"
-            cy.contains('CONTINUAR').click()// Confirmamos la publicacion
+            cy.contains('CONTINUAR').click({force:true})// Confirmamos la publicacion
         })
          
     });
