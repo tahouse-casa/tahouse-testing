@@ -53,7 +53,6 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
         cy.get('button').eq(1).click({force:true})
         cy.contains('CONTINUAR').click({force:true})
        })
-
     });
 
     it('U_005 | Editar Inmueble', () => {// Se prueba la edicion del 1er inmueble de la lista modificando todos sus datos ingresado previamente
