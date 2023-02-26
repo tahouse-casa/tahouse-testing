@@ -36,8 +36,8 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
         cy.wait(2000).then(()=>{
             cy.get('.icon-of-create-properties').click()// Relizamos click sobre el icono svg "+"
             cy.get('button').click()// Realizamos click en siguiente
-            cy.selectGroup('Alquiler','Casa','Vendido','COLOMBIA','Cartagena')// Se generan datos random en options
-            cy.inputGroup1('av 140st',3,165,4,3,123000,'Excelente Ubicacion')// Se generan datos random en inputs de datos
+            cy.selectGroup('Alquiler','Casa','Vendido','Francia','Paris')// Se generan datos random en options
+            cy.inputGroup1('av 140st',2,155,3,2,93000,'Excelente Ubicacion')// Se generan datos random en inputs de datos
             cy.get('button').click()// Realizamos click en siguiente
             cy.inputGroup2(11223366746,'nuevo18@mail.com')// Se generan datos randon en inputs de datos
             cy.get('button').click()
@@ -60,9 +60,9 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
         cy.wait(2000).then(()=>{
             cy.get('.gysgEo').eq(0).click()// Realizamos Click sobre la 1er card de inmueble existente
             cy.get('button').eq(0).click({force:true})
-            cy.selectGroup('Venta','Terreno','Alquilado','USA','California')// Se generan nuevos datos random en options
+            cy.selectGroup('Venta','Terreno','Alquilado','USA','New York')// Se generan nuevos datos random en options
             cy.clearInputsGroup1()// Se realiza un clear sobre todos los campos de datos en inmuebles
-            cy.inputGroup1('av 12st',3,500,4,3,125000,'Excelente Ubicacion')// Se generan nuevos datos random en inputs 
+            cy.inputGroup1('av 13st',1,200,2,1,121000,'Excelente Ubicacion')// Se generan nuevos datos random en inputs 
             cy.get('button').click()// Realizamos clieck en "Siguiente"
             cy.clearInputsGroup2()// Se realiza un clear sobre todos los campos de datos en contacto
             cy.inputGroup2(9341568532451,'nuevo55@mail.com')// Se generan datos randon en inputs de datos
