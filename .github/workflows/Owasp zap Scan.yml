@@ -10,7 +10,9 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
-      - name: ZAP Scan
-        uses: zaproxy/action-api-scan@v0.1.1
-        with:
-        target: 'https://www.zaproxy.org/'
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Install OWASP ZAP
+      run: npx apt-get update && npx apt-get install -y zaproxy
+    - name: Run OWASP ZAP scan
+      run: zap-cli --zap-path /usr/bin/zaproxy --api-key <API key> --spider https://dev.tahouse.casa/
