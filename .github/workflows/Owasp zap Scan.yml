@@ -13,6 +13,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Install OWASP ZAP
-      run: npx apt-get update && npx apt-get install -y zaproxy
+      run: npm apt-get update && npm apt-get install -y zaproxy
     - name: Run OWASP ZAP scan
       run: zap-cli --zap-path /usr/bin/zaproxy --api-key <API key> --spider https://dev.tahouse.casa/
