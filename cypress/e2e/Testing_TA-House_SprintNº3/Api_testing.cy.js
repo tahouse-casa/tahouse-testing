@@ -1,4 +1,3 @@
-
 import Login from "../../pages/login"
 
 const urlTaHouseLogin = 'https://dev.tahouse.casa/login'
@@ -9,6 +8,7 @@ const apiUsers = 'https://api.dev.tahouse.casa/api/v1/users'
 const apiLogin = 'https://api.dev.tahouse.casa/api/v1/auth/login'
 const apiRecovery = 'https://api.dev.tahouse.casa/api/v1/auth/recovery'
 const apiChangePassword = 'https://api.dev.tahouse.casa/api/v1/auth/change-password'
+
 const login = new Login
 
 describe('Mobile | Api Testing',{  

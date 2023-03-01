@@ -1,0 +1,18 @@
+name: OWASP ZAP scan
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Install OWASP ZAP
+      run: sudo apt-get update && sudo apt-get install -y zaproxy
+    - name: Run OWASP ZAP scan
+      run: zap-cli --zap-path /usr/bin/zaproxy --api-key <API key> --spider <target URL>

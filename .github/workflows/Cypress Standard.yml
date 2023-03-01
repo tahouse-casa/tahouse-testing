@@ -1,4 +1,4 @@
-name: Cypress Testing Standard
+name: Cypress Test | TaHouse
 on: [push]
 jobs:
   test:
