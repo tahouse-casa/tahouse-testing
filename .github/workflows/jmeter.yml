@@ -1,0 +1,18 @@
+name: JMeter Run
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  jmeter:
+    runs-on: ubuntu-latest
+    container:
+      image: justb4/jmeter:5.4.1
+    steps:
+    - name: Descargar código
+      uses: actions/checkout@v2
+    - name: Ejecutar pruebas de carga
+      run: jmeter -n -t ruta/al/test.jmx -l ruta/al/resultados.jtl
