@@ -1,4 +1,4 @@
-name: Testq Postman api
+name: Postman test api
 on:
   push:
     branches:
@@ -31,8 +31,7 @@ jobs:
       # Run the POSTMAN collection
       - name: Run POSTMAN collection
         run: |
-          newman run newman/TaHouse.postman_collection.json -e newman/Ta_House.postman_environment.json -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html
-      # Upload the contents of Test Results directory to workspace
+          newman run newman/TaHouse.postman_collection.json -e newman/Ta_House.postman_environment.json -r htmlextra
       - name: Output the run Details
         uses: actions/upload-artifact@v2
         with:
