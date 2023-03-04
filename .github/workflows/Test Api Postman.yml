@@ -2,7 +2,7 @@ name: Newman Test Run
 on:
   push:
     branches:
-    - master
+    - main
     - staging
 jobs:
   newman:
