@@ -3,10 +3,6 @@ on:
   workflow_dispatch:
   push:
 jobs: 
-  test: 
-    defaults: 
-      run: 
-    environment: staging
     name: "Run tests"
     runs-on: ubuntu-latest
     steps: 
