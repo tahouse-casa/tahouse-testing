@@ -16,7 +16,7 @@
     "cy:run:chrome": "cypress run -b chrome",
     "newman:reporter:hmtlextra": "newman run https://api.getpostman.com/collections/08c7d3df-d134-46bf-914c-b7b224e3dd3d?apikey=PMAK-63c355bc01ed333f4119fdc7-79e1372dd6f4ef0691b57ab4c358d2a025 -e https://api.getpostman.com/environments/7eb70b23-1675-428c-aaff-8d2f6193c1db?apikey=PMAK-63c355bc01ed333f4119fdc7-79e1372dd6f4ef0691b57ab4c358d2a025 -r htmlextra",
     "newman:reporter:html": "newman run https://api.getpostman.com/collections/08c7d3df-d134-46bf-914c-b7b224e3dd3d?apikey=PMAK-63c355bc01ed333f4119fdc7-79e1372dd6f4ef0691b57ab4c358d2a025 -e https://api.getpostman.com/environments/7eb70b23-1675-428c-aaff-8d2f6193c1db?apikey=PMAK-63c355bc01ed333f4119fdc7-79e1372dd6f4ef0691b57ab4c358d2a025 -r html",
-    "newman:reporter:local": "newman run newman/Postman/TaHouse.postman_collection.json -e newman/Postman/Ta_House.postman_environment.json -r htmlextra",
+    "newman:reporter:local": "newman run newman/TaHouse.postman_collection.json -e newman/Ta_House.postman_environment.json -r htmlextra",
     "test:sprint2:mocha": "cypress run reporter mochawesome --spec cypress/e2e/Testing_TA-House/Sprint_n2.cy.js",
     "test": "cypress run",
     "start": "npm start --prefix todomvc",

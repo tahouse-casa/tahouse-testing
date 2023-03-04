@@ -25,14 +25,16 @@ jobs:
         run: "npm install -g newman-reporter-htmlextra"
       - 
         name: "Run tests"
-        run: "newman run TaHouse.postman_collection.json -e Ta_House.postman_environment.json  
+        run: "newman run newman/TaHouse.postman_collection.json -e newman/Ta_House.postman_environment.json
         -r htmlextra --reporter-htmlextra-export htmlreport.html --reporter-htmlextra-darkTheme  > runreport1.html"
       
       - name: Publish report
         uses: MeilCli/slack-upload-file@v1
         with:
           slack_token: ${{ secrets.SLACK_TOKEN }}
-          file_path: './tests/htmlreport.html'
+          file_path: './newman/htmlreport.html'
           file_name: 'postmanReport.html'
           file_type: 'html'
           channels: 'api-test-reports'
+
+          
