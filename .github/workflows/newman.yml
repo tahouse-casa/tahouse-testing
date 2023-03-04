@@ -1,6 +1,7 @@
 name: Newman API Tests
 on: 
   workflow_dispatch:
+  push:
 jobs: 
   test: 
     defaults: 
