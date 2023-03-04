@@ -1,7 +1,5 @@
-name: Postman Api Testing
-
+name: Postman Api Test | TaHouse
 on: push
-
 jobs:
   automated-api-tests:
     runs-on: windows-latest
