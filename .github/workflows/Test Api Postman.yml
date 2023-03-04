@@ -1,59 +1,14 @@
-# Name of the GitHub Actions
-name: Continuous Test
- 
-# Set the actions that triggers the workflow
+name: Newman Test Run
 on:
-# Trigger the workflow on the push event, only in dev branch
   push:
-    branches: [ dev ]
- 
- 
+    branches:
+    - master
+    - staging
 jobs:
-  build:
+  newman:
     runs-on: ubuntu-latest
- 
- 
-    strategy:
-      matrix:
-        node-version: [14.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-       
- 
     steps:
-      # Check out the repo, so the job can access it.  
       - uses: actions/checkout@v2
- 
- 
-      # Install Node on the runner
-      - name: Use Node.js ${{ matrix.node-version }}      
-        uses: actions/setup-node@v1
-       
-      # Install newman globally, the reporter for slack and install the html extra reporter
-      - name: Install newman
-        run: |
-         npm install -g newman
-         npm install -g newman-reporter-slackreporter
-         npm install -g newman-reporter-htmlextra
- 
- 
-      # Create directory to upload test results
-      - name: Make Directory for Test Results
-        run: mkdir -p testArtifacts
- 
- 
-      # Run postman collection
-      - name: Run Postman Collection  
-        env:
-          COLLECTION_URL: ${{https://api.getpostman.com/collections/08c7d3df-d134-46bf-914c-b7b224e3dd3d?apikey=PMAK-63c355bc01ed333f4119fdc7-79e1372dd6f4ef0691b57ab4c358d2a025}}
-          ENVIRONMENT_URL: ${{https://api.getpostman.com/environments/7eb70b23-1675-428c-aaff-8d2f6193c1db?apikey=PMAK-63c355bc01ed333f4119fdc7-79e1372dd6f4ef0691b57ab4c358d2a025}}    
-          SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK_URL}}
-        run: |
-
-        newman  run ${{COLLECTION_URL}} -e ${{ENVIRONMENT_URL}} --suppress-exit-code -r slackreporter,htmlextra --reporter-htmlextra-export testArtifacts/htmlreport.html --reporter-slackreporter-webhookurl ${{SLACK_WEBHOOK_URL}}
-
-      # Upload the reports to TestArtifacts directory
-      - name: Output the results
-        uses: actions/upload-artifact@v2
-        with:
-         name: Reports
-         path: testArtifacts
+      - uses: actions/setup-node@v2-beta
+      - run: npm install -g newman
+      - run: newman run https://api.getpostman.com/collections/08c7d3df-d134-46bf-914c-b7b224e3dd3d?apikey=PMAK-63c355bc01ed333f4119fdc7-79e1372dd6f4ef0691b57ab4c358d2a025 -e https://api.getpostman.com/environments/7eb70b23-1675-428c-aaff-8d2f6193c1db?apikey=PMAK-63c355bc01ed333f4119fdc7-79e1372dd6f4ef0691b57ab4c358d2a025
