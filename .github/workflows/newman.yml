@@ -11,8 +11,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2-beta
         with:
-          node-version: '12'
-          collectionID: 22531503-08c7d3df-d134-46bf-914c-b7b224e3dd3d
-          environmentID: 22531503-7eb70b23-1675-428c-aaff-8d2f6193c1db
+          node-version: '16'
       - run: npm install -g newman
-      - run: newman run "https://api.getpostman.com/collections/${{collectionID}}?apikey=${{ secrets.POSTMAN_API_KEY }}" --environment "https://api.getpostman.com/environments/${{ environmentID }}?apikey=${{ secrets.POSTMAN_API_KEY }}"
+      - run: newman run "https://api.getpostman.com/collections/22531503-08c7d3df-d134-46bf-914c-b7b224e3dd3d?apikey=${{ secrets.POSTMAN_API_KEY }}" --environment "https://api.getpostman.com/environments/22531503-7eb70b23-1675-428c-aaff-8d2f6193c1db?apikey=${{ secrets.POSTMAN_API_KEY }}"
