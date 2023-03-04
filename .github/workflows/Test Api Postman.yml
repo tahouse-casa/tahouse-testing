@@ -31,7 +31,7 @@ jobs:
       # Run the POSTMAN collection
       - name: Run POSTMAN collection
         run: |
-          newman run newman/TaHouse.postman_collection.json -e newman/Ta_House.postman_environment.json -r html
+          newman run newman/TaHouse.postman_collection.json -e newman/Ta_House.postman_environment.json -r cli,html
       - name: Output the run Details
         uses: actions/upload-artifact@v2
         with:
