@@ -42,15 +42,18 @@ jobs:
  
  
       # Run postman collection
-      - name: Run Postman Collection        
+      - name: Run Postman Collection  
+        env:
+          COLLECTION_URL: ${{https://api.getpostman.com/collections/08c7d3df-d134-46bf-914c-b7b224e3dd3d?apikey=PMAK-63c355bc01ed333f4119fdc7-79e1372dd6f4ef0691b57ab4c358d2a025}}
+          ENVIRONMENT_URL: ${{https://api.getpostman.com/environments/7eb70b23-1675-428c-aaff-8d2f6193c1db?apikey=PMAK-63c355bc01ed333f4119fdc7-79e1372dd6f4ef0691b57ab4c358d2a025}}    
+          SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK_URL}}
         run: |
 
-        newman  run https://api.getpostman.com/collections/08c7d3df-d134-46bf-914c-b7b224e3dd3d?apikey=PMAK-63c355bc01ed333f4119fdc7-79e1372dd6f4ef0691b57ab4c358d2a025 -e https://api.getpostman.com/environments/7eb70b23-1675-428c-aaff-8d2f6193c1db?apikey=PMAK-63c355bc01ed333f4119fdc7-79e1372dd6f4ef0691b57ab4c358d2a025 --suppress-exit-code -r slackreporter,htmlextra --reporter-htmlextra-export testArtifacts/htmlreport.html 
-     
+        newman  run ${{COLLECTION_URL}} -e ${{ENVIRONMENT_URL}} --suppress-exit-code -r slackreporter,htmlextra --reporter-htmlextra-export testArtifacts/htmlreport.html --reporter-slackreporter-webhookurl ${{SLACK_WEBHOOK_URL}}
+
       # Upload the reports to TestArtifacts directory
       - name: Output the results
         uses: actions/upload-artifact@v2
         with:
          name: Reports
          path: testArtifacts
-
