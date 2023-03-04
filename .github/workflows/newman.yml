@@ -1,0 +1,37 @@
+name: Newman API Tests
+on: 
+  workflow_dispatch:
+jobs: 
+  test: 
+    defaults: 
+      run: 
+        working-directory: ./newman
+    environment: staging
+    name: "Run tests"
+    runs-on: ubuntu-latest
+    steps: 
+      - 
+        uses: actions/checkout@v2
+      - 
+        uses: actions/setup-node@v2
+        with: 
+          node-version: "18"
+      - 
+        name: "Install newman"
+        run: "npm install -g newman"
+      - 
+        name: "Install newman reporter"
+        run: "npm install -g newman-reporter-htmlextra"
+      - 
+        name: "Run tests"
+        run: "newman run TaHouse.postman_collection.json -e Ta_House.postman_environment.json  
+        -r htmlextra --reporter-htmlextra-export htmlreport.html --reporter-htmlextra-darkTheme  > runreport1.html"
+      
+      - name: Publish report
+        uses: MeilCli/slack-upload-file@v1
+        with:
+          slack_token: ${{ secrets.SLACK_TOKEN }}
+          file_path: './tests/htmlreport.html'
+          file_name: 'postmanReport.html'
+          file_type: 'html'
+          channels: 'api-test-reports'
