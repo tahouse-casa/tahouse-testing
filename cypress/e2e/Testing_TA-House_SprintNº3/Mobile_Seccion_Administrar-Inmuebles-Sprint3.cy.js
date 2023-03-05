@@ -12,7 +12,7 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
         login.loginAdmin(urlTaHouseLogin)
     });
 
-    it.only('U_001 | Validaciones Html Request', () => {// Se prueban las props HTML
+    it('U_001 | Validaciones Html Request', () => {// Se prueban las props HTML
         cy.visit(urlTaHouseProperty)
         cy.title().should('eq','TaHouse.casa')// Validamos el Tiutlo de la Pagina 
         expect(cy.config('viewportWidth')).to.equal(380)// Validamos MaxWhidth 380px
@@ -36,7 +36,7 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
         cy.wait(2000).then(()=>{
             cy.get('.icon-of-create-properties').click()// Relizamos click sobre el icono svg "+"
             cy.get('button').click()// Realizamos click en siguiente
-            cy.selectGroup('Alquiler','Casa','Vendido','USA','Ohio')// Se generan datos random en options
+            cy.selectGroup('Venta','Casa','Vendido','CANADA','Toronto')// Se generan datos random en options
             cy.inputGroup1('av 10st',2,155,3,2,93000,'Excelente Ubicacion')// Se generan datos random en inputs de datos
             cy.get('button').click()// Realizamos click en siguiente
             cy.inputGroup2(11223366746,'nuevo18@mail.com')// Se generan datos randon en inputs de datos
@@ -46,7 +46,7 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
         })      
     });
 
-    it('U_004 | Eliminar Inmueble', () => {// Se prueba la eliminacion de un inmuelbe en la 1er ubicaion de la lista
+    it.only('U_004 | Eliminar Inmueble', () => {// Se prueba la eliminacion de un inmuelbe en la 1er ubicaion de la lista
        cy.visit(urlTaHouseProperty)
        cy.wait(2000).then(()=>{
         cy.get('.kMUvhG').eq(1).click()

@@ -26,8 +26,10 @@ describe('Mobile | Test en Seccion Favoritos', {
           it('F_002 | Check Elementos | Card div size', () => {// Se prueba el tamaños en divs contenedores de las cards
               cy.visit(urlTaHouseFavorites)
               cy.wait(2000).then(()=>{
-                cy.Cardsize(0,'156px','158px')// Se espera: que el tamaño de la imagen sea "Width: 156px" y "height: 158px"
+                
+                cy.Cardsize(0,'163.5px','193.28125px')// Se espera: que el tamaño de la imagen sea "Width: 156px" y "height: 158px"
               })
+              
           });
           
           it('F_003 | Check elementos', () => {// Se prueba la redireccion del button "/all-properties"

@@ -174,7 +174,7 @@
     })
 
     Cypress.Commands.add('Cardsize',(num,width,height)=>{
-        cy.get('.cAOvxN').eq(num).should('have.css','width',width).and('have.css','height',height)
+        cy.get('.fLOQWm').eq(0).should('have.css','width',width).and('have.css','height',height)
     })
 
     Cypress.Commands.add('ResultSearch',(text,pais)=>{

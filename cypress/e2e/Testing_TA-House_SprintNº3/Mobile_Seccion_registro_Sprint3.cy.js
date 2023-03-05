@@ -41,11 +41,13 @@ describe('Mobile | Tests en Seccion Registro de Usuarios',{
     });
 
       it('Registro_003 | Registro Exitoso', () => {// El usuario pueda Regitrarse en el sistema
-        cy.typeInputName('email','nuevo03@mail.com')// Ingresamos mail random
+        cy.typeInputName('email','nuevo09@mail.com')// Ingresamos mail random
         cy.typeInputName('password','aBc123')// Ingresamos password random
         cy.typeInputName('password2','aBc123')// Repetimos password random ingresada
-        cy.assertionCheck('Ingresar').click()// Click en Ingresar
-        cy.msjAviso('Gracias por registrarte','be.visible')// Se espera: el sistema avise mediante un mensaje en pantalla la confirmacion del registro
+        cy.assertionCheck('Ingresar').click()
+        cy.wait(3500).then(()=>{// Click en Ingresar
+          cy.msjAviso('¡Te has registrado correctamente!','be.visible')// Se espera: el sistema avise mediante un mensaje en pantalla la confirmacion del registro
+        }) 
       });
 
       it('Resgistro_004 | Registro con campo de datos vacios',()=>{// Se prueba realizar un registro en el sistema con todos los campos de datos vacios

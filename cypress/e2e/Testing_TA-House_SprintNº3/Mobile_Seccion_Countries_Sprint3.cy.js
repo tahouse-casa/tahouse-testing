@@ -13,7 +13,7 @@ describe('Mobile | Tests en Panel de administrar Paises',{
         login.loginAdmin(urlTaHouseLogin)     
     });
 
-    it.only('P_001 | Validaciones Html Request', () => {// Se prueban las props HTML
+    it('P_001 | Validaciones Html Request', () => {// Se prueban las props HTML
         cy.visit(urlTaHouseCountries)
         cy.title().should('eq','TaHouse.casa')// Validamos el Tiutlo de la Pagina 
           expect(cy.config('viewportWidth')).to.equal(380)// Validamos MaxWhidth 380px
@@ -39,7 +39,7 @@ describe('Mobile | Tests en Panel de administrar Paises',{
     it('P_003 | Eliminar Pais / Ciudad', () => {// Se prueba eliminar exitosamente el 1er pais de la lista "Paises"
         cy.visit(urlTaHouseCountries)
         cy.wait(2000).then(()=>{
-            cy.deletecountry(0)// Realizamos click sobre el 1er elemento "pais" de la lista
+            cy.deletecountry(10)// Realizamos click sobre el 1er elemento "pais" de la lista
             cy.get('button').eq(1).click()// Realizamos click en "ELIMINAR"
         })  
          
@@ -48,11 +48,11 @@ describe('Mobile | Tests en Panel de administrar Paises',{
     it('P_004 | Editar Pais / Ciudad', () => {// Se prueba editar exitosamente el 1er pais y/o ciudad de la lista "Paises"
         cy.visit(urlTaHouseCountries)
         cy.wait(2000).then(()=>{
-            cy.editCountry(7)// Realizamos click en el icono "edit"
+            cy.editCountry(9)// Realizamos click en el icono "edit"
             cy.clearCountry()// Realizamos un clear en los campos de datos pais y ciudad
             cy.clearLatitud()// Realizamos un clear en campos de datos de latitud
             cy.clearLongitud()// Realizamos un clear en campos de datos de longitud
-            cy.addcountry('USA','Ohio')// Completamos en campo de datos pais y ciudad
+            cy.addcountry('Portugal','Lisboa')// Completamos en campo de datos pais y ciudad
             cy.longitud(54,15,66,11)// Completamos campo de datos seccion "Longitud"
             cy.latitud(80,63,11,99)// Completamos campo de datos seccion "Latitud"
             cy.get('button').click()// Realizamos click en "Guardar"
