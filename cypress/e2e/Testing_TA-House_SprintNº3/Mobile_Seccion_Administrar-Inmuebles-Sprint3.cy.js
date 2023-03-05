@@ -36,7 +36,7 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
         cy.wait(2000).then(()=>{
             cy.get('.icon-of-create-properties').click()// Relizamos click sobre el icono svg "+"
             cy.get('button').click()// Realizamos click en siguiente
-            cy.selectGroup('Venta','Casa','Vendido','Argentina','Villa Gesell')// Se generan datos random en options
+            cy.selectGroup('Venta','Casa','Vendido','ARGENTINA','Villa Gesell')// Se generan datos random en options
             cy.inputGroup1('av 10st',2,155,3,2,93000,'Excelente Ubicacion')// Se generan datos random en inputs de datos
             cy.get('button').click()// Realizamos click en siguiente
             cy.inputGroup2(11223366746,'nuevo18@mail.com')// Se generan datos randon en inputs de datos

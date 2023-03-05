@@ -32,14 +32,14 @@ describe('Mobile | Tests en Filtro de Busqueda | Home', {
      });
 
      it('Mobile | Filtro por Habitaciones', () => {// Probamos que se muestre el total de inmuebles buscados en el filtro
-        cy.ResultSearch('Departamentos en alquiler','Argentina')// Se espera: mostrar el rusultado de la busqueda en pantalla indicando cantidad y pais 
+        cy.ResultSearch('Departamentos en alquiler','ARGENTINA')// Se espera: mostrar el rusultado de la busqueda en pantalla indicando cantidad y pais 
         cy.contains('Filtros').click()
         cy.FilterOption(3,4)
         cy.get('button').eq(2).click()
      });
 
      it('Mobile | Filtro por Precio', () => {// Probamos que se muestre el total de inmuebles buscados en el filtro
-        cy.ResultSearch('Departamentos en alquiler','Argentina')// Se espera: mostrar el rusultado de la busqueda en pantalla indicando cantidad y pais 
+        cy.ResultSearch('Departamentos en alquiler','ARGENTINA')// Se espera: mostrar el rusultado de la busqueda en pantalla indicando cantidad y pais 
         cy.contains('Filtros').click()
         cy.FilterOption(4,100000)
         cy.get('button').eq(2).click()
@@ -53,7 +53,7 @@ describe('Mobile | Tests en Filtro de Busqueda | Home', {
      });
 
      it('Mobile | Filtro con todos los filtros completos', () => {// Probamos que se muestre el total de inmuebles buscados en el filtro
-        cy.ResultSearch('Departamentos en alquiler','Argentina')// Se espera: mostrar el rusultado de la busqueda en pantalla indicando cantidad y pais 
+        cy.ResultSearch('Departamentos en alquiler','ARGENTINA')// Se espera: mostrar el rusultado de la busqueda en pantalla indicando cantidad y pais 
         cy.contains('Filtros').click()
         cy.FilterOption(2,3)
         cy.FilterOption(3,3)
