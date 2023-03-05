@@ -36,7 +36,7 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
         cy.wait(2000).then(()=>{
             cy.get('.icon-of-create-properties').click()// Relizamos click sobre el icono svg "+"
             cy.get('button').click()// Realizamos click en siguiente
-            cy.selectGroup('Venta','Casa','Vendido','CANADA','Toronto')// Se generan datos random en options
+            cy.selectGroup('Venta','Casa','Vendido','Argentina','Villa Gesell')// Se generan datos random en options
             cy.inputGroup1('av 10st',2,155,3,2,93000,'Excelente Ubicacion')// Se generan datos random en inputs de datos
             cy.get('button').click()// Realizamos click en siguiente
             cy.inputGroup2(11223366746,'nuevo18@mail.com')// Se generan datos randon en inputs de datos
@@ -46,7 +46,7 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
         })      
     });
 
-    it.only('U_004 | Eliminar Inmueble', () => {// Se prueba la eliminacion de un inmuelbe en la 1er ubicaion de la lista
+    it('U_004 | Eliminar Inmueble', () => {// Se prueba la eliminacion de un inmuelbe en la 1er ubicaion de la lista
        cy.visit(urlTaHouseProperty)
        cy.wait(2000).then(()=>{
         cy.get('.kMUvhG').eq(1).click()
@@ -60,7 +60,7 @@ describe('Mobile | Tests en Panel de Administrar Inmueble', {
         cy.wait(2000).then(()=>{
             cy.get('.gysgEo').eq(0).click()// Realizamos Click sobre la 1er card de inmueble existente
             cy.get('button').eq(0).click({force:true})
-            cy.selectGroup('Venta','Hotel','Vendido','USA','New York')// Se generan nuevos datos random en options
+            cy.selectGroup('Venta','Hotel','Vendido','USA','California')// Se generan nuevos datos random en options
             cy.clearInputsGroup1()// Se realiza un clear sobre todos los campos de datos en inmuebles
             cy.inputGroup1('av 13st',2,250,2,2,99000,'Excelente Ubicacion')// Se generan nuevos datos random en inputs 
             cy.get('button').click()// Realizamos clieck en "Siguiente"

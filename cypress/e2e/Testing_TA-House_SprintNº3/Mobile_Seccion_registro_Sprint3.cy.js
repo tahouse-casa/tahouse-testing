@@ -41,7 +41,7 @@ describe('Mobile | Tests en Seccion Registro de Usuarios',{
     });
 
       it('Registro_003 | Registro Exitoso', () => {// El usuario pueda Regitrarse en el sistema
-        cy.typeInputName('email','nuevo09@mail.com')// Ingresamos mail random
+        cy.typeInputName('email','nuevo17@mail.com')// Ingresamos mail random
         cy.typeInputName('password','aBc123')// Ingresamos password random
         cy.typeInputName('password2','aBc123')// Repetimos password random ingresada
         cy.assertionCheck('Ingresar').click()

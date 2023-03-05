@@ -20,7 +20,7 @@ describe('Mobile | Api Testing',{
 
     it('Test Api Countries', () => {
         cy.wait(2000).then(()=>{
-           cy.request(apiCountries).then((e)=>{
+           cy.request('https://api.dev.tahouse.casa/api/v1/countries').then((e)=>{
             expect(e).property('status').to.equal(200)
             expect(e).property('headers')
             expect(e).property('duration')
@@ -36,7 +36,7 @@ describe('Mobile | Api Testing',{
 
     it('Test Api Properties', () => {
         cy.wait(2000).then(()=>{
-           cy.request(apiProperties).then((e)=>{
+           cy.request('https://api.dev.tahouse.casa/api/v1/properties').then((e)=>{
             expect(e).property('status').to.equal(200)
             expect(e).property('headers')
             expect(e).property('duration')
@@ -61,7 +61,7 @@ describe('Mobile | Api Testing',{
     });
     
     it('Test Api Favoritos', () => {
-        cy.request(apiFavorites).then((e)=>{
+        cy.request('https://api.dev.tahouse.casa/api/v1/favorites').then((e)=>{
             expect(e).property('status').to.equal(200)
             expect(e).property('headers')
             expect(e).property('duration')
@@ -72,7 +72,7 @@ describe('Mobile | Api Testing',{
     });
 
     it('Test Api Users', () => {
-        cy.request(apiUsers).then((e)=>{
+        cy.request('https://api.dev.tahouse.casa/api/v1/users').then((e)=>{
             expect(e).property('status').to.equal(200)
             expect(e).property('headers')
             expect(e).property('duration')
