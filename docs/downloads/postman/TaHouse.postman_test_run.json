@@ -1,0 +1,1668 @@
+{
+	"id": "9e5a9aa5-628c-40f7-b58c-077c594fad0b",
+	"name": "TaHouse",
+	"timestamp": "2023-03-14T22:18:36.988Z",
+	"collection_id": "22531503-08c7d3df-d134-46bf-914c-b7b224e3dd3d",
+	"folder_id": 0,
+	"environment_id": "22531503-7eb70b23-1675-428c-aaff-8d2f6193c1db",
+	"totalPass": 133,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-03-14T22:18:03.138Z",
+	"totalFail": 10,
+	"results": [
+		{
+			"id": "7fc95303-eef1-4d74-9b22-dce68b1f6485",
+			"name": "ApiLogin_01 | Proteccion de Datos",
+			"url": "https://api.dev.tahouse.casa/api/v1/auth/login",
+			"time": 552,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Status code is 400 (Bad request)": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 400 (Bad request)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				552
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Status code is 400 (Bad request)": true
+				}
+			]
+		},
+		{
+			"id": "102f38ce-26db-4d5a-9eed-39623512ac95",
+			"name": "ApiLogin_02 | Autorizacion",
+			"url": "https://api.dev.tahouse.casa/api/v1/auth/login",
+			"time": 6088,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Comprobamos en Body si el elemento 'token' existe": true,
+				"Comprobamos que 'token' sea un String": true,
+				"Comprobamos en Body si el elemento 'Recoverytoken' existe": true,
+				"Comprobamos que 'Recoverytoken' sea un String": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'token' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'token' sea un String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Recoverytoken' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Recoverytoken' sea un String": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6088
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Comprobamos en Body si el elemento 'token' existe": true,
+					"Comprobamos que 'token' sea un String": true,
+					"Comprobamos en Body si el elemento 'Recoverytoken' existe": true,
+					"Comprobamos que 'Recoverytoken' sea un String": true
+				}
+			]
+		},
+		{
+			"id": "b8e65b6e-cf31-4f1f-aa14-029df8618724",
+			"name": "ApiLogin_03 | Autenticacion",
+			"url": "https://api.dev.tahouse.casa/api/v1/auth/login",
+			"time": 1613,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1613
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "0ea0a78e-e3bd-4961-996d-fd7e2bbfe8ca",
+			"name": "ApiLogin_04 | Validacion de Datos",
+			"url": "https://api.dev.tahouse.casa/api/v1/auth/login",
+			"time": 1625,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Estados Ok de conexion 200/201/202": true,
+				"Comprobamos en Body si el elemento 'Id' existe": true,
+				"Comprobamos que 'Id' sea un Number": true,
+				"Comprobamos en Body si el elemento 'Email' existe": true,
+				"Comprobamos que 'Email' sea un String": true,
+				"Comprobamos en Body si el elemento 'recoveryToken' existe": true,
+				"Comprobamos en Body si el elemento 'role' existe": true,
+				"Comprobamos que 'role' sea un String": true,
+				"Comprobamos en Body si el elemento 'name' existe": true,
+				"Comprobamos que 'name' sea null": true,
+				"Comprobamos en Body si el elemento 'city' existe": true,
+				"Comprobamos que 'city' sea null": true,
+				"Comprobamos en Body si el elemento 'country' existe": true,
+				"Comprobamos que 'country' sea null": true,
+				"Comprobamos en Body si el elemento 'phone' existe": true,
+				"Comprobamos que 'phone' sea null": true,
+				"Comprobamos en Body si el elemento 'token' existe": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Estados Ok de conexion 200/201/202": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Id' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Id' sea un Number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Email' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Email' sea un String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'recoveryToken' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'role' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'role' sea un String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'name' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'name' sea null": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'city' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'city' sea null": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'country' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'country' sea null": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'phone' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'phone' sea null": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'token' existe": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1625
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Estados Ok de conexion 200/201/202": true,
+					"Comprobamos en Body si el elemento 'Id' existe": true,
+					"Comprobamos que 'Id' sea un Number": true,
+					"Comprobamos en Body si el elemento 'Email' existe": true,
+					"Comprobamos que 'Email' sea un String": true,
+					"Comprobamos en Body si el elemento 'recoveryToken' existe": true,
+					"Comprobamos en Body si el elemento 'role' existe": true,
+					"Comprobamos que 'role' sea un String": true,
+					"Comprobamos en Body si el elemento 'name' existe": true,
+					"Comprobamos que 'name' sea null": true,
+					"Comprobamos en Body si el elemento 'city' existe": true,
+					"Comprobamos que 'city' sea null": true,
+					"Comprobamos en Body si el elemento 'country' existe": true,
+					"Comprobamos que 'country' sea null": true,
+					"Comprobamos en Body si el elemento 'phone' existe": true,
+					"Comprobamos que 'phone' sea null": true,
+					"Comprobamos en Body si el elemento 'token' existe": true
+				}
+			]
+		},
+		{
+			"id": "f2eff9f1-59db-44b2-83c7-dc8d5d49fad4",
+			"name": "ApiLogin_06 | Credenciales Incorrectos",
+			"url": "https://api.dev.tahouse.casa/api/v1/auth/login",
+			"time": 1889,
+			"responseCode": {
+				"code": 503,
+				"name": "Service Unavailable"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Status code is 503 service unavailable": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 503 service unavailable": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1889
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Status code is 503 service unavailable": true
+				}
+			]
+		},
+		{
+			"id": "811a92ab-045f-43b2-97e2-f9de9475b762",
+			"name": "Login Admin",
+			"url": "https://api.dev.tahouse.casa/api/v1/auth/login",
+			"time": 5058,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present in header": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5058
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true
+				}
+			]
+		},
+		{
+			"id": "79d505da-eb9a-45ff-b705-2cf0e3c1fe20",
+			"name": "ApiUser_01 | Proteccion de datos",
+			"url": "https://api.dev.tahouse.casa/api/v1/users",
+			"time": 442,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Status code is 200 or 400?": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200 or 400?": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				442
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Status code is 200 or 400?": true
+				}
+			]
+		},
+		{
+			"id": "80638827-7817-4986-8a9d-ca7867320629",
+			"name": "ApiUser_04 | Validacion tipo de Datos",
+			"url": "https://api.dev.tahouse.casa/api/v1/users",
+			"time": 486,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Comprobamos en Body si el elemento 'Id' existe": true,
+				"Comprobamos que 'Id' sea un Number": true,
+				"Comprobamos en Body si el elemento 'Email' existe": true,
+				"Comprobamos que 'Email' sea un String": true,
+				"Comprobamos en Body si el elemento 'Role' existe": true,
+				"Comprobamos que 'Role' sea de tipo (Admin o Client) y ademas sea una String": true,
+				"Comprobamos en Body si el elemento 'Name' existe": true,
+				"Comprobamos que 'Name' sea un String": false,
+				"Comprobamos en Body si el elemento 'City' existe": true,
+				"Comprobamos que 'City' sea un String": false,
+				"Comprobamos en Body si el elemento 'Country' existe": true,
+				"Comprobamos que 'Country' sea un String": false,
+				"Comprobamos en Body si el elemento 'Phone' existe": true,
+				"Comprobamos que 'Phone' sea un String": false,
+				"Comprobamos en Body si el elemento 'Fecha creacion Card' existe": true,
+				"Comprobamos que 'Date Create' sea un String": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Id' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Id' sea un Number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Email' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Email' sea un String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Role' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Role' sea de tipo (Admin o Client) y ademas sea una String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Name' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Name' sea un String": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Comprobamos en Body si el elemento 'City' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'City' sea un String": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Comprobamos en Body si el elemento 'Country' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Country' sea un String": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Comprobamos en Body si el elemento 'Phone' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Phone' sea un String": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Comprobamos en Body si el elemento 'Fecha creacion Card' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Date Create' sea un String": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				486
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Comprobamos en Body si el elemento 'Id' existe": true,
+					"Comprobamos que 'Id' sea un Number": true,
+					"Comprobamos en Body si el elemento 'Email' existe": true,
+					"Comprobamos que 'Email' sea un String": true,
+					"Comprobamos en Body si el elemento 'Role' existe": true,
+					"Comprobamos que 'Role' sea de tipo (Admin o Client) y ademas sea una String": true,
+					"Comprobamos en Body si el elemento 'Name' existe": true,
+					"Comprobamos que 'Name' sea un String": false,
+					"Comprobamos en Body si el elemento 'City' existe": true,
+					"Comprobamos que 'City' sea un String": false,
+					"Comprobamos en Body si el elemento 'Country' existe": true,
+					"Comprobamos que 'Country' sea un String": false,
+					"Comprobamos en Body si el elemento 'Phone' existe": true,
+					"Comprobamos que 'Phone' sea un String": false,
+					"Comprobamos en Body si el elemento 'Fecha creacion Card' existe": true,
+					"Comprobamos que 'Date Create' sea un String": true
+				}
+			]
+		},
+		{
+			"id": "58cb5ea3-2dd2-457e-9cfd-683c2f5769d2",
+			"name": "ApiUser_05 | Agregar Usuario",
+			"url": "https://api.dev.tahouse.casa/api/v1/users",
+			"time": 1556,
+			"responseCode": {
+				"code": 409,
+				"name": "Conflict"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Status code is 201 created": false
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 201 created": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				1556
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Status code is 201 created": false
+				}
+			]
+		},
+		{
+			"id": "01a02bf4-2493-40b9-a016-989542b8ed15",
+			"name": "ApiUser_06 | Eliminar Usuario",
+			"url": "https://api.dev.tahouse.casa/api/v1/users/47",
+			"time": 392,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Status code is 201 created": false
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 201 created": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				392
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Status code is 201 created": false
+				}
+			]
+		},
+		{
+			"id": "1b46861f-5923-4d15-9403-05f771800e3f",
+			"name": "ApiUser_07 | Limite de Consultas",
+			"url": "https://api.dev.tahouse.casa/api/v1/users",
+			"time": 416,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Limite de Consultas is present in header, 50 x min": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Limite de Consultas is present in header, 50 x min": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				416
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Limite de Consultas is present in header, 50 x min": true
+				}
+			]
+		},
+		{
+			"id": "32df5972-30cb-4d03-bcdc-1049f50ce296",
+			"name": "ApiUser_08 | Modificar Usuario",
+			"url": "https://api.dev.tahouse.casa/api/v1/users",
+			"time": 450,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				450
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "26e1da0a-eb74-4bf1-8809-d718cb575be6",
+			"name": "ApiUser_09 | Conusulta User por ID",
+			"url": "https://api.dev.tahouse.casa/api/v1/users/1",
+			"time": 502,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				502
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "e52a2181-0e5f-41c2-9418-2dea63ba7766",
+			"name": "ApiUser_10 | Duplicar Usuario",
+			"url": "https://api.dev.tahouse.casa/api/v1/users",
+			"time": 1596,
+			"responseCode": {
+				"code": 409,
+				"name": "Conflict"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Status code is 409 Conflict": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 409 Conflict": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1596
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Status code is 409 Conflict": true
+				}
+			]
+		},
+		{
+			"id": "c5ec1f3f-077f-4dc3-bcf1-ecf6841254cb",
+			"name": "ApiProp_01 | Proteccion de datos",
+			"url": "https://api.dev.tahouse.casa/api/v1/properties",
+			"time": 796,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				796
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "b9da0242-734c-4323-9f30-44557fc5f223",
+			"name": "ApiProp_04 | Validacion tipo de datos",
+			"url": "https://api.dev.tahouse.casa/api/v1/properties",
+			"time": 600,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Comprobamos en Body si el elemento 'ID' existe": true,
+				"Comprobamos que 'Id' sea de tipo Number": true,
+				"Comprobamos en Body si el elemento 'city' existe": true,
+				"Comprobamos que 'City' sea de tipo String": true,
+				"Comprobamos en Body si el elemento tipo de 'State' existe": true,
+				"Comprobamos segun el tipo de 'State' contenga (Libre, Reservado, Alquilado, Vendido) y ademas que sea de tipo String": true,
+				"Comprobamos en Body si el elemento 'Type' existe": true,
+				"Comprobamos en Body que 'Type' contenga (Casa, Departamento, Hotel, Terreno, Monoambiente) y ademas sea de tipo string": true,
+				"Comprobamos en Body si el elemento 'Country' existe": true,
+				"Comprobamos que 'Country' sea de tipo string": true,
+				"Comprobamos en Body si el elemento 'Address' existe": true,
+				"Comprobamos que 'Address' sea de tipo string": true,
+				"Comprobamos en Body si el elemento 'Meters' existe": true,
+				"Comprobamos que 'Meters' sea de tipo Number": true,
+				"Comprobamos en Body si el elemento 'Rooms' existe": true,
+				"Comprobamos que 'Rooms' sea de tipo Number": true,
+				"Comprobamos en Body si el elemento 'Environments' existe": true,
+				"Comprobamos que 'Environments' sea de tipo Number": true,
+				"Comprobamos en Body si el elemento 'Bathrooms' existe": true,
+				"Comprobamos que 'Bathrooms' sea de tipo Number": true,
+				"Comprobamos en Body si el elemento 'Price' existe": true,
+				"Comprobamos que 'Price' sea de tipo Number": true,
+				"Comprobamos en Body si el elemento 'Phone' existe": true,
+				"Comprobamos que 'Phone' sea de tipo string": true,
+				"Comprobamos en Body si el elemento 'Email' existe": true,
+				"Comprobamos que 'Email' sea de tipo string": true,
+				"Comprobamos en Body si el elemento 'UrlImage' existe": true,
+				"Comprobamos que 'UrlImage' sea de tipo array": true,
+				"Comprobamos en Body si el elemento 'Description' existe": true,
+				"Comprobamos que 'Description' sea de tipo string": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'ID' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Id' sea de tipo Number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'city' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'City' sea de tipo String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento tipo de 'State' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos segun el tipo de 'State' contenga (Libre, Reservado, Alquilado, Vendido) y ademas que sea de tipo String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Type' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body que 'Type' contenga (Casa, Departamento, Hotel, Terreno, Monoambiente) y ademas sea de tipo string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Country' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Country' sea de tipo string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Address' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Address' sea de tipo string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Meters' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Meters' sea de tipo Number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Rooms' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Rooms' sea de tipo Number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Environments' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Environments' sea de tipo Number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Bathrooms' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Bathrooms' sea de tipo Number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Price' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Price' sea de tipo Number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Phone' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Phone' sea de tipo string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Email' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Email' sea de tipo string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'UrlImage' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'UrlImage' sea de tipo array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Description' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Description' sea de tipo string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				600
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Comprobamos en Body si el elemento 'ID' existe": true,
+					"Comprobamos que 'Id' sea de tipo Number": true,
+					"Comprobamos en Body si el elemento 'city' existe": true,
+					"Comprobamos que 'City' sea de tipo String": true,
+					"Comprobamos en Body si el elemento tipo de 'State' existe": true,
+					"Comprobamos segun el tipo de 'State' contenga (Libre, Reservado, Alquilado, Vendido) y ademas que sea de tipo String": true,
+					"Comprobamos en Body si el elemento 'Type' existe": true,
+					"Comprobamos en Body que 'Type' contenga (Casa, Departamento, Hotel, Terreno, Monoambiente) y ademas sea de tipo string": true,
+					"Comprobamos en Body si el elemento 'Country' existe": true,
+					"Comprobamos que 'Country' sea de tipo string": true,
+					"Comprobamos en Body si el elemento 'Address' existe": true,
+					"Comprobamos que 'Address' sea de tipo string": true,
+					"Comprobamos en Body si el elemento 'Meters' existe": true,
+					"Comprobamos que 'Meters' sea de tipo Number": true,
+					"Comprobamos en Body si el elemento 'Rooms' existe": true,
+					"Comprobamos que 'Rooms' sea de tipo Number": true,
+					"Comprobamos en Body si el elemento 'Environments' existe": true,
+					"Comprobamos que 'Environments' sea de tipo Number": true,
+					"Comprobamos en Body si el elemento 'Bathrooms' existe": true,
+					"Comprobamos que 'Bathrooms' sea de tipo Number": true,
+					"Comprobamos en Body si el elemento 'Price' existe": true,
+					"Comprobamos que 'Price' sea de tipo Number": true,
+					"Comprobamos en Body si el elemento 'Phone' existe": true,
+					"Comprobamos que 'Phone' sea de tipo string": true,
+					"Comprobamos en Body si el elemento 'Email' existe": true,
+					"Comprobamos que 'Email' sea de tipo string": true,
+					"Comprobamos en Body si el elemento 'UrlImage' existe": true,
+					"Comprobamos que 'UrlImage' sea de tipo array": true,
+					"Comprobamos en Body si el elemento 'Description' existe": true,
+					"Comprobamos que 'Description' sea de tipo string": true
+				}
+			]
+		},
+		{
+			"id": "b86dd98d-83bc-46fb-b7b6-0b59f5c169a9",
+			"name": "ApiProp_05 | Agregar Properties",
+			"url": "https://api.dev.tahouse.casa/api/v1/properties",
+			"time": 509,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Status code is 201 created": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 201 created": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				509
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Status code is 201 created": true
+				}
+			]
+		},
+		{
+			"id": "f6f94a00-dcaf-485a-811c-a3831297c022",
+			"name": "ApiProp_06 | Eliminar Properties",
+			"url": "https://api.dev.tahouse.casa/api/v1/properties/172",
+			"time": 410,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Status code is 201 Created": false
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 201 Created": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				410
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Status code is 201 Created": false
+				}
+			]
+		},
+		{
+			"id": "02a91423-f79c-494f-ae96-813db849f8f8",
+			"name": "ApiProp_07 | Modificar Properties",
+			"url": "https://api.dev.tahouse.casa/api/v1/properties/100",
+			"time": 413,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Status code is 200 created": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200 created": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				413
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Status code is 200 created": true
+				}
+			]
+		},
+		{
+			"id": "f2b2853c-caf5-4f0f-acba-f444f78fb854",
+			"name": "ApiProp_08 | Consultar Properties por ID",
+			"url": "https://api.dev.tahouse.casa/api/v1/properties/160",
+			"time": 358,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				358
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "2ae9a5da-e4db-413a-84b9-1ad733ae86ef",
+			"name": "ApiProp_09 | Limite de Consultas",
+			"url": "https://api.dev.tahouse.casa/api/v1/properties",
+			"time": 423,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Limite de Consultas is present in header, 50 x min": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Limite de Consultas is present in header, 50 x min": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				423
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Limite de Consultas is present in header, 50 x min": true
+				}
+			]
+		},
+		{
+			"id": "d1df48c7-b56a-4161-8564-ddaf9cc4fcd5",
+			"name": "ApiCountr_01 | Proteccion de Datos",
+			"url": "https://api.dev.tahouse.casa/api/v1/countries",
+			"time": 452,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				452
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "52229a2b-96b2-4b2d-9247-1dbbb069e254",
+			"name": "ApiCountr_04 | Validacion tipo de Datos",
+			"url": "https://api.dev.tahouse.casa/api/v1/countries",
+			"time": 367,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Date is present in header": true,
+				"Comprobamos en Body si el elemento 'ID' existe": true,
+				"Comprobamos que 'Id' sea un Number": true,
+				"Comprobamos en Body si el elemento 'Country' existe": true,
+				"Comprobamos que 'Country' sea un String": true,
+				"Comprobamos en Body si el elemento 'Latitud' existe": true,
+				"Comprobamos que 'Latitud' sea un String": true,
+				"Comprobamos en Body si el elemento 'Longitud' existe": true,
+				"Comprobamos que 'Longitud' sea un String": true,
+				"Comprobamos en Body si el elemento 'City' existe": true,
+				"Comprobamos que 'City' sea un Array": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Date is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'ID' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Id' sea un Number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Country' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Country' sea un String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Latitud' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Latitud' sea un String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Longitud' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Longitud' sea un String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'City' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'City' sea un Array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				367
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Date is present in header": true,
+					"Comprobamos en Body si el elemento 'ID' existe": true,
+					"Comprobamos que 'Id' sea un Number": true,
+					"Comprobamos en Body si el elemento 'Country' existe": true,
+					"Comprobamos que 'Country' sea un String": true,
+					"Comprobamos en Body si el elemento 'Latitud' existe": true,
+					"Comprobamos que 'Latitud' sea un String": true,
+					"Comprobamos en Body si el elemento 'Longitud' existe": true,
+					"Comprobamos que 'Longitud' sea un String": true,
+					"Comprobamos en Body si el elemento 'City' existe": true,
+					"Comprobamos que 'City' sea un Array": true
+				}
+			]
+		},
+		{
+			"id": "e8113bcb-a6d1-402b-9ed0-f07fc934bb21",
+			"name": "ApiCountr_05 | Agregar Countries",
+			"url": "https://api.dev.tahouse.casa/api/v1/countries",
+			"time": 357,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Status code is 201 created": false
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 201 created": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				357
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Status code is 201 created": false
+				}
+			]
+		},
+		{
+			"id": "9d9411ca-5511-4853-9a65-62e61da3f634",
+			"name": "ApiCountr_06 | Eliminar Countries",
+			"url": "https://api.dev.tahouse.casa/api/v1/countries/94",
+			"time": 416,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Status code is 200 created": false
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200 created": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				416
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Status code is 200 created": false
+				}
+			]
+		},
+		{
+			"id": "e195801f-df80-48f7-aad0-bea751197911",
+			"name": "ApiCountr_07 | Modificar Countries",
+			"url": "https://api.dev.tahouse.casa/api/v1/countries/80",
+			"time": 366,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				366
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "609c8e49-72c4-4959-838a-4187feabd110",
+			"name": "ApiCountr_08 | Duplicar Countries",
+			"url": "https://api.dev.tahouse.casa/api/v1/countries",
+			"time": 427,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Status code is 401 Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 401 Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				427
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Status code is 401 Unauthorized": true
+				}
+			]
+		},
+		{
+			"id": "ce22a892-2c30-4334-bddb-8fa990e5c2c6",
+			"name": "ApiCountr_09 | Consultar Countries por ID",
+			"url": "https://api.dev.tahouse.casa/api/v1/countries/33",
+			"time": 359,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				359
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "d098c4bd-beb4-40bf-a4dc-9bcc400e969d",
+			"name": "ApiCountr_10 | Limite de Consultas",
+			"url": "https://api.dev.tahouse.casa/api/v1/countries",
+			"time": 376,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present in header": true,
+				"Limite de Consultas is present in header, 50 x min": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present in header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Limite de Consultas is present in header, 50 x min": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				376
+			],
+			"allTests": [
+				{
+					"Content-Type is present in header": true,
+					"Limite de Consultas is present in header, 50 x min": true
+				}
+			]
+		},
+		{
+			"id": "cb84ecc3-b60d-46d9-afba-88dc23bf9d4b",
+			"name": "Api favorites",
+			"url": "https://api.dev.tahouse.casa/api/v1/favorites",
+			"time": 455,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 200ms": false,
+				"Status code is 200": true,
+				"Content-Type is present": true,
+				"Comprobamos en Body si el elemento 'Id' existe": true,
+				"Comprobamos que 'Id' sea un Number": true,
+				"Comprobamos en Body si el elemento 'UserId' existe": true,
+				"Comprobamos que 'UserId' sea un Number": true,
+				"Comprobamos en Body si el elemento 'PropertyId' existe": true,
+				"Comprobamos que 'PropertyId' sea un Number": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'Id' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'Id' sea un Number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'UserId' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'UserId' sea un Number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos en Body si el elemento 'PropertyId' existe": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Comprobamos que 'PropertyId' sea un Number": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				455
+			],
+			"allTests": [
+				{
+					"Response time is less than 200ms": false,
+					"Status code is 200": true,
+					"Content-Type is present": true,
+					"Comprobamos en Body si el elemento 'Id' existe": true,
+					"Comprobamos que 'Id' sea un Number": true,
+					"Comprobamos en Body si el elemento 'UserId' existe": true,
+					"Comprobamos que 'UserId' sea un Number": true,
+					"Comprobamos en Body si el elemento 'PropertyId' existe": true,
+					"Comprobamos que 'PropertyId' sea un Number": true
+				}
+			]
+		},
+		{
+			"id": "e5aaff91-ed8a-4aa8-879a-61a2ec8d15c5",
+			"name": "Api Login / Recovery",
+			"url": "https://api.dev.tahouse.casa/api/v1/auth/recovery",
+			"time": 419,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400 (Bad request)": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400 (Bad request)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				419
+			],
+			"allTests": [
+				{
+					"Status code is 400 (Bad request)": true
+				}
+			]
+		},
+		{
+			"id": "1b71c421-24eb-47c5-bb6e-37c52846fcb5",
+			"name": "Api Login/Change-Password",
+			"url": "https://api.dev.tahouse.casa/api/v1/auth/change-password",
+			"time": 360,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 401 (Unauthorizaed)": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401 (Unauthorizaed)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				360
+			],
+			"allTests": [
+				{
+					"Status code is 401 (Unauthorizaed)": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 30528,
+	"collection": {
+		"requests": [
+			{
+				"id": "7fc95303-eef1-4d74-9b22-dce68b1f6485",
+				"method": "GET"
+			},
+			{
+				"id": "102f38ce-26db-4d5a-9eed-39623512ac95",
+				"method": "POST"
+			},
+			{
+				"id": "b8e65b6e-cf31-4f1f-aa14-029df8618724",
+				"method": "POST"
+			},
+			{
+				"id": "0ea0a78e-e3bd-4961-996d-fd7e2bbfe8ca",
+				"method": "POST"
+			},
+			{
+				"id": "f2eff9f1-59db-44b2-83c7-dc8d5d49fad4",
+				"method": "POST"
+			},
+			{
+				"id": "811a92ab-045f-43b2-97e2-f9de9475b762",
+				"method": "POST"
+			},
+			{
+				"id": "79d505da-eb9a-45ff-b705-2cf0e3c1fe20",
+				"method": "GET"
+			},
+			{
+				"id": "80638827-7817-4986-8a9d-ca7867320629",
+				"method": "GET"
+			},
+			{
+				"id": "58cb5ea3-2dd2-457e-9cfd-683c2f5769d2",
+				"method": "POST"
+			},
+			{
+				"id": "01a02bf4-2493-40b9-a016-989542b8ed15",
+				"method": "DELETE"
+			},
+			{
+				"id": "1b46861f-5923-4d15-9403-05f771800e3f",
+				"method": "GET"
+			},
+			{
+				"id": "32df5972-30cb-4d03-bcdc-1049f50ce296",
+				"method": "PATCH"
+			},
+			{
+				"id": "26e1da0a-eb74-4bf1-8809-d718cb575be6",
+				"method": "GET"
+			},
+			{
+				"id": "e52a2181-0e5f-41c2-9418-2dea63ba7766",
+				"method": "POST"
+			},
+			{
+				"id": "c5ec1f3f-077f-4dc3-bcf1-ecf6841254cb",
+				"method": "GET"
+			},
+			{
+				"id": "b9da0242-734c-4323-9f30-44557fc5f223",
+				"method": "GET"
+			},
+			{
+				"id": "b86dd98d-83bc-46fb-b7b6-0b59f5c169a9",
+				"method": "POST"
+			},
+			{
+				"id": "f6f94a00-dcaf-485a-811c-a3831297c022",
+				"method": "DELETE"
+			},
+			{
+				"id": "02a91423-f79c-494f-ae96-813db849f8f8",
+				"method": "PATCH"
+			},
+			{
+				"id": "f2b2853c-caf5-4f0f-acba-f444f78fb854",
+				"method": "GET"
+			},
+			{
+				"id": "2ae9a5da-e4db-413a-84b9-1ad733ae86ef",
+				"method": "GET"
+			},
+			{
+				"id": "d1df48c7-b56a-4161-8564-ddaf9cc4fcd5",
+				"method": "GET"
+			},
+			{
+				"id": "52229a2b-96b2-4b2d-9247-1dbbb069e254",
+				"method": "GET"
+			},
+			{
+				"id": "e8113bcb-a6d1-402b-9ed0-f07fc934bb21",
+				"method": "POST"
+			},
+			{
+				"id": "9d9411ca-5511-4853-9a65-62e61da3f634",
+				"method": "DELETE"
+			},
+			{
+				"id": "e195801f-df80-48f7-aad0-bea751197911",
+				"method": "PATCH"
+			},
+			{
+				"id": "609c8e49-72c4-4959-838a-4187feabd110",
+				"method": "POST"
+			},
+			{
+				"id": "ce22a892-2c30-4334-bddb-8fa990e5c2c6",
+				"method": "GET"
+			},
+			{
+				"id": "d098c4bd-beb4-40bf-a4dc-9bcc400e969d",
+				"method": "GET"
+			},
+			{
+				"id": "cb84ecc3-b60d-46d9-afba-88dc23bf9d4b",
+				"method": "GET"
+			},
+			{
+				"id": "e5aaff91-ed8a-4aa8-879a-61a2ec8d15c5",
+				"method": "POST"
+			},
+			{
+				"id": "1b71c421-24eb-47c5-bb6e-37c52846fcb5",
+				"method": "POST"
+			}
+		]
+	}
+}
