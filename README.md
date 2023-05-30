@@ -17,7 +17,7 @@
 📌 [TA House | version Mobile](https://dev.tahouse.casa/) 
 <br />
 
-📌 [TA House | GitHub Organization](https://github.com/tahouse-casa) 
+📚 [TA House | GitHub Organization](https://github.com/tahouse-casa) 
 <br />
 
 ⚙️ [Reporte de Testing | Manual y Automation](https://tahouse-casa.github.io/tahouse-testing/docs/downloads/inicio.html)
