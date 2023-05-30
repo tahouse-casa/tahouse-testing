@@ -17,6 +17,9 @@
 📌 [TA House | version Mobile](https://dev.tahouse.casa/) 
 <br />
 
+📌 [TA House | GitHub Organization](https://github.com/tahouse-casa) 
+<br />
+
 ⚙️ [Reporte de Testing | Manual y Automation](https://tahouse-casa.github.io/tahouse-testing/docs/downloads/inicio.html)
 <br />
 <br />
@@ -25,7 +28,7 @@
 
 - ### <em>Sprint N°1</em>⚙️
 
- - [Resumen de Casos de Pruebas Ejecutados - Google 📘Docs](https://docs.google.com/document/d/1Xx8sjieOoW9J3KxGvVvh4f9f_67qTRfVkMO4sOdOIc0/edit)
+ - [Resumen de Casos de Pruebas Ejecutados - Google 📘Docs](https://github.com/tahouse-casa)
  - [Detalle Casos de Pruebas Ejecutados - Google 📗sheet](https://docs.google.com/spreadsheets/d/1AFWnSNzIHXbe13HhTuA2pnjD-wAlpQRj3usGxob2w0g/edit#gid=0)
  - [Reporte de Bugs - Google 📘Docs](https://docs.google.com/document/d/1ZPlk6z2-uWW_8OKjQq3M5jGCeLHwVqpxGv6tzIipkL8/edit)
  - [Detalle Casos de Pruebas Ejecutados en Automation - Cypress.io | Mochawesome | Postman | Newman](https://tahouse-casa.github.io/tahouse-testing/)
